@@ -1,0 +1,29 @@
+{
+  "description": "A physician counting symptoms he was not meant to see.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_davrigny",
+      "showIf": {
+        "of": [
+          {
+            "flag": "household_dying",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "doctor_certain",
+            "type": "flag",
+            "value": false
+          }
+        ],
+        "type": "all"
+      }
+    },
+    {
+      "dialogue": "dlg_davrigny_idle"
+    }
+  ],
+  "id": "npc_davrigny",
+  "name": "Doctor d'Avrigny",
+  "role": "A physician counting symptoms he was not meant to see."
+}

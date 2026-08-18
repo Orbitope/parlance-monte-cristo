@@ -1,0 +1,12 @@
+{
+  "id": "fac_bonapartist",
+  "name": "The Bonapartists",
+  "opposes": [
+    "fac_royalist"
+  ],
+  "reputationRange": {
+    "max": 10,
+    "min": -10
+  },
+  "summary": "Those who expect the Emperor back, and write letters they should not."
+}

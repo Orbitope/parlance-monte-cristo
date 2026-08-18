@@ -1,0 +1,61 @@
+{
+  "entry": "dlg_julie_purse_open",
+  "id": "dlg_julie_purse",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "item": "item_red_purse",
+              "type": "take_item"
+            }
+          ],
+          "goto": "dlg_julie_purse_saved",
+          "id": "dlg_julie_purse_send",
+          "showIf": {
+            "has": true,
+            "item": "item_red_purse",
+            "type": "item"
+          },
+          "text": "Send her to the Allées de Meilhan. The purse on the mantel."
+        }
+      ],
+      "id": "dlg_julie_purse_open",
+      "text": "If you ask him, he says Sinbad the Sailor; but I doubt if it be his real name."
+    },
+    {
+      "id": "dlg_julie_purse_saved",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "morrel_saved",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_morrel",
+          "delta": 2,
+          "type": "adjust_relationship"
+        },
+        {
+          "character": "npc_julie",
+          "delta": 2,
+          "type": "adjust_relationship"
+        },
+        {
+          "quest": "qst_mercy",
+          "toStage": "stg_mer_purse",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Have you not saved Peppino’s life?"
+    }
+  ],
+  "speakerId": "npc_julie",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Julie — the red silk purse"
+}

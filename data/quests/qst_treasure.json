@@ -1,0 +1,82 @@
+{
+  "availableWhen": {
+    "outcome": "out_free",
+    "quest": "qst_escape",
+    "type": "questOutcome"
+  },
+  "id": "qst_treasure",
+  "journalName": "The Spada Fortune",
+  "name": "The Spada Fortune",
+  "outcomes": [
+    {
+      "description": "Monte Cristo entered the tower, which was divided into three stories.",
+      "effects": [
+        {
+          "amount": 100,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_rich",
+      "kind": "success",
+      "reachedWhen": {
+        "has": true,
+        "item": "item_treasure",
+        "type": "item"
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "knows_treasure",
+        "type": "flag",
+        "value": true
+      },
+      "description": "The funds rose one per cent higher than before they had fallen.",
+      "id": "stg_tre_secret",
+      "objectives": [
+        {
+          "id": "obj_stg_tre_secret",
+          "text": "Hear the abbé out."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "on_isle",
+        "type": "flag",
+        "value": true
+      },
+      "description": "One chamber alone had been respected by the magnificent Bertuccio.",
+      "id": "stg_tre_isle",
+      "objectives": [
+        {
+          "id": "obj_stg_tre_isle",
+          "text": "Reach the island alone."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "has": true,
+        "item": "item_treasure",
+        "type": "item"
+      },
+      "description": "The instant Debray had touched the ground, he was at the carriage-door.",
+      "id": "stg_tre_found",
+      "objectives": [
+        {
+          "id": "obj_stg_tre_found",
+          "text": "The second opening, the far corner."
+        }
+      ],
+      "order": 3
+    }
+  ],
+  "summary": "An arithmetic of caverns and ingots, tested against rock.",
+  "tags": [
+    "main"
+  ]
+}

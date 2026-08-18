@@ -1,0 +1,19 @@
+{
+  "description": "Sent to a mantelpiece by a stranger's letter, and found a fortune.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_julie_purse",
+      "showIf": {
+        "flag": "morrel_bought",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_julie_idle"
+    }
+  ],
+  "id": "npc_julie",
+  "name": "Julie Morrel",
+  "role": "Sent to a mantelpiece by a stranger's letter, and found a fortune."
+}

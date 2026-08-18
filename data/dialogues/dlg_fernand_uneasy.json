@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_fernand_uneasy_open",
+  "id": "dlg_fernand_uneasy",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_fernand_uneasy_aside",
+          "id": "dlg_fernand_uneasy_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_fernand_uneasy_out",
+          "id": "dlg_fernand_uneasy_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_fernand_uneasy_open",
+      "text": "You just now spoke his name as if you knew the baron?"
+    },
+    {
+      "id": "dlg_fernand_uneasy_aside",
+      "next": "dlg_fernand_uneasy_out",
+      "text": "Can my influence with them be of any service to you?"
+    },
+    {
+      "id": "dlg_fernand_uneasy_out",
+      "isEnd": true,
+      "text": "As Debray walked towards the window, Danglars approached his wife."
+    }
+  ],
+  "speakerId": "npc_fernand",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Morcerf — a count reading the papers twice"
+}

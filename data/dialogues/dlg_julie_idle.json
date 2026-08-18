@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_julie_idle_open",
+  "id": "dlg_julie_idle",
+  "nodes": [
+    {
+      "id": "dlg_julie_idle_open",
+      "isEnd": true,
+      "text": "But how comes the diamond in your possession, sir? Did Edmond make you his heir?"
+    }
+  ],
+  "speakerId": "npc_julie",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Julie — the happiest house in Marseilles"
+}

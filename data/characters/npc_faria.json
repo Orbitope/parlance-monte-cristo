@@ -1,0 +1,43 @@
+{
+  "description": "A prisoner who made a library of his own memory.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_faria_death",
+      "showIf": {
+        "flag": "knows_treasure",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_faria_treasure",
+      "showIf": {
+        "flag": "knows_betrayers",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_faria_deduce",
+      "showIf": {
+        "flag": "edu_2",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_faria_teach_2",
+      "showIf": {
+        "flag": "edu_1",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_faria_teach_1"
+    }
+  ],
+  "id": "npc_faria",
+  "name": "Abbé Faria",
+  "role": "A prisoner who made a library of his own memory."
+}

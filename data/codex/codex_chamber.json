@@ -1,0 +1,12 @@
+{
+  "body": "France's upper house: titles, rentes, and reputations. It cannot try a man for Yanina, but it can stop standing when he enters.",
+  "category": "world",
+  "id": "codex_chamber",
+  "name": "The Chamber of Peers",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "fernand_unmasked",
+    "type": "flag",
+    "value": true
+  }
+}

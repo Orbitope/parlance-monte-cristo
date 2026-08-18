@@ -1,0 +1,45 @@
+{
+  "entry": "dlg_villefort_madness_open",
+  "id": "dlg_villefort_madness",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_villefort_madness_ash",
+          "id": "dlg_villefort_madness_witness",
+          "showIf": {
+            "flag": "villefort_unmasked",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Say nothing. What is left of him is not listening."
+        }
+      ],
+      "id": "dlg_villefort_madness_open",
+      "text": "Villefort would be obliged to pass by one of these clumps of trees."
+    },
+    {
+      "id": "dlg_villefort_madness_ash",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "villefort_done",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_procureur",
+          "toStage": "stg_pro_done",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "That is what deceives you, Debray."
+    }
+  ],
+  "speakerId": "npc_villefort",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Villefort — the garden, digging"
+}

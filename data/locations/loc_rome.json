@@ -1,0 +1,57 @@
+{
+  "description": "XVIII.’s throne, or the still more tragic destruction of the empire.",
+  "exits": [
+    {
+      "id": "ex_loc_rome_loc_isle",
+      "to": {
+        "location": "loc_isle",
+        "spawn": "sp_loc_isle"
+      }
+    },
+    {
+      "gate": {
+        "flag": "paris_invitation",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_rome_loc_paris_salon",
+      "to": {
+        "location": "loc_paris_salon",
+        "spawn": "sp_loc_paris_salon"
+      }
+    }
+  ],
+  "id": "loc_rome",
+  "interactables": [
+    {
+      "character": "npc_vampa",
+      "id": "int_loc_rome_npc_vampa",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_franz",
+      "id": "int_loc_rome_npc_franz",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_albert",
+      "id": "int_loc_rome_npc_albert",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_pastrini",
+      "id": "int_loc_rome_npc_pastrini",
+      "kind": "npc"
+    }
+  ],
+  "name": "Rome — carnival and catacombs",
+  "spawns": [
+    {
+      "id": "sp_loc_rome",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_italy"
+}

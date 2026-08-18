@@ -1,0 +1,102 @@
+{
+  "availableWhen": {
+    "outcome": "out_doors",
+    "quest": "qst_rome",
+    "type": "questOutcome"
+  },
+  "id": "qst_mercy",
+  "journalName": "What Is Owed",
+  "name": "What Is Owed",
+  "outcomes": [
+    {
+      "description": "Valentine met Barrois, and looked despairingly at the old servant.",
+      "id": "out_mercy",
+      "kind": "success",
+      "reachedWhen": {
+        "of": [
+          {
+            "flag": "danglars_spared",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "valentine_saved",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "all"
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "morrel_saved",
+        "type": "flag",
+        "value": true
+      },
+      "description": "M. Noirtier, my master, wishes to speak on important subjects to M.",
+      "id": "stg_mer_purse",
+      "objectives": [
+        {
+          "id": "obj_stg_mer_purse",
+          "text": "The red purse, on the mantel, as it once was."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "valentine_saved",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Valentine blushed, but did not answer. Villefort, approached Noirtier.",
+      "id": "stg_mer_valentine",
+      "objectives": [
+        {
+          "id": "obj_stg_mer_valentine",
+          "text": "One life kept out of the ledger."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "danglars_spared",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Noirtier answered only by a look which made Villefort’s blood run cold.",
+      "id": "stg_mer_spare",
+      "objectives": [
+        {
+          "id": "obj_stg_mer_spare",
+          "text": "Leave one man alive to be old."
+        }
+      ],
+      "order": 3
+    },
+    {
+      "completeWhen": {
+        "flag": "story_closed",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Perugino sometimes makes his Virgins, and her eyes dull from fatigue.",
+      "id": "stg_mer_letter",
+      "objectives": [
+        {
+          "id": "obj_stg_mer_letter",
+          "text": "Write the letter, and leave it on the island."
+        }
+      ],
+      "order": 4
+    }
+  ],
+  "summary": "Vengeance keeps accounts. So does the other thing.",
+  "tags": [
+    "main"
+  ]
+}

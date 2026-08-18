@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_pastrini_rescue_open",
+  "id": "dlg_pastrini_rescue",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_pastrini_rescue_aside",
+          "id": "dlg_pastrini_rescue_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_pastrini_rescue_out",
+          "id": "dlg_pastrini_rescue_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_pastrini_rescue_open",
+      "text": "Why, did you not hear all we said?"
+    },
+    {
+      "id": "dlg_pastrini_rescue_aside",
+      "next": "dlg_pastrini_rescue_out",
+      "text": "The fifth part of the profits from this stone belongs to us then, does it not?"
+    },
+    {
+      "id": "dlg_pastrini_rescue_out",
+      "isEnd": true,
+      "text": "There was a crowd on the pier. All the crowd gave way before Morrel."
+    }
+  ],
+  "speakerId": "npc_pastrini",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "Pastrini — how the French boy was saved"
+}

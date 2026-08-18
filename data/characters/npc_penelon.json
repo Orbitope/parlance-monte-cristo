@@ -1,0 +1,19 @@
+{
+  "description": "Sailor of the Pharaon. Chews tobacco and history in equal measure.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_penelon_affair",
+      "showIf": {
+        "flag": "identity_wilmore",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_penelon_pharaon"
+    }
+  ],
+  "id": "npc_penelon",
+  "name": "Penelon",
+  "role": "Sailor of the Pharaon. Chews tobacco and history in equal measure."
+}

@@ -1,0 +1,12 @@
+{
+  "body": "A fortress on a rock. Prisoners arrive by boat and leave by the cemetery, which is the sea.",
+  "category": "world",
+  "id": "codex_chateau_dif",
+  "name": "The Château d'If",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "in_cell",
+    "type": "flag",
+    "value": true
+  }
+}

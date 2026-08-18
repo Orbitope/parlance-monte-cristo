@@ -1,0 +1,12 @@
+{
+  "arrivesAt": {
+    "location": "loc_isle",
+    "spawn": "sp_loc_isle"
+  },
+  "asset": "Cutscenes/EscapeShroud",
+  "effectsOnComplete": [],
+  "entersDialogue": "dlg_jacopo_rescue",
+  "id": "cs_escape_shroud",
+  "name": "The Cemetery of the Château d'If",
+  "skippable": false
+}

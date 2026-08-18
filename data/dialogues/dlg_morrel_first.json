@@ -1,0 +1,107 @@
+{
+  "entry": "dlg_morrel_first_open",
+  "id": "dlg_morrel_first",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "flag": "met_morrel",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "character": "npc_morrel",
+              "delta": 1,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_morrel_first_pleased",
+          "id": "dlg_morrel_first_report",
+          "text": "Report the voyage plainly: the cargo, the delay, the death."
+        },
+        {
+          "check": {
+            "difficulty": 10,
+            "mode": "active",
+            "onFailure": "dlg_morrel_first_modest",
+            "onSuccess": "dlg_morrel_first_captain",
+            "skill": "rhetoric"
+          },
+          "id": "dlg_morrel_first_press",
+          "text": "Ask for the captaincy outright."
+        }
+      ],
+      "id": "dlg_morrel_first_open",
+      "text": "Is all safe, M. Morrel; and I think you will be satisfied on that head. But poor Captain Leclere——"
+    },
+    {
+      "id": "dlg_morrel_first_pleased",
+      "next": "dlg_morrel_first_offer",
+      "text": "What’s the matter? and why have you such an air of sadness aboard?"
+    },
+    {
+      "id": "dlg_morrel_first_offer",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "made_captain",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_pharaon",
+          "toStage": "stg_pha_captain",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Is all safe, M. Morrel; and I think you will be satisfied on that head. But poor Captain Leclere——"
+    },
+    {
+      "id": "dlg_morrel_first_captain",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "made_captain",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "flag": "met_morrel",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_pharaon",
+          "toStage": "stg_pha_captain",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Is all safe, M. Morrel; and I think you will be satisfied on that head. But poor Captain Leclere——"
+    },
+    {
+      "id": "dlg_morrel_first_modest",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "met_morrel",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_morrel",
+          "delta": 1,
+          "type": "adjust_relationship"
+        }
+      ],
+      "text": "Is all safe, M. Morrel; and I think you will be satisfied on that head. But poor Captain Leclere——"
+    }
+  ],
+  "speakerId": "npc_morrel",
+  "tags": [
+    "conversation",
+    "act1"
+  ],
+  "title": "M. Morrel — the owner"
+}

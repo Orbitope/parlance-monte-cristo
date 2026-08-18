@@ -1,0 +1,58 @@
+{
+  "entry": "dlg_jailer_open",
+  "id": "dlg_jailer",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 12,
+            "mode": "active",
+            "onFailure": "dlg_jailer_wall",
+            "onSuccess": "dlg_jailer_pity",
+            "skill": "rhetoric"
+          },
+          "id": "dlg_jailer_priest",
+          "text": "Ask again for the governor. For a priest. For anyone."
+        },
+        {
+          "goto": "dlg_jailer_wall",
+          "id": "dlg_jailer_silent",
+          "text": "Take the soup. Say nothing. Days are all one now."
+        }
+      ],
+      "id": "dlg_jailer_open",
+      "text": "Forgive us our trespasses as we forgive them that trespass against us."
+    },
+    {
+      "id": "dlg_jailer_pity",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "counter": "years",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "I will cast them out of the window, and they will think that I have eaten them."
+    },
+    {
+      "id": "dlg_jailer_wall",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "counter": "years",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "Well, don’t you intend to bring me another plate?"
+    }
+  ],
+  "speakerId": "npc_jailer",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "The jailer — soup and silence"
+}

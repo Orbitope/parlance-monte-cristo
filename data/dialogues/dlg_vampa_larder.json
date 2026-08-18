@@ -1,0 +1,78 @@
+{
+  "entry": "dlg_vampa_larder_open",
+  "id": "dlg_vampa_larder",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "flag": "danglars_spared",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "quest": "qst_mercy",
+              "toStage": "stg_mer_spare",
+              "type": "advance_quest"
+            }
+          ],
+          "goto": "dlg_vampa_larder_mercy",
+          "id": "dlg_vampa_larder_spare",
+          "showIf": {
+            "flag": "danglars_ruined",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Enough. Feed him, take the five millions for the hospitals, let him go grey."
+        },
+        {
+          "check": {
+            "difficulty": 11,
+            "mode": "active",
+            "onFailure": "dlg_vampa_larder_relent",
+            "onSuccess": "dlg_vampa_larder_relent",
+            "skill": "nerve"
+          },
+          "id": "dlg_vampa_larder_starve",
+          "showIf": {
+            "flag": "danglars_ruined",
+            "type": "flag",
+            "value": true
+          },
+          "text": "One more day. Hunger is an honest creditor."
+        }
+      ],
+      "id": "dlg_vampa_larder_open",
+      "text": "I have just made a discovery for twenty-five thousand francs, for which I would have paid a hundred thousand."
+    },
+    {
+      "id": "dlg_vampa_larder_mercy",
+      "isEnd": true,
+      "text": "I forgive you. What I was saying, Villefort, was, that the Bonapartists had not our sincerity, enthusiasm, or devotion."
+    },
+    {
+      "id": "dlg_vampa_larder_relent",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "danglars_spared",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_mercy",
+          "toStage": "stg_mer_spare",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "I will profit by them to tell you something about my guest."
+    }
+  ],
+  "speakerId": "npc_vampa",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Vampa's larder — the price of a chicken"
+}

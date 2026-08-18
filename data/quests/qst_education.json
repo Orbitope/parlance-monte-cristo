@@ -1,0 +1,82 @@
+{
+  "availableWhen": {
+    "outcome": "out_companion",
+    "quest": "qst_tunnel",
+    "type": "questOutcome"
+  },
+  "id": "qst_education",
+  "journalName": "The Second Life",
+  "name": "The Second Life",
+  "outcomes": [
+    {
+      "description": "Monte Cristo rang; Baptistin appeared. The count advanced to meet him.",
+      "effects": [
+        {
+          "amount": 200,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_scholar",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "knows_betrayers",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "edu_1",
+        "type": "flag",
+        "value": true
+      },
+      "description": "The major made a wise choice; he took the full glass and a biscuit.",
+      "id": "stg_edu_tongues",
+      "objectives": [
+        {
+          "id": "obj_stg_edu_tongues",
+          "text": "Languages, first."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "edu_2",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Andrea made a low bow to the count, and entered the adjoining room.",
+      "id": "stg_edu_sciences",
+      "objectives": [
+        {
+          "id": "obj_stg_edu_sciences",
+          "text": "Then everything else."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "knows_betrayers",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Noirtier made such an effort that his lips expanded into a smile.",
+      "id": "stg_edu_deduction",
+      "objectives": [
+        {
+          "id": "obj_stg_edu_deduction",
+          "text": "Then the one deduction that matters."
+        }
+      ],
+      "order": 3
+    }
+  ],
+  "summary": "Everything Faria knows, poured into the years.",
+  "tags": [
+    "main"
+  ]
+}

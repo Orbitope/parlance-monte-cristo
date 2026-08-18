@@ -1,0 +1,32 @@
+{
+  "entry": "dlg_busoni_donning_open",
+  "id": "dlg_busoni_donning",
+  "nodes": [
+    {
+      "id": "dlg_busoni_donning_open",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "identity_busoni",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "item": "item_diamond",
+          "type": "give_item"
+        },
+        {
+          "quest": "qst_diamond",
+          "toStage": "stg_dia_donned",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Such was the state of affairs when, the day after his interview with M."
+    }
+  ],
+  "tags": [
+    "object",
+    "act3"
+  ],
+  "title": "A cassock, a tonsure, an Italian accent"
+}

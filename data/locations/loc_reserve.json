@@ -1,0 +1,48 @@
+{
+  "description": "Then the first pangs of an unending torture seized upon his heart.",
+  "exits": [
+    {
+      "id": "ex_loc_reserve_loc_harbour",
+      "to": {
+        "location": "loc_harbour",
+        "spawn": "sp_loc_harbour"
+      }
+    },
+    {
+      "gate": {
+        "flag": "arrested",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_reserve_loc_palais",
+      "to": {
+        "location": "loc_palais",
+        "spawn": "sp_loc_palais"
+      }
+    }
+  ],
+  "id": "loc_reserve",
+  "interactables": [
+    {
+      "dialogue": "dlg_reserve_feast",
+      "id": "int_loc_reserve_dlg_reserve_feast",
+      "kind": "object",
+      "showIf": {
+        "flag": "betrothed",
+        "type": "flag",
+        "value": true
+      },
+      "trigger": "on_enter"
+    }
+  ],
+  "name": "La Réserve",
+  "spawns": [
+    {
+      "id": "sp_loc_reserve",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_marseilles"
+}

@@ -1,0 +1,82 @@
+{
+  "availableWhen": {
+    "outcome": "out_scholar",
+    "quest": "qst_education",
+    "type": "questOutcome"
+  },
+  "id": "qst_escape",
+  "journalName": "The Only Door",
+  "name": "The Only Door",
+  "outcomes": [
+    {
+      "description": "She then recited all the letters of the alphabet from A down to N.",
+      "effects": [
+        {
+          "amount": 100,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_free",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "aboard_amelie",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "faria_dead",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Monsieur or Madame de Villefort that they were requested to come to M.",
+      "id": "stg_esc_dead",
+      "objectives": [
+        {
+          "id": "obj_stg_esc_dead",
+          "text": "Bury your friend."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "escaped",
+        "type": "flag",
+        "value": true
+      },
+      "description": "But before the notary could answer, Villefort had drawn him aside.",
+      "id": "stg_esc_shroud",
+      "objectives": [
+        {
+          "id": "obj_stg_esc_shroud",
+          "text": "Take his place."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "aboard_amelie",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Valentine named all the letters of the alphabet until she came to W.",
+      "id": "stg_esc_amelie",
+      "objectives": [
+        {
+          "id": "obj_stg_esc_amelie",
+          "text": "Be someone else by the time you are pulled from the sea."
+        }
+      ],
+      "order": 3
+    }
+  ],
+  "summary": "Nobody leaves the Château d'If alive. Precisely.",
+  "tags": [
+    "main"
+  ]
+}

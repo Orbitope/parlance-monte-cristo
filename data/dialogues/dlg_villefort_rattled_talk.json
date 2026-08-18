@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_villefort_rattled_talk_open",
+  "id": "dlg_villefort_rattled_talk",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_villefort_rattled_talk_aside",
+          "id": "dlg_villefort_rattled_talk_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_villefort_rattled_talk_out",
+          "id": "dlg_villefort_rattled_talk_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_villefort_rattled_talk_open",
+      "text": "Germain informs me that breakfast is ready. My dear count, allow me to show you the way."
+    },
+    {
+      "id": "dlg_villefort_rattled_talk_aside",
+      "next": "dlg_villefort_rattled_talk_out",
+      "text": "I was forced to go out of my road to obtain some information near Nîmes, so that I was somewhat late, and therefore I did not choose to stop."
+    },
+    {
+      "id": "dlg_villefort_rattled_talk_out",
+      "isEnd": true,
+      "text": "He bowed. Just at that moment voices were heard hailing the concierge."
+    }
+  ],
+  "speakerId": "npc_villefort",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Villefort — a man checking the locks"
+}

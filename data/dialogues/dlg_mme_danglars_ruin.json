@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_mme_danglars_ruin_open",
+  "id": "dlg_mme_danglars_ruin",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_mme_danglars_ruin_aside",
+          "id": "dlg_mme_danglars_ruin_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_mme_danglars_ruin_out",
+          "id": "dlg_mme_danglars_ruin_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_mme_danglars_ruin_open",
+      "text": "I see they kept their promise."
+    },
+    {
+      "id": "dlg_mme_danglars_ruin_aside",
+      "next": "dlg_mme_danglars_ruin_out",
+      "text": "But I am sure that the count does not regret having once deviated from the principles he has so boldly avowed."
+    },
+    {
+      "id": "dlg_mme_danglars_ruin_out",
+      "isEnd": true,
+      "text": "Europe, and still wealth such as yours has been wholly unknown to me."
+    }
+  ],
+  "speakerId": "npc_mme_danglars",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Madame Danglars — economies, suddenly"
+}

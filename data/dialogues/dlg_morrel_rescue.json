@@ -1,0 +1,44 @@
+{
+  "entry": "dlg_morrel_rescue_open",
+  "id": "dlg_morrel_rescue",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "flag": "morrel_bought",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "item": "item_red_purse",
+              "type": "give_item"
+            }
+          ],
+          "goto": "dlg_morrel_rescue_respite",
+          "id": "dlg_morrel_rescue_buy",
+          "showIf": {
+            "has": true,
+            "item": "item_treasure",
+            "type": "item"
+          },
+          "text": "As agent of Thomson & French, buy every debt the house owes."
+        }
+      ],
+      "id": "dlg_morrel_rescue_open",
+      "text": "I am not in the least surprised, for she has been to me three times, inquiring if there were any news of the _Pharaon_. _Peste!_ Edmond, you have a very handsome mistress!"
+    },
+    {
+      "id": "dlg_morrel_rescue_respite",
+      "isEnd": true,
+      "text": "Morrel again changed color. Julie threw herself into his arms."
+    }
+  ],
+  "speakerId": "npc_morrel",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Morrel — the house that must not fail"
+}

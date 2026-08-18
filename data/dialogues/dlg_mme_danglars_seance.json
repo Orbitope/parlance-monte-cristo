@@ -1,0 +1,51 @@
+{
+  "entry": "dlg_mme_danglars_seance_open",
+  "id": "dlg_mme_danglars_seance",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 10,
+            "mode": "active",
+            "onFailure": "dlg_mme_danglars_seance_composed",
+            "onSuccess": "dlg_mme_danglars_seance_white",
+            "skill": "nerve"
+          },
+          "id": "dlg_mme_danglars_seance_press",
+          "showIf": {
+            "flag": "auteuil_told",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Describe the garden. The tree. The box no larger than a child."
+        }
+      ],
+      "id": "dlg_mme_danglars_seance_open",
+      "text": "You have already answered the question once, but so vaguely that I venture to put it a second time."
+    },
+    {
+      "id": "dlg_mme_danglars_seance_composed",
+      "isEnd": true,
+      "text": "I do not know; when I invited him three months ago, he was then at Rome, but since that time who knows where he may have gone?"
+    },
+    {
+      "id": "dlg_mme_danglars_seance_white",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "mme_d_shaken",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "I have something better to offer my readers than a speech of M."
+    }
+  ],
+  "speakerId": "npc_mme_danglars",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Madame Danglars — the house at Auteuil"
+}

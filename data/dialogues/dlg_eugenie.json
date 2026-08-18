@@ -1,0 +1,42 @@
+{
+  "entry": "dlg_eugenie_open",
+  "id": "dlg_eugenie",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "character": "npc_eugenie",
+              "delta": 1,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_eugenie_noted",
+          "id": "dlg_eugenie_listen",
+          "text": "She wants liberty, not Cavalcanti. Note it, and note the exit it offers."
+        }
+      ],
+      "id": "dlg_eugenie_open",
+      "text": "And you think him capable of being exact?"
+    },
+    {
+      "id": "dlg_eugenie_noted",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "eugenie_noted",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "I think him capable of everything."
+    }
+  ],
+  "speakerId": "npc_eugenie",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Eugénie — the unwilling bride"
+}

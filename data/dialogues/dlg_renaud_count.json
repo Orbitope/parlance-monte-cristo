@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_renaud_count_open",
+  "id": "dlg_renaud_count",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_renaud_count_aside",
+          "id": "dlg_renaud_count_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_renaud_count_out",
+          "id": "dlg_renaud_count_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_renaud_count_open",
+      "text": "I told you I did not wish to be behind my time; I dressed myself in the carriage, and descended at the viscount’s door."
+    },
+    {
+      "id": "dlg_renaud_count_aside",
+      "next": "dlg_renaud_count_out",
+      "text": "Is your steward also a Nubian?"
+    },
+    {
+      "id": "dlg_renaud_count_out",
+      "isEnd": true,
+      "text": "Morrel obeyed to the letter, to the great discomfiture of Barrois."
+    }
+  ],
+  "speakerId": "npc_renaud",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Château-Renaud — who IS this Count?"
+}

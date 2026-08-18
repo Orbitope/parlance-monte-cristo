@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_eugenie_idle_open",
+  "id": "dlg_eugenie_idle",
+  "nodes": [
+    {
+      "id": "dlg_eugenie_idle_open",
+      "isEnd": true,
+      "text": "Or, having delivered you, make you sign a flaming parchment, surrendering your soul to him as Esau did his birth-right?"
+    }
+  ],
+  "speakerId": "npc_eugenie",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Eugénie — scales, practised coldly"
+}

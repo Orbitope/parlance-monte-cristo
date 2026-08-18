@@ -1,0 +1,146 @@
+{
+  "availableWhen": {
+    "outcome": "out_doors",
+    "quest": "qst_rome",
+    "type": "questOutcome"
+  },
+  "id": "qst_procureur",
+  "journalName": "The House of Villefort",
+  "name": "The House of Villefort",
+  "outcomes": [
+    {
+      "description": "This was already half an hour past the time Valentine had fixed.",
+      "effects": [
+        {
+          "amount": 50,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_villefort",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "villefort_done",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "auteuil_told",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Amidst all these alternations of hope and fear, the clock struck ten.",
+      "id": "stg_pro_auteuil",
+      "objectives": [
+        {
+          "id": "obj_stg_pro_auteuil",
+          "text": "Hear Bertuccio's confession."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "dinner_told",
+        "type": "flag",
+        "value": true
+      },
+      "description": "The cold sweat sprang to the young man’s brow, and his teeth chattered.",
+      "id": "stg_pro_dinner",
+      "objectives": [
+        {
+          "id": "obj_stg_pro_dinner",
+          "text": "Serve the garden's history at dinner."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "poison_lesson",
+        "type": "flag",
+        "value": true
+      },
+      "description": "The eyes of the paralytic expressed a multitude of tumultuous thoughts.",
+      "id": "stg_pro_lesson",
+      "objectives": [
+        {
+          "id": "obj_stg_pro_lesson",
+          "text": "Answer Madame's questions about brucine."
+        }
+      ],
+      "order": 3
+    },
+    {
+      "completeWhen": {
+        "flag": "household_dying",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Villefort’s door, and the coffin removed into it from the post-wagon.",
+      "id": "stg_pro_dying",
+      "objectives": [
+        {
+          "id": "obj_stg_pro_dying",
+          "text": "Count the deaths as the house does not."
+        }
+      ],
+      "order": 4
+    },
+    {
+      "completeWhen": {
+        "flag": "valentine_saved",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Villefort, Franz, and a few near relatives alone entered the sanctuary.",
+      "id": "stg_pro_valentine",
+      "objectives": [
+        {
+          "id": "obj_stg_pro_valentine",
+          "text": "Keep Valentine out of the arithmetic."
+        }
+      ],
+      "order": 5
+    },
+    {
+      "completeWhen": {
+        "flag": "villefort_unmasked",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Albert, and Morrel, went one way, and Debray and Beauchamp the other.",
+      "id": "stg_pro_trial",
+      "objectives": [
+        {
+          "id": "obj_stg_pro_trial",
+          "text": "Attend the assizes."
+        }
+      ],
+      "order": 6
+    },
+    {
+      "completeWhen": {
+        "flag": "villefort_done",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Franz bowed and left the room. Scarcely had the door closed, when M.",
+      "id": "stg_pro_done",
+      "objectives": [
+        {
+          "id": "obj_stg_pro_done",
+          "text": "See what is left in the garden."
+        }
+      ],
+      "order": 7
+    }
+  ],
+  "summary": "Justice, applied at last to the man who dispensed it.",
+  "tags": [
+    "main"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "entry": "dlg_salon_rumors_open",
+  "id": "dlg_salon_rumors",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_salon_rumors_round",
+          "id": "dlg_salon_rumors_listen",
+          "text": "Circulate. Collect sentences the way other men collect debts."
+        },
+        {
+          "goto": "dlg_salon_rumors_steered",
+          "id": "dlg_salon_rumors_scandal",
+          "showIf": {
+            "flag": "yanina_seed",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Steer the room toward Yanina, gently."
+        }
+      ],
+      "id": "dlg_salon_rumors_open",
+      "text": "Saint-Méran died as soon. People die very suddenly in your house, M."
+    },
+    {
+      "id": "dlg_salon_rumors_round",
+      "next": "dlg_salon_rumors_done",
+      "text": "Directly I have given my card to the count, who has promised to pay us a visit at Rue Meslay, No. 14."
+    },
+    {
+      "id": "dlg_salon_rumors_steered",
+      "next": "dlg_salon_rumors_done",
+      "text": "I ever heard made concerning myself."
+    },
+    {
+      "id": "dlg_salon_rumors_done",
+      "isEnd": true,
+      "text": "Andrea turned pale, but as it was dark his pallor was not perceptible."
+    }
+  ],
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "The salon — what Paris is saying"
+}

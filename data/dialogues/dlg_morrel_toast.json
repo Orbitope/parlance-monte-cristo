@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_morrel_toast_open",
+  "id": "dlg_morrel_toast",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_morrel_toast_aside",
+          "id": "dlg_morrel_toast_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_morrel_toast_out",
+          "id": "dlg_morrel_toast_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_morrel_toast_open",
+      "text": "Why, I lived almost on the same floor with the poor old man. Ah, yes, about a year after the disappearance of his son the poor old man died."
+    },
+    {
+      "id": "dlg_morrel_toast_aside",
+      "next": "dlg_morrel_toast_out",
+      "text": "Why, the doctors called his complaint gastro-enteritis, I believe; his acquaintances say he died of grief; but I, who saw him in his dying moments, I say he died of——"
+    },
+    {
+      "id": "dlg_morrel_toast_out",
+      "isEnd": true,
+      "text": "Captain Gaumard, recovered from his illness, had returned from Palma."
+    }
+  ],
+  "speakerId": "npc_morrel",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "Morrel — a toast to Sinbad the Sailor"
+}

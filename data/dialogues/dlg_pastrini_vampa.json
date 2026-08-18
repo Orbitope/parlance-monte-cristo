@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_pastrini_vampa_open",
+  "id": "dlg_pastrini_vampa",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_pastrini_vampa_aside",
+          "id": "dlg_pastrini_vampa_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_pastrini_vampa_out",
+          "id": "dlg_pastrini_vampa_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_pastrini_vampa_open",
+      "text": "I do not. Pray relate it to me!"
+    },
+    {
+      "id": "dlg_pastrini_vampa_aside",
+      "next": "dlg_pastrini_vampa_out",
+      "text": "No, truly, it would take up too much time."
+    },
+    {
+      "id": "dlg_pastrini_vampa_out",
+      "isEnd": true,
+      "text": "Morrel passed his hand over his brow; it seemed to him a dream."
+    }
+  ],
+  "speakerId": "npc_pastrini",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "Pastrini — the legend of Luigi Vampa"
+}

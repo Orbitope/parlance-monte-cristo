@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_caderousse_spending_open",
+  "id": "dlg_caderousse_spending",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_caderousse_spending_aside",
+          "id": "dlg_caderousse_spending_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_caderousse_spending_out",
+          "id": "dlg_caderousse_spending_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_caderousse_spending_open",
+      "text": "To be sure. ‘You will go to Marseilles,’ said Dantès,—for you understand, I repeat his words just as he uttered them. Do you understand?"
+    },
+    {
+      "id": "dlg_caderousse_spending_aside",
+      "next": "dlg_caderousse_spending_out",
+      "text": "Because the fifth is dead, as I hear. The fifth sharer in Edmond’s bequest, was his own father."
+    },
+    {
+      "id": "dlg_caderousse_spending_out",
+      "isEnd": true,
+      "text": "Penelon turned to his companions, and exchanged a few words with them."
+    }
+  ],
+  "speakerId": "npc_caderousse",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "Caderousse — how a diamond gets spent"
+}

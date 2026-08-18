@@ -1,0 +1,33 @@
+{
+  "entry": "dlg_cell_arrival_open",
+  "id": "dlg_cell_arrival",
+  "nodes": [
+    {
+      "id": "dlg_cell_arrival_open",
+      "next": "dlg_cell_arrival_stone",
+      "text": "Paris. I undertook it because it was what my captain had bade me do."
+    },
+    {
+      "id": "dlg_cell_arrival_stone",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "in_cell",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_arrest",
+          "toStage": "stg_arr_cell",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "The Château d’If?"
+    }
+  ],
+  "tags": [
+    "object",
+    "act1"
+  ],
+  "title": "The Château d'If — the door closes"
+}

@@ -1,0 +1,49 @@
+{
+  "description": "Old Dantès was dying with anxiety to know what had become of Edmond.",
+  "exits": [
+    {
+      "id": "ex_loc_palais_loc_reserve",
+      "to": {
+        "location": "loc_reserve",
+        "spawn": "sp_loc_reserve"
+      }
+    },
+    {
+      "id": "ex_loc_palais_loc_harbour",
+      "to": {
+        "location": "loc_harbour",
+        "spawn": "sp_loc_harbour"
+      }
+    },
+    {
+      "gate": {
+        "flag": "condemned",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_palais_loc_if_cell",
+      "to": {
+        "location": "loc_if_cell",
+        "spawn": "sp_loc_if_cell"
+      }
+    }
+  ],
+  "id": "loc_palais",
+  "interactables": [
+    {
+      "character": "npc_villefort",
+      "id": "int_loc_palais_npc_villefort",
+      "kind": "npc"
+    }
+  ],
+  "name": "The Palais de Justice",
+  "spawns": [
+    {
+      "id": "sp_loc_palais",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_marseilles"
+}

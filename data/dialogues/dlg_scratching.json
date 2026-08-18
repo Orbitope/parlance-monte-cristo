@@ -1,0 +1,55 @@
+{
+  "entry": "dlg_scratching_open",
+  "id": "dlg_scratching",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 9,
+            "mode": "active",
+            "onFailure": "dlg_scratching_unsure",
+            "onSuccess": "dlg_scratching_sure",
+            "skill": "observation"
+          },
+          "id": "dlg_scratching_listen",
+          "text": "Put your ear to the stone and count the intervals."
+        },
+        {
+          "goto": "dlg_scratching_sure",
+          "id": "dlg_scratching_answer",
+          "text": "Knock three times, and wait."
+        }
+      ],
+      "id": "dlg_scratching_open",
+      "text": "Ugolino devours the skull of Archbishop Roger in the Inferno of Dante."
+    },
+    {
+      "id": "dlg_scratching_sure",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "heard_scratching",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_tunnel",
+          "toStage": "stg_tun_sound",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Who talks of God and despair at the same time?"
+    },
+    {
+      "id": "dlg_scratching_unsure",
+      "isEnd": true,
+      "text": "Since the 28th of February, 1815."
+    }
+  ],
+  "tags": [
+    "object",
+    "act2"
+  ],
+  "title": "The wall — a sound that is not water"
+}

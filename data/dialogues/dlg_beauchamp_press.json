@@ -1,0 +1,56 @@
+{
+  "entry": "dlg_beauchamp_press_open",
+  "id": "dlg_beauchamp_press",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 11,
+            "mode": "active",
+            "onFailure": "dlg_beauchamp_press_waved",
+            "onSuccess": "dlg_beauchamp_press_printed",
+            "skill": "rhetoric"
+          },
+          "id": "dlg_beauchamp_press_seed",
+          "showIf": {
+            "flag": "knows_morcerf_house",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Wonder aloud what a French officer was paid for Ali Pasha's fortress."
+        }
+      ],
+      "id": "dlg_beauchamp_press_open",
+      "text": "Well, write to your correspondent in Yanina, and ask him what part was played by a Frenchman named Fernand Mondego in the catastrophe of Ali Tepelini."
+    },
+    {
+      "id": "dlg_beauchamp_press_printed",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "yanina_seed",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_morcerf",
+          "toStage": "stg_mor_seed",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "You are like Debray, and yet it seems to me that when the minister is out of spirits, the opposition ought to be joyous."
+    },
+    {
+      "id": "dlg_beauchamp_press_waved",
+      "isEnd": true,
+      "text": "I understand; you must lay in a stock of hilarity."
+    }
+  ],
+  "speakerId": "npc_beauchamp",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Beauchamp — a paragraph from Yanina"
+}

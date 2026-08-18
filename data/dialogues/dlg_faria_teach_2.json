@@ -1,0 +1,40 @@
+{
+  "entry": "dlg_faria_teach_2_open",
+  "id": "dlg_faria_teach_2",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "flag": "edu_2",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "quest": "qst_education",
+              "toStage": "stg_edu_sciences",
+              "type": "advance_quest"
+            }
+          ],
+          "goto": "dlg_faria_teach_2_more",
+          "id": "dlg_faria_teach_2_learn",
+          "text": "Mathematics, chemistry, the manners of three courts."
+        }
+      ],
+      "id": "dlg_faria_teach_2_open",
+      "text": "Of having conspired to aid the emperor’s return."
+    },
+    {
+      "id": "dlg_faria_teach_2_more",
+      "isEnd": true,
+      "text": "What! For the emperor’s return?—the emperor is no longer on the throne, then?"
+    }
+  ],
+  "speakerId": "npc_faria",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "Faria — sciences, and how to hold them"
+}

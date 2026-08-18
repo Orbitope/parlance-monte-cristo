@@ -1,0 +1,55 @@
+{
+  "entry": "dlg_morrel_despair_open",
+  "id": "dlg_morrel_despair",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_morrel_despair_month",
+          "id": "dlg_morrel_despair_hope",
+          "showIf": {
+            "flag": "valentine_saved",
+            "type": "flag",
+            "value": true
+          },
+          "text": "One month. Give me one month, and grief will owe you an apology."
+        },
+        {
+          "goto": "dlg_morrel_despair_month",
+          "id": "dlg_morrel_despair_truth",
+          "showIf": {
+            "flag": "valentine_saved",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Tell him now and forfeit the lesson. He has bled enough."
+        }
+      ],
+      "id": "dlg_morrel_despair_open",
+      "text": "Adieu, then, sir, and do not forget the prescription."
+    },
+    {
+      "id": "dlg_morrel_despair_month",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "maximilien_held",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_maximilien",
+          "delta": 1,
+          "type": "adjust_relationship"
+        }
+      ],
+      "text": "And you have seen this cavern, Morcerf?"
+    }
+  ],
+  "speakerId": "npc_maximilien",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Maximilien — the loaded question"
+}

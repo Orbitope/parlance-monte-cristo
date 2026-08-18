@@ -1,0 +1,176 @@
+{
+  "description": "Faria replied to this sarcasm with a glance of profound contempt.",
+  "exits": [
+    {
+      "id": "ex_loc_paris_salon_loc_danglars_bank",
+      "to": {
+        "location": "loc_danglars_bank",
+        "spawn": "sp_loc_danglars_bank"
+      }
+    },
+    {
+      "id": "ex_loc_paris_salon_loc_villefort_house",
+      "to": {
+        "location": "loc_villefort_house",
+        "spawn": "sp_loc_villefort_house"
+      }
+    },
+    {
+      "id": "ex_loc_paris_salon_loc_auteuil",
+      "to": {
+        "location": "loc_auteuil",
+        "spawn": "sp_loc_auteuil"
+      }
+    },
+    {
+      "gate": {
+        "flag": "identity_count",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_paris_salon_loc_rome",
+      "to": {
+        "location": "loc_rome",
+        "spawn": "sp_loc_rome"
+      }
+    },
+    {
+      "gate": {
+        "flag": "villefort_done",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_paris_salon_loc_isle",
+      "to": {
+        "location": "loc_isle",
+        "spawn": "sp_loc_isle"
+      }
+    }
+  ],
+  "id": "loc_paris_salon",
+  "interactables": [
+    {
+      "character": "npc_albert",
+      "id": "int_loc_paris_salon_npc_albert",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_haydee",
+      "id": "int_loc_paris_salon_npc_haydee",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_beauchamp",
+      "id": "int_loc_paris_salon_npc_beauchamp",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_mercedes",
+      "id": "int_loc_paris_salon_npc_mercedes",
+      "kind": "npc",
+      "showIf": {
+        "flag": "duel_pending",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "character": "npc_fernand",
+      "id": "int_loc_paris_salon_npc_fernand",
+      "kind": "npc",
+      "showIf": {
+        "flag": "fernand_unmasked",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_paris_entrance",
+      "id": "int_loc_paris_salon_dlg_paris_entrance",
+      "kind": "object",
+      "showIf": {
+        "flag": "paris_invitation",
+        "type": "flag",
+        "value": true
+      },
+      "trigger": "on_enter"
+    },
+    {
+      "dialogue": "dlg_chamber_trial",
+      "id": "int_loc_paris_salon_dlg_chamber_trial",
+      "kind": "object",
+      "showIf": {
+        "of": [
+          {
+            "flag": "haydee_willing",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "faction": "fac_society",
+            "op": ">=",
+            "type": "reputation",
+            "value": 2
+          }
+        ],
+        "type": "all"
+      }
+    },
+    {
+      "dialogue": "dlg_benedetto_trial",
+      "id": "int_loc_paris_salon_dlg_benedetto_trial",
+      "kind": "object",
+      "showIf": {
+        "of": [
+          {
+            "flag": "danglars_ruined",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "benedetto_seeded",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "all"
+      }
+    },
+    {
+      "dialogue": "dlg_duel_dawn",
+      "id": "int_loc_paris_salon_dlg_duel_dawn",
+      "kind": "object",
+      "showIf": {
+        "flag": "duel_pending",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "character": "npc_debray",
+      "id": "int_loc_paris_salon_npc_debray",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_renaud",
+      "id": "int_loc_paris_salon_npc_renaud",
+      "kind": "npc"
+    },
+    {
+      "dialogue": "dlg_salon_rumors",
+      "id": "int_loc_paris_salon_rumors",
+      "kind": "object"
+    }
+  ],
+  "name": "The Champs-Élysées house",
+  "spawns": [
+    {
+      "id": "sp_loc_paris_salon",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_paris"
+}

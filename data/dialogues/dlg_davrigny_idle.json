@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_davrigny_idle_open",
+  "id": "dlg_davrigny_idle",
+  "nodes": [
+    {
+      "id": "dlg_davrigny_idle_open",
+      "isEnd": true,
+      "text": "Yes; but so little, it can hardly be called eating."
+    }
+  ],
+  "speakerId": "npc_davrigny",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Doctor d'Avrigny — professional silence"
+}

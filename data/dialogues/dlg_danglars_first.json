@@ -1,0 +1,66 @@
+{
+  "entry": "dlg_danglars_first_open",
+  "id": "dlg_danglars_first",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 9,
+            "mode": "active",
+            "onFailure": "dlg_danglars_first_missed",
+            "onSuccess": "dlg_danglars_first_seen",
+            "skill": "observation"
+          },
+          "id": "dlg_danglars_first_watch",
+          "showIf": {
+            "flag": "made_captain",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Say little. Watch what his eyes do when Morrel is mentioned."
+        },
+        {
+          "goto": "dlg_danglars_first_civil_end",
+          "id": "dlg_danglars_first_civil",
+          "text": "Be civil about the accounts and nothing else."
+        }
+      ],
+      "id": "dlg_danglars_first_open",
+      "text": "What happened to the worthy captain?"
+    },
+    {
+      "id": "dlg_danglars_first_seen",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "noticed_danglars",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "counter": "suspicion",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "M. Morrel felt that further resistance or remonstrance was useless."
+    },
+    {
+      "id": "dlg_danglars_first_missed",
+      "isEnd": true,
+      "text": "No, sir, he died of brain-fever in dreadful agony."
+    },
+    {
+      "id": "dlg_danglars_first_civil_end",
+      "isEnd": true,
+      "text": "Bear a hand there, to take in sail!"
+    }
+  ],
+  "speakerId": "npc_danglars",
+  "tags": [
+    "conversation",
+    "act1"
+  ],
+  "title": "Danglars — the supercargo"
+}

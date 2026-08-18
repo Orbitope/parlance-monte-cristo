@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_debray_ministry_open",
+  "id": "dlg_debray_ministry",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_debray_ministry_aside",
+          "id": "dlg_debray_ministry_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_debray_ministry_out",
+          "id": "dlg_debray_ministry_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_debray_ministry_open",
+      "text": "Yes, monsieur, a most excellent sister."
+    },
+    {
+      "id": "dlg_debray_ministry_aside",
+      "next": "dlg_debray_ministry_out",
+      "text": "She married the man she loved, who remained faithful to us in our fallen fortunes—Emmanuel Herbaut."
+    },
+    {
+      "id": "dlg_debray_ministry_out",
+      "isEnd": true,
+      "text": "Valentine, on condition that she should never be separated from him."
+    }
+  ],
+  "speakerId": "npc_debray",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Debray — ministry small talk"
+}

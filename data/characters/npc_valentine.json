@@ -1,0 +1,27 @@
+{
+  "description": "The inheritor every death in the house points toward.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_valentine_hidden",
+      "showIf": {
+        "flag": "valentine_saved",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_valentine_vigil",
+      "showIf": {
+        "flag": "household_dying",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_valentine_first"
+    }
+  ],
+  "id": "npc_valentine",
+  "name": "Valentine de Villefort",
+  "role": "The inheritor every death in the house points toward."
+}

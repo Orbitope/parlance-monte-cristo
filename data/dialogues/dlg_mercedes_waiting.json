@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_mercedes_waiting_open",
+  "id": "dlg_mercedes_waiting",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_mercedes_waiting_aside",
+          "id": "dlg_mercedes_waiting_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_mercedes_waiting_out",
+          "id": "dlg_mercedes_waiting_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_mercedes_waiting_open",
+      "text": "I have forgotten what he called her."
+    },
+    {
+      "id": "dlg_mercedes_waiting_aside",
+      "next": "dlg_mercedes_waiting_out",
+      "text": "The name of Edmond’s betrothed was Mercédès."
+    },
+    {
+      "id": "dlg_mercedes_waiting_out",
+      "isEnd": true,
+      "text": "I’ll take precautions accordingly. We are carrying too much canvas."
+    }
+  ],
+  "speakerId": "npc_mercedes",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "Mercédès — the woman who waits"
+}

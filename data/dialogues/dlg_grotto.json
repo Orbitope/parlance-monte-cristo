@@ -1,0 +1,49 @@
+{
+  "entry": "dlg_grotto_open",
+  "id": "dlg_grotto",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 8,
+            "mode": "active",
+            "onFailure": "dlg_grotto_gold",
+            "onSuccess": "dlg_grotto_gold",
+            "skill": "observation"
+          },
+          "id": "dlg_grotto_dig",
+          "showIf": {
+            "flag": "knows_treasure",
+            "type": "flag",
+            "value": true
+          },
+          "text": "The corner of the second opening, as the paper said."
+        }
+      ],
+      "id": "dlg_grotto_open",
+      "text": "M. Morrel and then ran on to Mercédès. They both came immediately, M."
+    },
+    {
+      "id": "dlg_grotto_gold",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "item": "item_treasure",
+          "type": "give_item"
+        },
+        {
+          "quest": "qst_treasure",
+          "toStage": "stg_tre_found",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "He pretended to know of an immense treasure, and offered vast sums to the government if they would liberate him."
+    }
+  ],
+  "tags": [
+    "object",
+    "act3"
+  ],
+  "title": "The grotto — the second chamber"
+}

@@ -1,0 +1,50 @@
+{
+  "entry": "dlg_benedetto_groom_open",
+  "id": "dlg_benedetto_groom",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_benedetto_groom_ready",
+          "id": "dlg_benedetto_groom_coach",
+          "showIf": {
+            "flag": "credit_opened",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Coach the counterfeit: the walk, the income, the fiancée."
+        }
+      ],
+      "id": "dlg_benedetto_groom_open",
+      "text": "You were very much frightened, then?"
+    },
+    {
+      "id": "dlg_benedetto_groom_ready",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "benedetto_seeded",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "delta": 1,
+          "faction": "fac_underworld",
+          "type": "adjust_reputation"
+        },
+        {
+          "quest": "qst_banker",
+          "toStage": "stg_ban_benedetto",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "No, his horse; of which we each of us ate a slice with a hearty appetite. It was very hard."
+    }
+  ],
+  "speakerId": "npc_benedetto",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Andrea Cavalcanti — a prince assembled from parts"
+}

@@ -1,0 +1,35 @@
+{
+  "description": "The son of the man the red purse saved.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_morrel_despair",
+      "showIf": {
+        "flag": "villefort_unmasked",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_maximilien_love",
+      "showIf": {
+        "flag": "household_dying",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_maximilien_thanks",
+      "showIf": {
+        "flag": "morrel_saved",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_maximilien_idle"
+    }
+  ],
+  "id": "npc_maximilien",
+  "name": "Maximilien Morrel",
+  "role": "The son of the man the red purse saved."
+}

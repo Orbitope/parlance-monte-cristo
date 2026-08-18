@@ -1,0 +1,67 @@
+{
+  "entry": "dlg_heloise_poisons_open",
+  "id": "dlg_heloise_poisons",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_heloise_poisons_lesson",
+          "id": "dlg_heloise_poisons_teach",
+          "showIf": {
+            "flag": "dinner_told",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Answer her questions about brucine. Precisely. Completely."
+        },
+        {
+          "goto": "dlg_heloise_poisons_held_back",
+          "id": "dlg_heloise_poisons_demur",
+          "text": "Change the subject to harmless botany."
+        }
+      ],
+      "id": "dlg_heloise_poisons_open",
+      "text": "Enough of this poison, let me now seek the antidote."
+    },
+    {
+      "id": "dlg_heloise_poisons_lesson",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "poison_lesson",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_procureur",
+          "toStage": "stg_pro_lesson",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "A man whose name is Franz d’Épinay or Albert de Morcerf has not much difficulty in procuring them."
+    },
+    {
+      "id": "dlg_heloise_poisons_held_back",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "poison_lesson",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_procureur",
+          "toStage": "stg_pro_lesson",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "No, he arrived accompanied simply by the guest I am going to present to you."
+    }
+  ],
+  "speakerId": "npc_heloise",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Madame de Villefort — the chemistry lesson"
+}

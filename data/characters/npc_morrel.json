@@ -1,0 +1,27 @@
+{
+  "description": "Owner of the Pharaon. Decency with a ledger it cannot quite balance.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_morrel_toast",
+      "showIf": {
+        "flag": "morrel_saved",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_morrel_rescue",
+      "showIf": {
+        "flag": "identity_wilmore",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_morrel_first"
+    }
+  ],
+  "id": "npc_morrel",
+  "name": "M. Morrel",
+  "role": "Owner of the Pharaon. Decency with a ledger it cannot quite balance."
+}

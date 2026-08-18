@@ -1,0 +1,44 @@
+{
+  "entry": "dlg_albert_invitation_open",
+  "id": "dlg_albert_invitation",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_albert_invitation_fixed",
+          "id": "dlg_albert_invitation_accept",
+          "text": "In three months, at half-past ten in the morning. Precisely."
+        }
+      ],
+      "id": "dlg_albert_invitation_open",
+      "text": "It is much more convenient at Paris,—when anything cannot be done, you pay double, and it is done directly."
+    },
+    {
+      "id": "dlg_albert_invitation_fixed",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "paris_invitation",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_rome",
+          "toStage": "stg_rome_invite",
+          "type": "advance_quest"
+        },
+        {
+          "cutscene": "cs_paris_entrance",
+          "type": "play_cutscene"
+        }
+      ],
+      "text": "Of what, think you, do young and strong men die in prison, when they have scarcely numbered their thirtieth year, unless it be of imprisonment?"
+    }
+  ],
+  "speakerId": "npc_albert",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Albert — a debt, and an address in Paris"
+}

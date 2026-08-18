@@ -1,0 +1,12 @@
+{
+  "body": "A village of Spanish fishing families on the tongue of land past the Fort. They marry inward, remember everything, and bury their own.",
+  "category": "world",
+  "id": "codex_catalans",
+  "name": "The Catalans",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "betrothed",
+    "type": "flag",
+    "value": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "entry": "dlg_albert_challenge_open",
+  "id": "dlg_albert_challenge",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "flag": "duel_pending",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "quest": "qst_morcerf",
+              "toStage": "stg_mor_duel",
+              "type": "advance_quest"
+            }
+          ],
+          "goto": "dlg_albert_challenge_fixed",
+          "id": "dlg_albert_challenge_accept",
+          "text": "Accept. Pistols, eight in the morning, the Bois de Vincennes."
+        }
+      ],
+      "id": "dlg_albert_challenge_open",
+      "text": "Did he reflect before he insulted my father?"
+    },
+    {
+      "id": "dlg_albert_challenge_fixed",
+      "isEnd": true,
+      "text": "M. de Château-Renaud exaggerates."
+    }
+  ],
+  "speakerId": "npc_albert",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Albert — the insult at the Opera"
+}

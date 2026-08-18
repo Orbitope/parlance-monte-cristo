@@ -1,0 +1,82 @@
+{
+  "availableWhen": {
+    "outcome": "out_rich",
+    "quest": "qst_treasure",
+    "type": "questOutcome"
+  },
+  "id": "qst_rome",
+  "journalName": "The Roman Door",
+  "name": "The Roman Door",
+  "outcomes": [
+    {
+      "description": "M. Cavalcanti, he paid no attention to anything that was passing.",
+      "effects": [
+        {
+          "amount": 50,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_doors",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "paris_invitation",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "vampa_pact",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Danglars did not even look at her, though she did her best to faint.",
+      "id": "stg_rome_pact",
+      "objectives": [
+        {
+          "id": "obj_stg_rome_pact",
+          "text": "Come to terms with Vampa."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "albert_saved",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Passage du Pont-Neuf. She descended, and went through the passage.",
+      "id": "stg_rome_albert",
+      "objectives": [
+        {
+          "id": "obj_stg_rome_albert",
+          "text": "Let the Morcerf boy owe you his life."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "paris_invitation",
+        "type": "flag",
+        "value": true
+      },
+      "description": "However, the last two or three years I had allowed myself some respite.",
+      "id": "stg_rome_invite",
+      "objectives": [
+        {
+          "id": "obj_stg_rome_invite",
+          "text": "Accept breakfast, three months hence, precisely."
+        }
+      ],
+      "order": 3
+    }
+  ],
+  "summary": "Paris does not open to money. It opens to a story.",
+  "tags": [
+    "main"
+  ]
+}

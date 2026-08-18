@@ -1,0 +1,51 @@
+{
+  "entry": "dlg_villefort_fence_open",
+  "id": "dlg_villefort_fence",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 13,
+            "mode": "active",
+            "onFailure": "dlg_villefort_fence_smooth",
+            "onSuccess": "dlg_villefort_fence_cracked",
+            "skill": "nerve"
+          },
+          "id": "dlg_villefort_fence_probe",
+          "showIf": {
+            "flag": "dinner_told",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Speak of justice as an instrument. Watch which word makes him still."
+        }
+      ],
+      "id": "dlg_villefort_fence_open",
+      "text": "Yes, but what you do not know is that I was carried off by bandits."
+    },
+    {
+      "id": "dlg_villefort_fence_cracked",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "villefort_rattled",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "Yes there are, and most hideous, or rather most admirable ones, for I found them ugly enough to frighten me."
+    },
+    {
+      "id": "dlg_villefort_fence_smooth",
+      "isEnd": true,
+      "text": "I narrowly escaped catching a fever there."
+    }
+  ],
+  "speakerId": "npc_villefort",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Villefort — two men measuring each other"
+}

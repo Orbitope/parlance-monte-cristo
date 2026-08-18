@@ -1,0 +1,43 @@
+{
+  "description": "Deputy procureur. Ambitious in the way that costs other people.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_villefort_madness",
+      "showIf": {
+        "flag": "villefort_unmasked",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_villefort_rattled_talk",
+      "showIf": {
+        "flag": "villefort_rattled",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_villefort_fence",
+      "showIf": {
+        "flag": "identity_count",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_villefort_interrogation",
+      "showIf": {
+        "flag": "arrested",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_villefort_idle"
+    }
+  ],
+  "id": "npc_villefort",
+  "name": "Villefort",
+  "role": "Deputy procureur. Ambitious in the way that costs other people."
+}

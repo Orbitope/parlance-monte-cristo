@@ -1,0 +1,12 @@
+{
+  "body": "A fortress sold, a pasha betrayed, a daughter sold after him. The buyer's name is now a French title.",
+  "category": "evidence",
+  "id": "codex_yanina",
+  "name": "Yanina",
+  "tags": [],
+  "unlockedBy": {
+    "has": true,
+    "item": "item_yanina_dossier",
+    "type": "item"
+  }
+}

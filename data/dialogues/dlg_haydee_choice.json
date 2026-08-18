@@ -1,0 +1,46 @@
+{
+  "entry": "dlg_haydee_choice_open",
+  "id": "dlg_haydee_choice",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_haydee_choice_stays",
+          "id": "dlg_haydee_choice_stay",
+          "showIf": {
+            "character": "npc_haydee",
+            "op": ">=",
+            "type": "relationship",
+            "value": 2
+          },
+          "text": "Then stay. Not as a ward. As the reason the story continues."
+        },
+        {
+          "goto": "dlg_haydee_choice_stays",
+          "id": "dlg_haydee_choice_free",
+          "text": "Give her the freedom first. Whatever she does with it."
+        }
+      ],
+      "id": "dlg_haydee_choice_open",
+      "text": "She married the man she loved, who remained faithful to us in our fallen fortunes—Emmanuel Herbaut."
+    },
+    {
+      "id": "dlg_haydee_choice_stays",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "haydee_stays",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "Are you mad, or are you laughing at us?"
+    }
+  ],
+  "speakerId": "npc_haydee",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Haydée — free, and choosing"
+}

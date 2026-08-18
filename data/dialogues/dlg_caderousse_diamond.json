@@ -1,0 +1,98 @@
+{
+  "entry": "dlg_caderousse_diamond_open",
+  "id": "dlg_caderousse_diamond",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 10,
+            "mode": "active",
+            "onFailure": "dlg_caderousse_diamond_tale",
+            "onSuccess": "dlg_caderousse_diamond_tale",
+            "skill": "rhetoric"
+          },
+          "id": "dlg_caderousse_diamond_probe",
+          "text": "The abbé asks: what became of the men who knew him?"
+        }
+      ],
+      "id": "dlg_caderousse_diamond_open",
+      "text": "Dantès? Did I know poor dear Edmond? Why, Edmond Dantès and myself were intimate friends!"
+    },
+    {
+      "id": "dlg_caderousse_diamond_tale",
+      "next": "dlg_caderousse_diamond_tale2",
+      "text": "Two men jealous of him, sir; one from love, and the other from ambition,—Fernand and Danglars."
+    },
+    {
+      "id": "dlg_caderousse_diamond_tale2",
+      "next": "dlg_caderousse_diamond_judge",
+      "text": "Do you, then, know in what manner Fernand injured Dantès?"
+    },
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "item": "item_diamond",
+              "type": "take_item"
+            },
+            {
+              "flag": "gave_diamond",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "character": "npc_caderousse",
+              "delta": 1,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_caderousse_diamond_given",
+          "id": "dlg_caderousse_diamond_give",
+          "showIf": {
+            "has": true,
+            "item": "item_diamond",
+            "type": "item"
+          },
+          "text": "Give him the diamond. Let what he is decide what it does to him."
+        },
+        {
+          "goto": "dlg_caderousse_diamond_held",
+          "id": "dlg_caderousse_diamond_hold",
+          "text": "He confessed to cowardice, not malice. But hold the stone."
+        }
+      ],
+      "id": "dlg_caderousse_diamond_judge",
+      "onEnter": [
+        {
+          "flag": "heard_inn_tale",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_diamond",
+          "toStage": "stg_dia_tale",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "M. Emmanuel, and that his business was with M. Morrel in person."
+    },
+    {
+      "id": "dlg_caderousse_diamond_given",
+      "isEnd": true,
+      "text": "I am Gaspard Caderousse, at your service."
+    },
+    {
+      "id": "dlg_caderousse_diamond_held",
+      "isEnd": true,
+      "text": "Yes,—Christian and surname are the same. You formerly lived, I believe in the Allées de Meilhan, on the fourth floor?"
+    }
+  ],
+  "speakerId": "npc_caderousse",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Caderousse — the inn at Pont du Gard"
+}

@@ -1,0 +1,11 @@
+{
+  "arrivesAt": {
+    "location": "loc_paris_salon",
+    "spawn": "sp_loc_paris_salon"
+  },
+  "asset": "Cutscenes/ParisEntrance",
+  "effectsOnComplete": [],
+  "id": "cs_paris_entrance",
+  "name": "Number 30, Champs-Élysées",
+  "skippable": true
+}

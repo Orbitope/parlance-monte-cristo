@@ -1,0 +1,45 @@
+{
+  "entry": "dlg_davrigny_open",
+  "id": "dlg_davrigny",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_davrigny_certain",
+          "id": "dlg_davrigny_show",
+          "showIf": {
+            "has": true,
+            "item": "item_poison_vial",
+            "type": "item"
+          },
+          "text": "Show him the vial. Let science say what the house will not."
+        },
+        {
+          "goto": "dlg_davrigny_certain",
+          "id": "dlg_davrigny_silent",
+          "text": "Let him reach it alone. He is nearly there."
+        }
+      ],
+      "id": "dlg_davrigny_open",
+      "text": "Ah, this gentleman is a Hercules killing Cacus, a Perseus freeing Andromeda."
+    },
+    {
+      "id": "dlg_davrigny_certain",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "doctor_certain",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "No, he is a man about my own size."
+    }
+  ],
+  "speakerId": "npc_davrigny",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Doctor d'Avrigny — a man counting symptoms"
+}

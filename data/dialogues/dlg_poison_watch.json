@@ -1,0 +1,37 @@
+{
+  "entry": "dlg_poison_watch_open",
+  "id": "dlg_poison_watch",
+  "nodes": [
+    {
+      "id": "dlg_poison_watch_open",
+      "next": "dlg_poison_watch_pattern",
+      "text": "Monte Cristo saw him advance towards him without making a single step."
+    },
+    {
+      "id": "dlg_poison_watch_pattern",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "household_dying",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "item": "item_poison_vial",
+          "type": "give_item"
+        },
+        {
+          "quest": "qst_procureur",
+          "toStage": "stg_pro_dying",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Bertuccio knocked, the door opened, and the concierge appeared."
+    }
+  ],
+  "tags": [
+    "object",
+    "act4"
+  ],
+  "title": "The Villefort house — one death, then another"
+}

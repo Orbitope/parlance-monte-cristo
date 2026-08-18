@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_mercedes_widow_open",
+  "id": "dlg_mercedes_widow",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_mercedes_widow_aside",
+          "id": "dlg_mercedes_widow_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_mercedes_widow_out",
+          "id": "dlg_mercedes_widow_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_mercedes_widow_open",
+      "text": "His excellency the Count of Monte Cristo."
+    },
+    {
+      "id": "dlg_mercedes_widow_aside",
+      "next": "dlg_mercedes_widow_out",
+      "text": "You have never seen our Africans, count?"
+    },
+    {
+      "id": "dlg_mercedes_widow_out",
+      "isEnd": true,
+      "text": "Bertuccio bowed respectfully, and turned away, sighing heavily."
+    }
+  ],
+  "speakerId": "npc_mercedes",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Mercédès — after the house of Morcerf"
+}

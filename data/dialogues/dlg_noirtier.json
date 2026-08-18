@@ -1,0 +1,45 @@
+{
+  "entry": "dlg_noirtier_open",
+  "id": "dlg_noirtier",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_noirtier_allied",
+          "id": "dlg_noirtier_ally",
+          "showIf": {
+            "flag": "household_dying",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Yes-blink by yes-blink, build the plan to shield Valentine."
+        }
+      ],
+      "id": "dlg_noirtier_open",
+      "text": "It is very warm, and the heat affects M. Noirtier."
+    },
+    {
+      "id": "dlg_noirtier_allied",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "noirtier_ally",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_valentine",
+          "delta": 1,
+          "type": "adjust_relationship"
+        }
+      ],
+      "text": "He had not even a knitting-needle."
+    }
+  ],
+  "speakerId": "npc_noirtier",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Noirtier — the man who speaks in blinks"
+}

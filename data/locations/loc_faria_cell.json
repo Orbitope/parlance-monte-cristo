@@ -1,0 +1,52 @@
+{
+  "description": "Dauphiné is quite the reverse of that in Provence or Languedoc.",
+  "exits": [
+    {
+      "id": "ex_loc_faria_cell_loc_if_cell",
+      "to": {
+        "location": "loc_if_cell",
+        "spawn": "sp_loc_if_cell"
+      }
+    },
+    {
+      "gate": {
+        "flag": "escaped",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_faria_cell_loc_isle",
+      "to": {
+        "location": "loc_isle",
+        "spawn": "sp_loc_isle"
+      }
+    }
+  ],
+  "id": "loc_faria_cell",
+  "interactables": [
+    {
+      "character": "npc_faria",
+      "id": "int_loc_faria_cell_npc_faria",
+      "kind": "npc"
+    },
+    {
+      "dialogue": "dlg_shroud",
+      "id": "int_loc_faria_cell_dlg_shroud",
+      "kind": "object",
+      "showIf": {
+        "flag": "faria_dead",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "name": "The abbé's cell",
+  "spawns": [
+    {
+      "id": "sp_loc_faria_cell",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_prison"
+}

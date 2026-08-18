@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_maximilien_idle_open",
+  "id": "dlg_maximilien_idle",
+  "nodes": [
+    {
+      "id": "dlg_maximilien_idle_open",
+      "isEnd": true,
+      "text": "Laugh, if you will; the Countess G——, who knew Lord Ruthven, declared that the count was a vampire."
+    }
+  ],
+  "speakerId": "npc_maximilien",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Maximilien — a captain of Spahis, at ease"
+}

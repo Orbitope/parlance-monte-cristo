@@ -1,0 +1,69 @@
+{
+  "entry": "dlg_mercedes_plea_open",
+  "id": "dlg_mercedes_plea",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "flag": "duel_spared",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "character": "npc_mercedes",
+              "delta": 1,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_mercedes_plea_spared",
+          "id": "dlg_mercedes_plea_spare",
+          "showIf": {
+            "character": "npc_mercedes",
+            "op": ">=",
+            "type": "relationship",
+            "value": 2
+          },
+          "text": "For her, then. The son will live. The father is another matter."
+        },
+        {
+          "check": {
+            "difficulty": 12,
+            "mode": "active",
+            "onFailure": "dlg_mercedes_plea_spared",
+            "onSuccess": "dlg_mercedes_plea_refused",
+            "skill": "nerve"
+          },
+          "id": "dlg_mercedes_plea_refuse",
+          "text": "The dead of the Château d'If outvote her. Refuse."
+        }
+      ],
+      "id": "dlg_mercedes_plea_open",
+      "text": "That did more honor to your heart than to your experience, M. Bertuccio. Had you known this Edmond Dantès, of whom they spoke?"
+    },
+    {
+      "id": "dlg_mercedes_plea_spared",
+      "isEnd": true,
+      "text": "The first person who sees her."
+    },
+    {
+      "id": "dlg_mercedes_plea_refused",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "duel_hard",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "We gather from all this, baron, that Captain Morrel saved your life."
+    }
+  ],
+  "speakerId": "npc_mercedes",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Mercédès — she has always known"
+}

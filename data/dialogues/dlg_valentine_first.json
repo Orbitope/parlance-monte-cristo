@@ -1,0 +1,51 @@
+{
+  "entry": "dlg_valentine_first_open",
+  "id": "dlg_valentine_first",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 10,
+            "mode": "active",
+            "onFailure": "dlg_valentine_first_polite",
+            "onSuccess": "dlg_valentine_first_heard",
+            "skill": "observation"
+          },
+          "id": "dlg_valentine_first_hear",
+          "text": "Hear what she does not say about her stepmother's kindness."
+        }
+      ],
+      "id": "dlg_valentine_first_open",
+      "text": "He said two words to the chief and I was free."
+    },
+    {
+      "id": "dlg_valentine_first_heard",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "valentine_trusts",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_valentine",
+          "delta": 1,
+          "type": "adjust_relationship"
+        }
+      ],
+      "text": "And they apologized to him for having carried you off?"
+    },
+    {
+      "id": "dlg_valentine_first_polite",
+      "isEnd": true,
+      "text": "No, his name is the Count of Monte Cristo."
+    }
+  ],
+  "speakerId": "npc_valentine",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Valentine — the quiet inheritor"
+}

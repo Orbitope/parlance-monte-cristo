@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_barrois_deaths_open",
+  "id": "dlg_barrois_deaths",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_barrois_deaths_aside",
+          "id": "dlg_barrois_deaths_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_barrois_deaths_out",
+          "id": "dlg_barrois_deaths_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_barrois_deaths_open",
+      "text": "And when you know, will you tell me?"
+    },
+    {
+      "id": "dlg_barrois_deaths_aside",
+      "next": "dlg_barrois_deaths_out",
+      "text": "I shall not go to the Chamber, but I have something better to offer my readers than a speech of M. Danglars."
+    },
+    {
+      "id": "dlg_barrois_deaths_out",
+      "isEnd": true,
+      "text": "Panting with loss of breath, he returned to the room he had just left."
+    }
+  ],
+  "speakerId": "npc_barrois",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Barrois — a servant counts the funerals"
+}

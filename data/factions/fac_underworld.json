@@ -1,0 +1,10 @@
+{
+  "id": "fac_underworld",
+  "name": "The Coast and the Catacombs",
+  "opposes": [],
+  "reputationRange": {
+    "max": 10,
+    "min": -10
+  },
+  "summary": "Smugglers, bandits, and men who keep their word for their own reasons."
+}

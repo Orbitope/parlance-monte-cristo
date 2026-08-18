@@ -1,0 +1,52 @@
+{
+  "entry": "dlg_mercedes_first_open",
+  "id": "dlg_mercedes_first",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "character": "npc_mercedes",
+              "delta": 2,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_mercedes_first_yes",
+          "id": "dlg_mercedes_first_ask",
+          "text": "Ask her now, with the whole voyage still on you."
+        }
+      ],
+      "id": "dlg_mercedes_first_open",
+      "text": "Well, I believe, my dear Edmond, though I have not seen him lately."
+    },
+    {
+      "id": "dlg_mercedes_first_yes",
+      "next": "dlg_mercedes_first_feast_set",
+      "text": "And why should he not have this?"
+    },
+    {
+      "id": "dlg_mercedes_first_feast_set",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "betrothed",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_betrothal",
+          "toStage": "stg_bet_feast",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Caderousse, who had never taken his eyes off Fernand, to Danglars."
+    }
+  ],
+  "speakerId": "npc_mercedes",
+  "tags": [
+    "conversation",
+    "act1"
+  ],
+  "title": "Mercédès — the Catalans"
+}

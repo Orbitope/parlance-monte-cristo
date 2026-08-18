@@ -1,0 +1,44 @@
+{
+  "description": "Mercédès; and all this because he had trusted to Villefort’s promise.",
+  "exits": [
+    {
+      "id": "ex_loc_morrel_office_loc_harbour",
+      "to": {
+        "location": "loc_harbour",
+        "spawn": "sp_loc_harbour"
+      }
+    }
+  ],
+  "id": "loc_morrel_office",
+  "interactables": [
+    {
+      "character": "npc_morrel",
+      "id": "int_loc_morrel_office_npc_morrel",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_danglars",
+      "id": "int_loc_morrel_office_npc_danglars",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_julie",
+      "id": "int_loc_morrel_office_npc_julie",
+      "kind": "npc",
+      "showIf": {
+        "flag": "morrel_bought",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "name": "Morrel & Son",
+  "spawns": [
+    {
+      "id": "sp_loc_morrel_office",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_marseilles"
+}

@@ -1,0 +1,12 @@
+{
+  "body": "Justice as an instrument. Say the word 'Auteuil' and watch which muscle moves first.",
+  "category": "evidence",
+  "id": "codex_procureur",
+  "name": "The Procureur's Face",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "villefort_rattled",
+    "type": "flag",
+    "value": true
+  }
+}

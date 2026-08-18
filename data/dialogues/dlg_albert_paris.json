@@ -1,0 +1,46 @@
+{
+  "entry": "dlg_albert_paris_open",
+  "id": "dlg_albert_paris",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 9,
+            "mode": "active",
+            "onFailure": "dlg_albert_paris_learned",
+            "onSuccess": "dlg_albert_paris_learned",
+            "skill": "discretion"
+          },
+          "id": "dlg_albert_paris_family",
+          "text": "Let him talk of his father the Count de Morcerf. Just listen."
+        }
+      ],
+      "id": "dlg_albert_paris_open",
+      "text": "A gentleman, and a diplomatist."
+    },
+    {
+      "id": "dlg_albert_paris_learned",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "knows_morcerf_house",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_albert",
+          "delta": 1,
+          "type": "adjust_relationship"
+        }
+      ],
+      "text": "Be it so; I will stay; I must do something to distract my thoughts."
+    }
+  ],
+  "speakerId": "npc_albert",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Albert — host and unwitting key"
+}

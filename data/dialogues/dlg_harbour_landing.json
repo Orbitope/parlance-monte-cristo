@@ -1,0 +1,33 @@
+{
+  "entry": "dlg_harbour_landing_open",
+  "id": "dlg_harbour_landing",
+  "nodes": [
+    {
+      "id": "dlg_harbour_landing_open",
+      "next": "dlg_harbour_landing_crowd",
+      "onEnter": [
+        {
+          "quest": "qst_pharaon",
+          "toStage": "stg_pha_dock",
+          "type": "advance_quest"
+        },
+        {
+          "flag": "came_ashore",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "His words were re-echoed by the whole party, with vociferous cheers."
+    },
+    {
+      "id": "dlg_harbour_landing_crowd",
+      "isEnd": true,
+      "text": "Talking of Captain Leclere, has not Dantès given you a letter from him?"
+    }
+  ],
+  "tags": [
+    "object",
+    "act1"
+  ],
+  "title": "Marseilles — the quay"
+}

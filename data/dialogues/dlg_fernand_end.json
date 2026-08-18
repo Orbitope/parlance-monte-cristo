@@ -1,0 +1,55 @@
+{
+  "entry": "dlg_fernand_end_open",
+  "id": "dlg_fernand_end",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_fernand_end_named",
+          "id": "dlg_fernand_end_reveal",
+          "showIf": {
+            "of": [
+              {
+                "flag": "knows_betrayers",
+                "type": "flag",
+                "value": true
+              },
+              {
+                "flag": "duel_done",
+                "type": "flag",
+                "value": true
+              }
+            ],
+            "type": "all"
+          },
+          "text": "Take off twenty-three years as if they were a coat. Name yourself."
+        }
+      ],
+      "id": "dlg_fernand_end_open",
+      "text": "And you will protect us, who are your children, against the will of my father?"
+    },
+    {
+      "id": "dlg_fernand_end_named",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "fernand_ruined",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_morcerf",
+          "toStage": "stg_mor_ruin",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "That did more honor to your heart than to your experience, M. Bertuccio. Had you known this Edmond Dantès, of whom they spoke?"
+    }
+  ],
+  "speakerId": "npc_fernand",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Morcerf — the last visit"
+}

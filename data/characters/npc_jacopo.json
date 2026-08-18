@@ -1,0 +1,27 @@
+{
+  "description": "A smuggler who pulled a stranger from the sea and never regretted it.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_jacopo_captain",
+      "showIf": {
+        "flag": "jacopo_loyal",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_jacopo_farewell",
+      "showIf": {
+        "has": true,
+        "item": "item_treasure",
+        "type": "item"
+      }
+    },
+    {
+      "dialogue": "dlg_jacopo_rescue"
+    }
+  ],
+  "id": "npc_jacopo",
+  "name": "Jacopo",
+  "role": "A smuggler who pulled a stranger from the sea and never regretted it."
+}

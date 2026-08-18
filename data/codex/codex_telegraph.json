@@ -1,0 +1,12 @@
+{
+  "body": "Signals relayed tower to tower by men who cannot read them. Twenty-five thousand francs buys one wrong arm.",
+  "category": "evidence",
+  "id": "codex_telegraph",
+  "name": "The Semaphore Telegraph",
+  "tags": [],
+  "unlockedBy": {
+    "has": true,
+    "item": "item_telegraph_note",
+    "type": "item"
+  }
+}

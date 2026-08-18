@@ -1,0 +1,58 @@
+{
+  "entry": "dlg_franz_doubt_open",
+  "id": "dlg_franz_doubt",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 12,
+            "mode": "active",
+            "onFailure": "dlg_franz_doubt_wary",
+            "onSuccess": "dlg_franz_doubt_eased",
+            "skill": "discretion"
+          },
+          "id": "dlg_franz_doubt_deflect",
+          "text": "A resemblance. The world is full of hospitable islanders."
+        },
+        {
+          "goto": "dlg_franz_doubt_eased",
+          "id": "dlg_franz_doubt_charm",
+          "text": "Invite him to breakfast too. Doubt starves at a full table."
+        }
+      ],
+      "id": "dlg_franz_doubt_open",
+      "text": "Dantès? Did I know poor dear Edmond? Why, Edmond Dantès and myself were intimate friends!"
+    },
+    {
+      "id": "dlg_franz_doubt_eased",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "franz_settled",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "He died a more wretched, hopeless, heart-broken prisoner than the felons who pay the penalty of their crimes at the galleys of Toulon."
+    },
+    {
+      "id": "dlg_franz_doubt_wary",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "counter": "suspicion",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "I was called to see him on his dying bed, that I might administer to him the consolations of religion."
+    }
+  ],
+  "speakerId": "npc_franz",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Franz — the man who remembers Sinbad"
+}

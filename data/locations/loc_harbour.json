@@ -1,0 +1,106 @@
+{
+  "description": "The soldiers looked at Dantès with an air of stupid curiosity.",
+  "exits": [
+    {
+      "id": "ex_loc_harbour_loc_pharaon",
+      "to": {
+        "location": "loc_pharaon",
+        "spawn": "sp_loc_pharaon"
+      }
+    },
+    {
+      "id": "ex_loc_harbour_loc_catalans",
+      "to": {
+        "location": "loc_catalans",
+        "spawn": "sp_loc_catalans"
+      }
+    },
+    {
+      "id": "ex_loc_harbour_loc_morrel_office",
+      "to": {
+        "location": "loc_morrel_office",
+        "spawn": "sp_loc_morrel_office"
+      }
+    },
+    {
+      "denialDialogue": "dlg_harbour_landing",
+      "gate": {
+        "flag": "betrothed",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_harbour_loc_reserve",
+      "to": {
+        "location": "loc_reserve",
+        "spawn": "sp_loc_reserve"
+      }
+    },
+    {
+      "gate": {
+        "flag": "arrested",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_harbour_loc_palais",
+      "to": {
+        "location": "loc_palais",
+        "spawn": "sp_loc_palais"
+      }
+    },
+    {
+      "gate": {
+        "flag": "identity_wilmore",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_harbour_loc_isle",
+      "to": {
+        "location": "loc_isle",
+        "spawn": "sp_loc_isle"
+      }
+    }
+  ],
+  "id": "loc_harbour",
+  "interactables": [
+    {
+      "character": "npc_penelon",
+      "id": "int_loc_harbour_npc_penelon",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_louis_dantes",
+      "id": "int_loc_harbour_npc_louis_dantes",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_caderousse",
+      "id": "int_loc_harbour_npc_caderousse",
+      "kind": "npc"
+    },
+    {
+      "dialogue": "dlg_harbour_landing",
+      "id": "int_loc_harbour_dlg_harbour_landing",
+      "kind": "object",
+      "trigger": "on_enter"
+    },
+    {
+      "dialogue": "dlg_quay_rumors",
+      "id": "int_loc_harbour_rumors",
+      "kind": "object"
+    }
+  ],
+  "name": "The Marseilles Quay",
+  "spawns": [
+    {
+      "id": "sp_loc_harbour",
+      "isDefault": true
+    }
+  ],
+  "tags": [
+    "start"
+  ],
+  "zone": "zone_marseilles"
+}

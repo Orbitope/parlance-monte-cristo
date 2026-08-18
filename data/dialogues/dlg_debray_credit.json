@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_debray_credit_open",
+  "id": "dlg_debray_credit",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_debray_credit_aside",
+          "id": "dlg_debray_credit_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_debray_credit_out",
+          "id": "dlg_debray_credit_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_debray_credit_open",
+      "text": "Take care, you are going to immure a traveller, Sinbad the Sailor, a man who comes to see Paris; you are going to make a patriarch of him."
+    },
+    {
+      "id": "dlg_debray_credit_aside",
+      "next": "dlg_debray_credit_out",
+      "text": "Was I so badly lodged at Rome?"
+    },
+    {
+      "id": "dlg_debray_credit_out",
+      "isEnd": true,
+      "text": "And Morcerf with a forced smile arose, and, making a low bow to M."
+    }
+  ],
+  "speakerId": "npc_debray",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Debray — six millions, they say"
+}

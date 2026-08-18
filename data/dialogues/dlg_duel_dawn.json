@@ -1,0 +1,49 @@
+{
+  "entry": "dlg_duel_dawn_open",
+  "id": "dlg_duel_dawn",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_duel_dawn_grace",
+          "id": "dlg_duel_dawn_apology",
+          "showIf": {
+            "flag": "duel_spared",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Albert apologises before witnesses. Take it with grace."
+        },
+        {
+          "goto": "dlg_duel_dawn_grace",
+          "id": "dlg_duel_dawn_fire",
+          "showIf": {
+            "flag": "duel_hard",
+            "type": "flag",
+            "value": true
+          },
+          "text": "No apology came. Take your ground."
+        }
+      ],
+      "id": "dlg_duel_dawn_open",
+      "text": "Boulevard;’ ‘four persons have been assassinated in the Rue St."
+    },
+    {
+      "id": "dlg_duel_dawn_grace",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "duel_done",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "Château-Renaud can tell us while we eat our breakfast."
+    }
+  ],
+  "tags": [
+    "object",
+    "act4"
+  ],
+  "title": "The Bois — eight in the morning"
+}

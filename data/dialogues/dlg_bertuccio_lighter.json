@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_bertuccio_lighter_open",
+  "id": "dlg_bertuccio_lighter",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_bertuccio_lighter_aside",
+          "id": "dlg_bertuccio_lighter_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_bertuccio_lighter_out",
+          "id": "dlg_bertuccio_lighter_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_bertuccio_lighter_open",
+      "text": "And it was Peppino you saved, was it not?"
+    },
+    {
+      "id": "dlg_bertuccio_lighter_aside",
+      "next": "dlg_bertuccio_lighter_out",
+      "text": "Well, you promise me, if I tell all I know, to relate, in your turn, all that I do not know?"
+    },
+    {
+      "id": "dlg_bertuccio_lighter_out",
+      "isEnd": true,
+      "text": "The banker thought the time had come for him to take the upper hand."
+    }
+  ],
+  "speakerId": "npc_bertuccio",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Bertuccio — a confession, once out"
+}

@@ -1,0 +1,12 @@
+{
+  "body": "Three-master out of Marseilles. Came home with her captain dead and her future first mate aboard.",
+  "category": "world",
+  "id": "codex_pharaon",
+  "name": "The Pharaon",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "made_captain",
+    "type": "flag",
+    "value": true
+  }
+}

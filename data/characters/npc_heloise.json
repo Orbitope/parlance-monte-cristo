@@ -1,0 +1,29 @@
+{
+  "description": "A stepmother with an interest in chemistry.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_heloise_poisons",
+      "showIf": {
+        "of": [
+          {
+            "flag": "dinner_told",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "poison_lesson",
+            "type": "flag",
+            "value": false
+          }
+        ],
+        "type": "all"
+      }
+    },
+    {
+      "dialogue": "dlg_heloise_idle"
+    }
+  ],
+  "id": "npc_heloise",
+  "name": "Madame de Villefort",
+  "role": "A stepmother with an interest in chemistry."
+}

@@ -1,0 +1,29 @@
+{
+  "description": "Dantès pressed the gendarme’s hand as though he would crush it.",
+  "exits": [
+    {
+      "id": "ex_loc_pharaon_loc_harbour",
+      "to": {
+        "location": "loc_harbour",
+        "spawn": "sp_loc_harbour"
+      }
+    }
+  ],
+  "id": "loc_pharaon",
+  "interactables": [
+    {
+      "dialogue": "dlg_pharaon_deck",
+      "id": "int_loc_pharaon_dlg_pharaon_deck",
+      "kind": "object"
+    }
+  ],
+  "name": "The Pharaon — deck",
+  "spawns": [
+    {
+      "id": "sp_loc_pharaon",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_marseilles"
+}

@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_renaud_scandal_open",
+  "id": "dlg_renaud_scandal",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_renaud_scandal_aside",
+          "id": "dlg_renaud_scandal_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_renaud_scandal_out",
+          "id": "dlg_renaud_scandal_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_renaud_scandal_open",
+      "text": "No, he is a countryman of yours, if a Corsican is a countryman of anyone’s. But you know him, M. de Morcerf."
+    },
+    {
+      "id": "dlg_renaud_scandal_aside",
+      "next": "dlg_renaud_scandal_out",
+      "text": "Is it that excellent M. Bertuccio, who understands hiring windows so well?"
+    },
+    {
+      "id": "dlg_renaud_scandal_out",
+      "isEnd": true,
+      "text": "I shall wait till I am of age, which will be in about ten months."
+    }
+  ],
+  "speakerId": "npc_renaud",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Château-Renaud — the Morcerf scandal"
+}

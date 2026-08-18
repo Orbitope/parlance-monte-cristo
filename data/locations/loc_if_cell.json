@@ -1,0 +1,62 @@
+{
+  "description": "The king was seated in the same place where the duke had left him.",
+  "exits": [
+    {
+      "gate": {
+        "flag": "met_faria",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_if_cell_loc_faria_cell",
+      "to": {
+        "location": "loc_faria_cell",
+        "spawn": "sp_loc_faria_cell"
+      }
+    }
+  ],
+  "id": "loc_if_cell",
+  "interactables": [
+    {
+      "character": "npc_jailer",
+      "id": "int_loc_if_cell_npc_jailer",
+      "kind": "npc"
+    },
+    {
+      "dialogue": "dlg_cell_arrival",
+      "id": "int_loc_if_cell_dlg_cell_arrival",
+      "kind": "object",
+      "trigger": "on_enter"
+    },
+    {
+      "dialogue": "dlg_scratching",
+      "id": "int_loc_if_cell_dlg_scratching",
+      "kind": "object",
+      "showIf": {
+        "counter": "years",
+        "op": ">=",
+        "type": "counter",
+        "value": 1
+      }
+    },
+    {
+      "dialogue": "dlg_faria_meet",
+      "id": "int_loc_if_cell_dlg_faria_meet",
+      "kind": "object",
+      "showIf": {
+        "flag": "heard_scratching",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "name": "The Château d'If — cell 34",
+  "spawns": [
+    {
+      "id": "sp_loc_if_cell",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_prison"
+}

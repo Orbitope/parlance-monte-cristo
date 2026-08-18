@@ -1,0 +1,39 @@
+{
+  "entry": "dlg_faria_death_open",
+  "id": "dlg_faria_death",
+  "nodes": [
+    {
+      "id": "dlg_faria_death_open",
+      "next": "dlg_faria_death_gone",
+      "text": "Who talks of God and despair at the same time?"
+    },
+    {
+      "id": "dlg_faria_death_gone",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "faria_dead",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_faria",
+          "delta": 1,
+          "type": "adjust_relationship"
+        },
+        {
+          "quest": "qst_escape",
+          "toStage": "stg_esc_dead",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Dantès strove to do this with his nails, but they were too weak."
+    }
+  ],
+  "speakerId": "npc_faria",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "Faria — the third attack"
+}

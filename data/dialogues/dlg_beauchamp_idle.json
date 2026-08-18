@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_beauchamp_idle_open",
+  "id": "dlg_beauchamp_idle",
+  "nodes": [
+    {
+      "id": "dlg_beauchamp_idle_open",
+      "isEnd": true,
+      "text": "No, lest on the first demonstration I make in favor of Mehemet Ali, the Sultan send me the bowstring, and make my secretaries strangle me."
+    }
+  ],
+  "speakerId": "npc_beauchamp",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Beauchamp — nothing printable today"
+}

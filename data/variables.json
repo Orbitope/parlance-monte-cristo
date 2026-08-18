@@ -1,0 +1,418 @@
+{
+  "variables": [
+    {
+      "default": false,
+      "description": "First written at 'taken'.",
+      "id": "aboard_amelie",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'freed'.",
+      "id": "albert_saved",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'seized'.",
+      "id": "arrested",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'told'.",
+      "id": "auteuil_told",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'ready'.",
+      "id": "benedetto_seeded",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'feast_set'.",
+      "id": "betrothed",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'open'.",
+      "id": "came_ashore",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'burn'.",
+      "id": "condemned",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dazzled'.",
+      "id": "credit_opened",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'broken'.",
+      "id": "danglars_ruined",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'spare'.",
+      "id": "danglars_spared",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'landed'.",
+      "id": "dinner_told",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'certain'.",
+      "id": "doctor_certain",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'grace'.",
+      "id": "duel_done",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'refused'.",
+      "id": "duel_hard",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'accept'.",
+      "id": "duel_pending",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'spare'.",
+      "id": "duel_spared",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'learn'.",
+      "id": "edu_1",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'learn'.",
+      "id": "edu_2",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'sea'.",
+      "id": "escaped",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'noted'.",
+      "id": "eugenie_noted",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'gone'.",
+      "id": "faria_dead",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'named'.",
+      "id": "fernand_ruined",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'verdict'.",
+      "id": "fernand_unmasked",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'eased'.",
+      "id": "franz_settled",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'give'.",
+      "id": "gave_diamond",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'debt'.",
+      "id": "greeted_father",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'stays'.",
+      "id": "haydee_stays",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'willing'.",
+      "id": "haydee_willing",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'judge'.",
+      "id": "heard_inn_tale",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'sure'.",
+      "id": "heard_scratching",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'pattern'.",
+      "id": "household_dying",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'open'.",
+      "id": "identity_busoni",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'open'.",
+      "id": "identity_count",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'open'.",
+      "id": "identity_wilmore",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'stone'.",
+      "id": "in_cell",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'loyal'.",
+      "id": "jacopo_loyal",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'named'.",
+      "id": "knows_betrayers",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'debt'.",
+      "id": "knows_father_debt",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'learned'.",
+      "id": "knows_morcerf_house",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'believe'.",
+      "id": "knows_treasure",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'burn'.",
+      "id": "letter_burned",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'offer'.",
+      "id": "made_captain",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'month'.",
+      "id": "maximilien_held",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'abbe'.",
+      "id": "met_faria",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'report'.",
+      "id": "met_morrel",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'white'.",
+      "id": "mme_d_shaken",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'buy'.",
+      "id": "morrel_bought",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'saved'.",
+      "id": "morrel_saved",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'allied'.",
+      "id": "noirtier_ally",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'seen'.",
+      "id": "noticed_danglars",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'hate'.",
+      "id": "noticed_fernand",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'open'.",
+      "id": "on_isle",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'fixed'.",
+      "id": "paris_invitation",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'lesson'.",
+      "id": "poison_lesson",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'letter'.",
+      "id": "story_closed",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'planted'.",
+      "id": "telegraph_planted",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'take'.",
+      "id": "took_letter",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'saved'.",
+      "id": "valentine_saved",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'heard'.",
+      "id": "valentine_trusts",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'pact'.",
+      "id": "vampa_pact",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'ash'.",
+      "id": "villefort_done",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'cracked'.",
+      "id": "villefort_rattled",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'open'.",
+      "id": "villefort_unmasked",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'vowed'.",
+      "id": "vowed_valentine",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'loose'.",
+      "id": "warned_by_caderousse",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'printed'.",
+      "id": "yanina_seed",
+      "kind": "flag"
+    },
+    {
+      "default": 0,
+      "description": "Years gone in the Château d'If.",
+      "id": "years",
+      "kind": "counter"
+    },
+    {
+      "default": 0,
+      "description": "How much the world has noticed you looking.",
+      "id": "suspicion",
+      "kind": "counter"
+    }
+  ]
+}

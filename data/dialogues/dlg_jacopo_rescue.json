@@ -1,0 +1,56 @@
+{
+  "entry": "dlg_jacopo_rescue_open",
+  "id": "dlg_jacopo_rescue",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 10,
+            "mode": "active",
+            "onFailure": "dlg_jacopo_rescue_taken",
+            "onSuccess": "dlg_jacopo_rescue_taken",
+            "skill": "discretion"
+          },
+          "id": "dlg_jacopo_rescue_story",
+          "text": "A shipwrecked sailor of the Rhône. Stick to it, shaved beard and all."
+        }
+      ],
+      "id": "dlg_jacopo_rescue_open",
+      "text": "Well, it is not that the man is more ugly, more foolish, or more disagreeable than any other; no, M. Andrea Cavalcanti may appear to those who look at men’s faces and figures as a very good specimen of his kind. It is not, either, that my heart is less touched by him than any other; that would be a "
+    },
+    {
+      "id": "dlg_jacopo_rescue_taken",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "aboard_amelie",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "delta": 2,
+          "faction": "fac_underworld",
+          "type": "adjust_reputation"
+        },
+        {
+          "quest": "qst_escape",
+          "toStage": "stg_esc_amelie",
+          "type": "advance_quest"
+        },
+        {
+          "character": "npc_jacopo",
+          "delta": 1,
+          "type": "adjust_relationship"
+        }
+      ],
+      "text": "He abdicated at Fontainebleau in 1814, and was sent to the Island of Elba. But how long have you been here that you are ignorant of all this?"
+    }
+  ],
+  "speakerId": "npc_jacopo",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "The Jeune-Amélie — pulled from the water"
+}

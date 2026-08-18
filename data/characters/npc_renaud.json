@@ -1,0 +1,27 @@
+{
+  "description": "Baron, clubman, reliable barometer of what Paris will say tomorrow.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_renaud_scandal",
+      "showIf": {
+        "flag": "fernand_unmasked",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_renaud_count",
+      "showIf": {
+        "flag": "identity_count",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_renaud_club"
+    }
+  ],
+  "id": "npc_renaud",
+  "name": "Château-Renaud",
+  "role": "Baron, clubman, reliable barometer of what Paris will say tomorrow."
+}

@@ -1,0 +1,67 @@
+{
+  "entry": "dlg_vampa_pact_open",
+  "id": "dlg_vampa_pact",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_vampa_pact_pact",
+          "id": "dlg_vampa_pact_terms",
+          "showIf": {
+            "faction": "fac_underworld",
+            "op": ">=",
+            "type": "reputation",
+            "value": 2
+          },
+          "text": "Your men spare my friends; my gold spares your men. Terms?"
+        },
+        {
+          "check": {
+            "difficulty": 11,
+            "mode": "active",
+            "onFailure": "dlg_vampa_pact_later",
+            "onSuccess": "dlg_vampa_pact_pact",
+            "skill": "nerve"
+          },
+          "id": "dlg_vampa_pact_watch",
+          "text": "Say nothing. Bandits respect a man who can wait."
+        }
+      ],
+      "id": "dlg_vampa_pact_open",
+      "text": "And you followed the business of a tailor?"
+    },
+    {
+      "id": "dlg_vampa_pact_pact",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "vampa_pact",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "delta": 1,
+          "faction": "fac_underworld",
+          "type": "adjust_reputation"
+        },
+        {
+          "quest": "qst_rome",
+          "toStage": "stg_rome_pact",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Yes; let me have a bottle of your best wine, and then, with your permission, we will resume our conversation from where we left off."
+    },
+    {
+      "id": "dlg_vampa_pact_later",
+      "isEnd": true,
+      "text": "In the first place, I must be satisfied that you are the person I am in search of."
+    }
+  ],
+  "speakerId": "npc_vampa",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Luigi Vampa — an understanding"
+}

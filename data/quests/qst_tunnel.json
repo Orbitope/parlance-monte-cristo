@@ -1,0 +1,66 @@
+{
+  "availableWhen": {
+    "outcome": "out_buried",
+    "quest": "qst_arrest",
+    "type": "questOutcome"
+  },
+  "id": "qst_tunnel",
+  "journalName": "The Sound in the Wall",
+  "name": "The Sound in the Wall",
+  "outcomes": [
+    {
+      "description": "Danglars served together in Spain, my father in the army and M.",
+      "effects": [
+        {
+          "amount": 50,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_companion",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "met_faria",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "heard_scratching",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Monte Cristo turned away; he seemed moved by this last remark.",
+      "id": "stg_tun_sound",
+      "objectives": [
+        {
+          "id": "obj_stg_tun_sound",
+          "text": "Make sense of the scratching."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "met_faria",
+        "type": "flag",
+        "value": true
+      },
+      "description": "I am going. Indeed, count, you are the most polished man in the world.",
+      "id": "stg_tun_meet",
+      "objectives": [
+        {
+          "id": "obj_stg_tun_meet",
+          "text": "Answer it."
+        }
+      ],
+      "order": 2
+    }
+  ],
+  "summary": "Fourteen inches of stone, and something on the other side.",
+  "tags": [
+    "main"
+  ]
+}

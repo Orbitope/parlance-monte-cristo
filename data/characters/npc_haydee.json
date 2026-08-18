@@ -1,0 +1,27 @@
+{
+  "description": "Daughter of Ali Pasha. Sold once; never again.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_haydee_choice",
+      "showIf": {
+        "flag": "fernand_ruined",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_haydee_verdict",
+      "showIf": {
+        "flag": "fernand_unmasked",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_haydee_story"
+    }
+  ],
+  "id": "npc_haydee",
+  "name": "Haydée",
+  "role": "Daughter of Ali Pasha. Sold once; never again."
+}

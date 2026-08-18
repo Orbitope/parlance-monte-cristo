@@ -1,0 +1,23 @@
+{
+  "entry": "dlg_wilmore_donning_open",
+  "id": "dlg_wilmore_donning",
+  "nodes": [
+    {
+      "id": "dlg_wilmore_donning_open",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "identity_wilmore",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "Thomson & French alone, returned and signed to him that he could enter."
+    }
+  ],
+  "tags": [
+    "object",
+    "act3"
+  ],
+  "title": "An Englishman's coat, a drawl, a bank's name"
+}

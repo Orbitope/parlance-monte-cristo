@@ -1,0 +1,46 @@
+{
+  "description": "Marseillaise accent, and a grin that displayed his ivory-white teeth.",
+  "exits": [
+    {
+      "id": "ex_loc_auteuil_loc_paris_salon",
+      "to": {
+        "location": "loc_paris_salon",
+        "spawn": "sp_loc_paris_salon"
+      }
+    },
+    {
+      "id": "ex_loc_auteuil_loc_villefort_house",
+      "to": {
+        "location": "loc_villefort_house",
+        "spawn": "sp_loc_villefort_house"
+      }
+    }
+  ],
+  "id": "loc_auteuil",
+  "interactables": [
+    {
+      "character": "npc_bertuccio",
+      "id": "int_loc_auteuil_npc_bertuccio",
+      "kind": "npc"
+    },
+    {
+      "dialogue": "dlg_auteuil_dinner",
+      "id": "int_loc_auteuil_dlg_auteuil_dinner",
+      "kind": "object",
+      "showIf": {
+        "flag": "auteuil_told",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "name": "The house at Auteuil",
+  "spawns": [
+    {
+      "id": "sp_loc_auteuil",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_paris"
+}

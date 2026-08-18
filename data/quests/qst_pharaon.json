@@ -1,0 +1,78 @@
+{
+  "id": "qst_pharaon",
+  "journalName": "The Homecoming",
+  "name": "The Homecoming",
+  "outcomes": [
+    {
+      "description": "With these reflections he entered his carriage and returned home.",
+      "effects": [
+        {
+          "amount": 50,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_captain",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "made_captain",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "came_ashore",
+        "type": "flag",
+        "value": true
+      },
+      "description": "M. de Villefort was not only a magistrate, he was almost a diplomatist.",
+      "id": "stg_pha_dock",
+      "objectives": [
+        {
+          "id": "obj_stg_pha_dock",
+          "text": "Bring the Pharaon to her mooring."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "met_morrel",
+        "type": "flag",
+        "value": true
+      },
+      "description": "In a very few minutes the count reached No. 7 in the Rue Meslay.",
+      "id": "stg_pha_report",
+      "objectives": [
+        {
+          "id": "obj_stg_pha_report",
+          "text": "Give the owner the voyage, plainly."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "made_captain",
+        "type": "flag",
+        "value": true
+      },
+      "description": "I have evinced?—none whatever. What granted me?—scarcely more.",
+      "id": "stg_pha_captain",
+      "objectives": [
+        {
+          "id": "obj_stg_pha_captain",
+          "text": "See M. Morrel about the captaincy."
+        }
+      ],
+      "order": 3
+    }
+  ],
+  "startsAvailable": true,
+  "summary": "The Pharaon is home and her captain is not.",
+  "tags": [
+    "main"
+  ]
+}

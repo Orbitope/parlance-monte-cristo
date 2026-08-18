@@ -1,0 +1,62 @@
+{
+  "entry": "dlg_auteuil_dinner_open",
+  "id": "dlg_auteuil_dinner",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 11,
+            "mode": "active",
+            "onFailure": "dlg_auteuil_dinner_glanced",
+            "onSuccess": "dlg_auteuil_dinner_landed",
+            "skill": "rhetoric"
+          },
+          "id": "dlg_auteuil_dinner_tell",
+          "showIf": {
+            "flag": "auteuil_told",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Tell the table what was found beneath the tree in this garden."
+        }
+      ],
+      "id": "dlg_auteuil_dinner_open",
+      "text": "He entered with a tolerably dignified step, and some little haste."
+    },
+    {
+      "id": "dlg_auteuil_dinner_glanced",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "counter": "suspicion",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "Go on, then, for I see I shall not get to the Chamber this morning, and I must make up for it."
+    },
+    {
+      "id": "dlg_auteuil_dinner_landed",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "dinner_told",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_procureur",
+          "toStage": "stg_pro_dinner",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "I was at Rome during the last Carnival."
+    }
+  ],
+  "tags": [
+    "object",
+    "act4"
+  ],
+  "title": "Auteuil — a dinner with ghosts invited"
+}

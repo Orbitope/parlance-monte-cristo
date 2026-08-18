@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_penelon_pharaon_open",
+  "id": "dlg_penelon_pharaon",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_penelon_pharaon_aside",
+          "id": "dlg_penelon_pharaon_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_penelon_pharaon_out",
+          "id": "dlg_penelon_pharaon_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_penelon_pharaon_open",
+      "text": "Well, it appears that he has given you satisfactory reasons for his landing at Porto-Ferrajo?"
+    },
+    {
+      "id": "dlg_penelon_pharaon_aside",
+      "next": "dlg_penelon_pharaon_out",
+      "text": "Yes, most satisfactory, my dear Danglars."
+    },
+    {
+      "id": "dlg_penelon_pharaon_out",
+      "isEnd": true,
+      "text": "Fernand’s paleness appeared to have communicated itself to Danglars."
+    }
+  ],
+  "speakerId": "npc_penelon",
+  "tags": [
+    "gossip",
+    "act1"
+  ],
+  "title": "Penelon — quay talk: the voyage home"
+}

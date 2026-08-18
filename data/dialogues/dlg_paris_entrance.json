@@ -1,0 +1,33 @@
+{
+  "entry": "dlg_paris_entrance_open",
+  "id": "dlg_paris_entrance",
+  "nodes": [
+    {
+      "id": "dlg_paris_entrance_open",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "identity_count",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "delta": 2,
+          "faction": "fac_society",
+          "type": "adjust_reputation"
+        },
+        {
+          "quest": "qst_morcerf",
+          "toStage": "stg_mor_arrive",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "No, his name is the Count of Monte Cristo."
+    }
+  ],
+  "tags": [
+    "object",
+    "act4"
+  ],
+  "title": "The Count of Monte Cristo — Paris"
+}

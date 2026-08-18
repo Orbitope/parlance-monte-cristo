@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_albert_idle_open",
+  "id": "dlg_albert_idle",
+  "nodes": [
+    {
+      "id": "dlg_albert_idle_open",
+      "isEnd": true,
+      "text": "How should he have been otherwise? Ah, sir, the poor fellow told you the truth."
+    }
+  ],
+  "speakerId": "npc_albert",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Albert — a prisoner keeping his manners"
+}

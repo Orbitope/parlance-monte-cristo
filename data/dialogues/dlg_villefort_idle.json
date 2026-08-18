@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_villefort_idle_open",
+  "id": "dlg_villefort_idle",
+  "nodes": [
+    {
+      "id": "dlg_villefort_idle_open",
+      "isEnd": true,
+      "text": "How could that bring me into trouble, sir?"
+    }
+  ],
+  "speakerId": "npc_villefort",
+  "tags": [
+    "conversation",
+    "act1"
+  ],
+  "title": "Villefort — the procureur is engaged"
+}

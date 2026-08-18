@@ -1,0 +1,12 @@
+{
+  "body": "A cardinal's hoard, hidden from a Borgia and everyone since. Faria's arithmetic says the second grotto.",
+  "category": "evidence",
+  "id": "codex_spada",
+  "name": "The Spada Fortune",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "knows_treasure",
+    "type": "flag",
+    "value": true
+  }
+}

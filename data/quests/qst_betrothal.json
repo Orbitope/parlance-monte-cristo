@@ -1,0 +1,44 @@
+{
+  "availableWhen": {
+    "outcome": "out_captain",
+    "quest": "qst_pharaon",
+    "type": "questOutcome"
+  },
+  "id": "qst_betrothal",
+  "journalName": "The Marriage Feast",
+  "name": "The Marriage Feast",
+  "outcomes": [
+    {
+      "description": "After the usual civilities, the count inquired after M. de Villefort.",
+      "id": "out_betrothed",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "betrothed",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "betrothed",
+        "type": "flag",
+        "value": true
+      },
+      "description": "The Count placed his hand on his brow as if to collect his thoughts.",
+      "id": "stg_bet_feast",
+      "objectives": [
+        {
+          "id": "obj_stg_bet_feast",
+          "text": "Ask her properly, at the Catalans."
+        }
+      ],
+      "order": 1
+    }
+  ],
+  "summary": "Mercédès said yes before the ship had docked.",
+  "tags": [
+    "main"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "entry": "dlg_telegraph_man_open",
+  "id": "dlg_telegraph_man",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 10,
+            "mode": "active",
+            "onFailure": "dlg_telegraph_man_noticed",
+            "onSuccess": "dlg_telegraph_man_planted",
+            "skill": "discretion"
+          },
+          "id": "dlg_telegraph_man_bribe",
+          "showIf": {
+            "flag": "credit_opened",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Twenty-five thousand francs against one wrong signal."
+        }
+      ],
+      "id": "dlg_telegraph_man_open",
+      "text": "Popolo the execution that affected you so much that you nearly fainted."
+    },
+    {
+      "id": "dlg_telegraph_man_noticed",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "counter": "suspicion",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "Yes? but I doubt that your object was like theirs—to rescue the Holy Sepulchre."
+    },
+    {
+      "id": "dlg_telegraph_man_planted",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "telegraph_planted",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "item": "item_telegraph_note",
+          "type": "give_item"
+        },
+        {
+          "quest": "qst_banker",
+          "toStage": "stg_ban_telegraph",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "You are mistaken, for I have made a vow never to return to Africa."
+    }
+  ],
+  "tags": [
+    "object",
+    "act4"
+  ],
+  "title": "The telegraph — a gardener's price"
+}

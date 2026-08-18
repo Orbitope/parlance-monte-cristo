@@ -1,0 +1,61 @@
+{
+  "entry": "dlg_fernand_first_open",
+  "id": "dlg_fernand_first",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 10,
+            "mode": "active",
+            "onFailure": "dlg_fernand_first_shrug",
+            "onSuccess": "dlg_fernand_first_hate",
+            "skill": "observation"
+          },
+          "id": "dlg_fernand_first_read",
+          "text": "Offer him your hand, and read what he does with the offer."
+        },
+        {
+          "goto": "dlg_fernand_first_left",
+          "id": "dlg_fernand_first_ignore",
+          "text": "He is her cousin. Leave it at that."
+        }
+      ],
+      "id": "dlg_fernand_first_open",
+      "text": "I wished to inquire why you stopped at the Island of Elba?"
+    },
+    {
+      "id": "dlg_fernand_first_hate",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "noticed_fernand",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "counter": "suspicion",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "Dantès conducted his father, nearly lifeless, to the Allées de Meilhan."
+    },
+    {
+      "id": "dlg_fernand_first_shrug",
+      "isEnd": true,
+      "text": "I do not know, sir; it was to fulfil the last instructions of Captain Leclere, who, when dying, gave me a packet for Marshal Bertrand."
+    },
+    {
+      "id": "dlg_fernand_first_left",
+      "isEnd": true,
+      "text": "Very well, as far as I could judge from the sight of him."
+    }
+  ],
+  "speakerId": "npc_fernand",
+  "tags": [
+    "conversation",
+    "act1"
+  ],
+  "title": "Fernand — the man in the doorway"
+}

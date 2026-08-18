@@ -1,0 +1,12 @@
+{
+  "body": "Eight days when Rome wears a mask and the Corso runs with confetti and moccoletti. An excellent week to move unnoticed, or to disappear a viscount.",
+  "category": "world",
+  "id": "codex_carnival",
+  "name": "The Roman Carnival",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "albert_saved",
+    "type": "flag",
+    "value": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "description": "Sealed at Elba, addressed to Paris. Worth exactly one man's life to carry.",
+      "id": "item_letter_elba",
+      "name": "The Letter from Elba"
+    },
+    {
+      "description": "Iron, patiently shaped over three years into something that opens stone.",
+      "id": "item_file",
+      "name": "A Prisoner's File"
+    },
+    {
+      "description": "Red silk. Once held a debt; later, a fortune returned the same way it left.",
+      "id": "item_red_purse",
+      "name": "The Red Silk Purse"
+    },
+    {
+      "description": "Cut, cold, and exactly the size of a man's conscience.",
+      "id": "item_diamond",
+      "name": "The Test Diamond"
+    },
+    {
+      "description": "The Spada fortune. After it, money stops being a number.",
+      "id": "item_treasure",
+      "name": "The Treasure of Monte Cristo"
+    },
+    {
+      "description": "Depositions, dates, and a sold fortress. Yanina, written down.",
+      "id": "item_yanina_dossier",
+      "name": "The Yanina Dossier"
+    },
+    {
+      "description": "A forged signal, priced at twenty-five thousand francs of gardener's peace.",
+      "id": "item_telegraph_note",
+      "name": "The Telegraph Instruction"
+    },
+    {
+      "description": "A vial from a locked cabinet. Brucine, in a house with a chemist in it.",
+      "id": "item_poison_vial",
+      "name": "The Poison Vial"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "entry": "dlg_isle_landing_open",
+  "id": "dlg_isle_landing",
+  "nodes": [
+    {
+      "id": "dlg_isle_landing_open",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "on_isle",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_treasure",
+          "toStage": "stg_tre_isle",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "This positive assurance seemed to give Caderousse a little courage."
+    }
+  ],
+  "tags": [
+    "object",
+    "act3"
+  ],
+  "title": "Monte Cristo — a feigned injury"
+}

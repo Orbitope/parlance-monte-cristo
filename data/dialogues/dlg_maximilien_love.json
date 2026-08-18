@@ -1,0 +1,47 @@
+{
+  "entry": "dlg_maximilien_love_open",
+  "id": "dlg_maximilien_love",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "character": "npc_maximilien",
+              "delta": 2,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_maximilien_love_vowed",
+          "id": "dlg_maximilien_love_promise",
+          "showIf": {
+            "flag": "morrel_saved",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Promise him her life on your own. Say it like a debt."
+        }
+      ],
+      "id": "dlg_maximilien_love_open",
+      "text": "Don’t be alarmed, Valentine—it is I!"
+    },
+    {
+      "id": "dlg_maximilien_love_vowed",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "vowed_valentine",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "Does anyone know anything of a Count of Monte Cristo?"
+    }
+  ],
+  "speakerId": "npc_maximilien",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Maximilien — the vow at the gate"
+}

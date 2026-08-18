@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_mme_danglars_idle_open",
+  "id": "dlg_mme_danglars_idle",
+  "nodes": [
+    {
+      "id": "dlg_mme_danglars_idle_open",
+      "isEnd": true,
+      "text": "Have you seen the Greek mistress?"
+    }
+  ],
+  "speakerId": "npc_mme_danglars",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Madame Danglars — weather, opera, nothing"
+}

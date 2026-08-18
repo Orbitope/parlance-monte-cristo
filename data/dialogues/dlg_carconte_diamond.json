@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_carconte_diamond_open",
+  "id": "dlg_carconte_diamond",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_carconte_diamond_aside",
+          "id": "dlg_carconte_diamond_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_carconte_diamond_out",
+          "id": "dlg_carconte_diamond_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_carconte_diamond_open",
+      "text": "Are these persons, then, so rich and powerful?"
+    },
+    {
+      "id": "dlg_carconte_diamond_aside",
+      "next": "dlg_carconte_diamond_out",
+      "text": "Do you not know their history?"
+    },
+    {
+      "id": "dlg_carconte_diamond_out",
+      "isEnd": true,
+      "text": "To you, perhaps, they will accord the time they have refused to me."
+    }
+  ],
+  "speakerId": "npc_carconte",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "La Carconte — arithmetic about a diamond"
+}

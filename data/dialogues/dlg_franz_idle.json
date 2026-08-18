@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_franz_idle_open",
+  "id": "dlg_franz_idle",
+  "nodes": [
+    {
+      "id": "dlg_franz_idle_open",
+      "isEnd": true,
+      "text": "To one in Edmond’s position the diamond certainly was of great value. It was estimated at fifty thousand francs."
+    }
+  ],
+  "speakerId": "npc_franz",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Franz — carnival talk"
+}

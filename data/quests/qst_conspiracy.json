@@ -1,0 +1,92 @@
+{
+  "availableWhen": {
+    "outcome": "out_captain",
+    "quest": "qst_pharaon",
+    "type": "questOutcome"
+  },
+  "id": "qst_conspiracy",
+  "journalName": "Three Men at a Table",
+  "name": "Three Men at a Table",
+  "outcomes": [
+    {
+      "description": "Abbé Adelmonte took a rabbit, and made it eat a leaf of the cabbage.",
+      "id": "out_eyes_open",
+      "kind": "success",
+      "reachedWhen": {
+        "of": [
+          {
+            "flag": "noticed_danglars",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "noticed_fernand",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "counter": "suspicion",
+            "op": ">=",
+            "type": "counter",
+            "value": 2
+          }
+        ],
+        "type": "all"
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "noticed_danglars",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Madame de Villefort was in deep thought, yet listened attentively.",
+      "id": "stg_con_danglars",
+      "objectives": [
+        {
+          "id": "obj_stg_con_danglars",
+          "text": "Watch Danglars when the captaincy is mentioned."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "noticed_fernand",
+        "type": "flag",
+        "value": true
+      },
+      "description": "As to Monte Cristo the result had surpassed his utmost expectations.",
+      "id": "stg_con_fernand",
+      "objectives": [
+        {
+          "id": "obj_stg_con_fernand",
+          "text": "Watch Fernand's hands, not his mouth."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "warned_by_caderousse",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Château-Renaud observed, but her bearing was more haughty and resolute.",
+      "id": "stg_con_warning",
+      "objectives": [
+        {
+          "id": "obj_stg_con_warning",
+          "text": "Listen to Caderousse past his third glass."
+        }
+      ],
+      "order": 3
+    }
+  ],
+  "summary": "Envy, jealousy, and a man too drunk to object.",
+  "tags": [
+    "main"
+  ]
+}

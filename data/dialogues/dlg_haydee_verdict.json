@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_haydee_verdict_open",
+  "id": "dlg_haydee_verdict",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_haydee_verdict_aside",
+          "id": "dlg_haydee_verdict_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_haydee_verdict_out",
+          "id": "dlg_haydee_verdict_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_haydee_verdict_open",
+      "text": "No, I slept, as I generally do when I am weary without having the courage to amuse myself, or when I am hungry without feeling inclined to eat."
+    },
+    {
+      "id": "dlg_haydee_verdict_aside",
+      "next": "dlg_haydee_verdict_out",
+      "text": "But you can sleep when you please, monsieur?"
+    },
+    {
+      "id": "dlg_haydee_verdict_out",
+      "isEnd": true,
+      "text": "Scarcely had Ali disappeared when the valet entered the chamber."
+    }
+  ],
+  "speakerId": "npc_haydee",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Haydée — after the Chamber stood up"
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Albert's friend. Remembers an island, and a host with no name.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_franz_doubt",
+      "showIf": {
+        "flag": "franz_settled",
+        "type": "flag",
+        "value": false
+      }
+    },
+    {
+      "dialogue": "dlg_franz_idle"
+    }
+  ],
+  "id": "npc_franz",
+  "name": "Franz d'Épinay",
+  "role": "Albert's friend. Remembers an island, and a host with no name."
+}

@@ -1,0 +1,12 @@
+{
+  "body": "Genoa to Marseilles, the little ships run silk, tobacco, and men without papers. They ask no questions a paying passenger does not raise.",
+  "category": "world",
+  "id": "codex_smugglers",
+  "name": "The Free Traders of the Coast",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "aboard_amelie",
+    "type": "flag",
+    "value": true
+  }
+}

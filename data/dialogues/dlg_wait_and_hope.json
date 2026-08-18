@@ -1,0 +1,33 @@
+{
+  "entry": "dlg_wait_and_hope_open",
+  "id": "dlg_wait_and_hope",
+  "nodes": [
+    {
+      "id": "dlg_wait_and_hope_open",
+      "next": "dlg_wait_and_hope_letter",
+      "text": "Caderousse and his wife started and looked aghast at each other."
+    },
+    {
+      "id": "dlg_wait_and_hope_letter",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "story_closed",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_mercy",
+          "toStage": "stg_mer_letter",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "has not the count just told us that all human wisdom is summed up in two words: “‘_Wait and hope_ (Fac et spera)!’"
+    }
+  ],
+  "tags": [
+    "object",
+    "act4"
+  ],
+  "title": "Monte Cristo — the letter on the island"
+}

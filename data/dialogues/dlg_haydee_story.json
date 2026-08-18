@@ -1,0 +1,68 @@
+{
+  "entry": "dlg_haydee_story_open",
+  "id": "dlg_haydee_story",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "character": "npc_haydee",
+              "delta": 2,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_haydee_story_willing",
+          "id": "dlg_haydee_story_ask",
+          "showIf": {
+            "flag": "yanina_seed",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Ask her — gently — whether she would say it before the Chamber."
+        },
+        {
+          "effects": [
+            {
+              "character": "npc_haydee",
+              "delta": 1,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_haydee_story_spared_her",
+          "id": "dlg_haydee_story_spare",
+          "text": "She has carried it long enough. Do not ask tonight."
+        }
+      ],
+      "id": "dlg_haydee_story_open",
+      "text": "Yes; a pallor that suits you admirably, mother, but which did not the less alarm my father and myself."
+    },
+    {
+      "id": "dlg_haydee_story_willing",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "item": "item_yanina_dossier",
+          "type": "give_item"
+        },
+        {
+          "flag": "haydee_willing",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "It is the social capital of a theatre on the boulevard, or a railroad from the Jardin des Plantes to La Râpée."
+    },
+    {
+      "id": "dlg_haydee_story_spared_her",
+      "isEnd": true,
+      "text": "To be sure; besides, every millionaire is as noble as a bastard—that is, he can be."
+    }
+  ],
+  "speakerId": "npc_haydee",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Haydée — what she saw at nine years old"
+}

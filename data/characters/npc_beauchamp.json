@@ -1,0 +1,37 @@
+{
+  "description": "A journalist who checks twice and prints once.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_beauchamp_echoes",
+      "showIf": {
+        "flag": "yanina_seed",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_beauchamp_press",
+      "showIf": {
+        "of": [
+          {
+            "flag": "identity_count",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "yanina_seed",
+            "type": "flag",
+            "value": false
+          }
+        ],
+        "type": "all"
+      }
+    },
+    {
+      "dialogue": "dlg_beauchamp_idle"
+    }
+  ],
+  "id": "npc_beauchamp",
+  "name": "Beauchamp",
+  "role": "A journalist who checks twice and prints once."
+}

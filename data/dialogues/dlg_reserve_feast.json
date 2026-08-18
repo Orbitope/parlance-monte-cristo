@@ -1,0 +1,43 @@
+{
+  "entry": "dlg_reserve_feast_open",
+  "id": "dlg_reserve_feast",
+  "nodes": [
+    {
+      "id": "dlg_reserve_feast_open",
+      "next": "dlg_reserve_feast_soldiers",
+      "text": "So that what we presumed to be merely the betrothal feast turns out to be the actual wedding dinner!"
+    },
+    {
+      "id": "dlg_reserve_feast_soldiers",
+      "next": "dlg_reserve_feast_seized",
+      "text": "At the door he met the commissary of police, who was waiting for him."
+    },
+    {
+      "id": "dlg_reserve_feast_seized",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "arrested",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_arrest",
+          "toStage": "stg_arr_seized",
+          "type": "advance_quest"
+        },
+        {
+          "character": "npc_mercedes",
+          "delta": 1,
+          "type": "adjust_relationship"
+        }
+      ],
+      "text": "Certainly not, if, as you said just now, you have the means of having Dantès arrested. Have you that means?"
+    }
+  ],
+  "tags": [
+    "object",
+    "act1"
+  ],
+  "title": "La Réserve — the marriage feast"
+}

@@ -1,0 +1,97 @@
+{
+  "entry": "dlg_villefort_interrogation_open",
+  "id": "dlg_villefort_interrogation",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 11,
+            "mode": "active",
+            "onFailure": "dlg_villefort_interrogation_doubted",
+            "onSuccess": "dlg_villefort_interrogation_believed",
+            "skill": "nerve"
+          },
+          "id": "dlg_villefort_interrogation_truth",
+          "showIf": {
+            "has": true,
+            "item": "item_letter_elba",
+            "type": "item"
+          },
+          "text": "Tell it exactly: Elba, the dying captain, the address you never read."
+        },
+        {
+          "check": {
+            "difficulty": 13,
+            "mode": "active",
+            "onFailure": "dlg_villefort_interrogation_doubted",
+            "onSuccess": "dlg_villefort_interrogation_doubted",
+            "skill": "discretion"
+          },
+          "id": "dlg_villefort_interrogation_deny",
+          "showIf": {
+            "flag": "took_letter",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Deny the letter altogether."
+        },
+        {
+          "goto": "dlg_villefort_interrogation_believed",
+          "id": "dlg_villefort_interrogation_innocent",
+          "showIf": {
+            "flag": "took_letter",
+            "type": "flag",
+            "value": false
+          },
+          "text": "You never took the packet. Say so, and it is even true."
+        }
+      ],
+      "id": "dlg_villefort_interrogation_open",
+      "text": "I have read the letter, sir, and you have acted rightly in arresting this man; now inform me what you have discovered concerning him and the conspiracy."
+    },
+    {
+      "id": "dlg_villefort_interrogation_believed",
+      "next": "dlg_villefort_interrogation_burn",
+      "text": "To Monsieur Noirtier, Rue Coq-Héron, Paris."
+    },
+    {
+      "id": "dlg_villefort_interrogation_doubted",
+      "next": "dlg_villefort_interrogation_burn",
+      "text": "If I obtain the situation I desire, I shall owe it to M. Morrel."
+    },
+    {
+      "id": "dlg_villefort_interrogation_burn",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "letter_burned",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "flag": "condemned",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_arrest",
+          "toStage": "stg_arr_letter",
+          "type": "advance_quest"
+        },
+        {
+          "delta": 1,
+          "faction": "fac_royalist",
+          "type": "adjust_reputation"
+        }
+      ],
+      "text": "the letter is destroyed; you and I alone know of its existence; should you, therefore, be questioned, deny all knowledge of it—deny it boldly, and you are saved."
+    }
+  ],
+  "speakerId": "npc_villefort",
+  "tags": [
+    "conversation",
+    "act1"
+  ],
+  "title": "Villefort — the deputy's chamber"
+}

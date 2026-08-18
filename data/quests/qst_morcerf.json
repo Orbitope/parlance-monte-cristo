@@ -1,0 +1,114 @@
+{
+  "availableWhen": {
+    "outcome": "out_doors",
+    "quest": "qst_rome",
+    "type": "questOutcome"
+  },
+  "id": "qst_morcerf",
+  "journalName": "Yanina",
+  "name": "Yanina",
+  "outcomes": [
+    {
+      "description": "I did not know when I might again come to Paris, I recommended M.",
+      "effects": [
+        {
+          "amount": 50,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_fernand",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "fernand_ruined",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "identity_count",
+        "type": "flag",
+        "value": true
+      },
+      "description": "And the two carriages passed on towards their different destinations.",
+      "id": "stg_mor_arrive",
+      "objectives": [
+        {
+          "id": "obj_stg_mor_arrive",
+          "text": "Arrive in Paris as the Count."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "yanina_seed",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Madame de Morcerf entered an archway of trees with her companion.",
+      "id": "stg_mor_seed",
+      "objectives": [
+        {
+          "id": "obj_stg_mor_seed",
+          "text": "Put one paragraph where Beauchamp will find it."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "fernand_unmasked",
+        "type": "flag",
+        "value": true
+      },
+      "description": "A gloomy scene had indeed just passed at the house of M. de Villefort.",
+      "id": "stg_mor_unmasked",
+      "objectives": [
+        {
+          "id": "obj_stg_mor_unmasked",
+          "text": "Let the Chamber hear a witness."
+        }
+      ],
+      "order": 3
+    },
+    {
+      "completeWhen": {
+        "flag": "duel_done",
+        "type": "flag",
+        "value": true
+      },
+      "description": "But Villefort uttered words which even he himself did not believe.",
+      "id": "stg_mor_duel",
+      "objectives": [
+        {
+          "id": "obj_stg_mor_duel",
+          "text": "Meet the son at eight in the morning."
+        }
+      ],
+      "order": 4
+    },
+    {
+      "completeWhen": {
+        "flag": "fernand_ruined",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Saint-Méran within his own, and conducted her to his apartment.",
+      "id": "stg_mor_ruin",
+      "objectives": [
+        {
+          "id": "obj_stg_mor_ruin",
+          "text": "Show the father twenty-three years, all at once."
+        }
+      ],
+      "order": 5
+    }
+  ],
+  "summary": "What a French officer sold, and what his son must not pay for.",
+  "tags": [
+    "main"
+  ]
+}

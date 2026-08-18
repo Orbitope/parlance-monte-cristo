@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_bertuccio_idle_open",
+  "id": "dlg_bertuccio_idle",
+  "nodes": [
+    {
+      "id": "dlg_bertuccio_idle_open",
+      "isEnd": true,
+      "text": "When I look at you Parisians, idlers on the Boulevard de Gand or the Bois de Boulogne, and think of this man, it seems to me we are not of the same race."
+    }
+  ],
+  "speakerId": "npc_bertuccio",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Bertuccio — the household accounts"
+}

@@ -1,0 +1,27 @@
+{
+  "description": "Secretary at the Ministry. Trades information at better rates than the Bourse.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_debray_telegraph",
+      "showIf": {
+        "flag": "telegraph_planted",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_debray_credit",
+      "showIf": {
+        "flag": "credit_opened",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_debray_ministry"
+    }
+  ],
+  "id": "npc_debray",
+  "name": "Lucien Debray",
+  "role": "Secretary at the Ministry. Trades information at better rates than the Bourse."
+}

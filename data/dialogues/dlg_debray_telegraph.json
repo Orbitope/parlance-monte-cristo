@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_debray_telegraph_open",
+  "id": "dlg_debray_telegraph",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_debray_telegraph_aside",
+          "id": "dlg_debray_telegraph_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_debray_telegraph_out",
+          "id": "dlg_debray_telegraph_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_debray_telegraph_open",
+      "text": "But you have, then, a valet de chambre who knows Paris?"
+    },
+    {
+      "id": "dlg_debray_telegraph_aside",
+      "next": "dlg_debray_telegraph_out",
+      "text": "Yes, Ali himself, my Nubian mute, whom you saw, I think, at Rome."
+    },
+    {
+      "id": "dlg_debray_telegraph_out",
+      "isEnd": true,
+      "text": "That evening he had a long conference with several friends; and M."
+    }
+  ],
+  "speakerId": "npc_debray",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Debray — a curious error at the telegraph"
+}

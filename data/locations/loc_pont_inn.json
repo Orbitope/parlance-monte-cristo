@@ -1,0 +1,41 @@
+{
+  "description": "Elba? What was the other day a crime is today a title to favor.",
+  "exits": [
+    {
+      "id": "ex_loc_pont_inn_loc_isle",
+      "to": {
+        "location": "loc_isle",
+        "spawn": "sp_loc_isle"
+      }
+    },
+    {
+      "id": "ex_loc_pont_inn_loc_rome",
+      "to": {
+        "location": "loc_rome",
+        "spawn": "sp_loc_rome"
+      }
+    }
+  ],
+  "id": "loc_pont_inn",
+  "interactables": [
+    {
+      "character": "npc_caderousse",
+      "id": "int_loc_pont_inn_npc_caderousse",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_carconte",
+      "id": "int_loc_pont_inn_npc_carconte",
+      "kind": "npc"
+    }
+  ],
+  "name": "The inn at Pont du Gard",
+  "spawns": [
+    {
+      "id": "sp_loc_pont_inn",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_road"
+}

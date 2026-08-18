@@ -1,0 +1,54 @@
+{
+  "description": "Abbé Faria, gone mad in prison, condemned him to perpetual captivity.",
+  "exits": [
+    {
+      "id": "ex_loc_danglars_bank_loc_paris_salon",
+      "to": {
+        "location": "loc_paris_salon",
+        "spawn": "sp_loc_paris_salon"
+      }
+    }
+  ],
+  "id": "loc_danglars_bank",
+  "interactables": [
+    {
+      "character": "npc_danglars",
+      "id": "int_loc_danglars_bank_npc_danglars",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_mme_danglars",
+      "id": "int_loc_danglars_bank_npc_mme_danglars",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_eugenie",
+      "id": "int_loc_danglars_bank_npc_eugenie",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_benedetto",
+      "id": "int_loc_danglars_bank_npc_benedetto",
+      "kind": "npc"
+    },
+    {
+      "dialogue": "dlg_telegraph_man",
+      "id": "int_loc_danglars_bank_dlg_telegraph_man",
+      "kind": "object",
+      "showIf": {
+        "flag": "credit_opened",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "name": "The Danglars bank",
+  "spawns": [
+    {
+      "id": "sp_loc_danglars_bank",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_paris"
+}

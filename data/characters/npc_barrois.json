@@ -1,0 +1,19 @@
+{
+  "description": "Noirtier's old servant. Loyal to the man, not the household.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_barrois_deaths",
+      "showIf": {
+        "flag": "household_dying",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_barrois_habits"
+    }
+  ],
+  "id": "npc_barrois",
+  "name": "Barrois",
+  "role": "Noirtier's old servant. Loyal to the man, not the household."
+}

@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_jailer_idle_open",
+  "id": "dlg_jailer_idle",
+  "nodes": [
+    {
+      "id": "dlg_jailer_idle_open",
+      "isEnd": true,
+      "text": "Has your bed been moved since you have been a prisoner?"
+    }
+  ],
+  "speakerId": "npc_jailer",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "The jailer — no answer through the grate"
+}

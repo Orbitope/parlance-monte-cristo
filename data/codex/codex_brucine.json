@@ -1,0 +1,12 @@
+{
+  "body": "A tonic in drops, a verdict in spoonfuls. Tolerance can be trained — Noirtier's physician knows how.",
+  "category": "evidence",
+  "id": "codex_brucine",
+  "name": "Brucine",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "doctor_certain",
+    "type": "flag",
+    "value": true
+  }
+}

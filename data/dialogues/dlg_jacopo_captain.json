@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_jacopo_captain_open",
+  "id": "dlg_jacopo_captain",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_jacopo_captain_aside",
+          "id": "dlg_jacopo_captain_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_jacopo_captain_out",
+          "id": "dlg_jacopo_captain_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_jacopo_captain_open",
+      "text": "Why should you meddle with what does not concern you?"
+    },
+    {
+      "id": "dlg_jacopo_captain_aside",
+      "next": "dlg_jacopo_captain_out",
+      "text": "This gentleman asks me for information, which common politeness will not permit me to refuse."
+    },
+    {
+      "id": "dlg_jacopo_captain_out",
+      "isEnd": true,
+      "text": "As he descended the staircase, Morrel met Penelon, who was going up."
+    }
+  ],
+  "speakerId": "npc_jacopo",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "Jacopo — a captain with his own deck"
+}

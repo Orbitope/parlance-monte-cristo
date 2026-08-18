@@ -1,0 +1,73 @@
+{
+  "entry": "dlg_caderousse_first_open",
+  "id": "dlg_caderousse_first",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 9,
+            "mode": "active",
+            "onFailure": "dlg_caderousse_first_tight",
+            "onSuccess": "dlg_caderousse_first_loose",
+            "skill": "discretion"
+          },
+          "effects": [
+            {
+              "character": "npc_caderousse",
+              "delta": 1,
+              "type": "adjust_relationship"
+            }
+          ],
+          "id": "dlg_caderousse_first_debt",
+          "showIf": {
+            "flag": "knows_father_debt",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Settle your father's debt to him, and watch his face while you do."
+        },
+        {
+          "goto": "dlg_caderousse_first_drunk",
+          "id": "dlg_caderousse_first_drink",
+          "text": "Drink with him and keep your own counsel."
+        }
+      ],
+      "id": "dlg_caderousse_first_open",
+      "text": "Yes—yes: poor Captain Leclere! He was a brave and an honest man."
+    },
+    {
+      "id": "dlg_caderousse_first_loose",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "warned_by_caderousse",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "counter": "suspicion",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "Yes, most satisfactory, my dear Danglars."
+    },
+    {
+      "id": "dlg_caderousse_first_tight",
+      "isEnd": true,
+      "text": "Half-mast the colors, and square the yards!"
+    },
+    {
+      "id": "dlg_caderousse_first_drunk",
+      "isEnd": true,
+      "text": "Except your signature and your partner’s, M. Morrel."
+    }
+  ],
+  "speakerId": "npc_caderousse",
+  "tags": [
+    "conversation",
+    "act1"
+  ],
+  "title": "Caderousse — over the wine"
+}

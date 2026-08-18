@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_barrois_habits_open",
+  "id": "dlg_barrois_habits",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_barrois_habits_aside",
+          "id": "dlg_barrois_habits_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_barrois_habits_out",
+          "id": "dlg_barrois_habits_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_barrois_habits_open",
+      "text": "Of how much does he rob you every year?"
+    },
+    {
+      "id": "dlg_barrois_habits_aside",
+      "next": "dlg_barrois_habits_out",
+      "text": "The first person who sees her."
+    },
+    {
+      "id": "dlg_barrois_habits_out",
+      "isEnd": true,
+      "text": "Noirtier looked his conviction that she was right in her supposition."
+    }
+  ],
+  "speakerId": "npc_barrois",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Barrois — the old gentleman's routine"
+}

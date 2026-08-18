@@ -1,0 +1,59 @@
+{
+  "entry": "dlg_shroud_open",
+  "id": "dlg_shroud",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 13,
+            "mode": "active",
+            "onFailure": "dlg_shroud_sea",
+            "onSuccess": "dlg_shroud_sea",
+            "skill": "nerve"
+          },
+          "id": "dlg_shroud_swap",
+          "showIf": {
+            "has": true,
+            "item": "item_file",
+            "type": "item"
+          },
+          "text": "Take his place in the sack, the file inside your shirt."
+        },
+        {
+          "goto": "dlg_shroud_open",
+          "id": "dlg_shroud_wait",
+          "text": "There must be another way. There is not, and you know it."
+        }
+      ],
+      "id": "dlg_shroud_open",
+      "text": "Dantès had made; it was necessary, therefore, to dig above or under it."
+    },
+    {
+      "id": "dlg_shroud_sea",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "escaped",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_escape",
+          "toStage": "stg_esc_shroud",
+          "type": "advance_quest"
+        },
+        {
+          "cutscene": "cs_escape_shroud",
+          "type": "play_cutscene"
+        }
+      ],
+      "text": "The sea is the cemetery of the Château d’If."
+    }
+  ],
+  "tags": [
+    "object",
+    "act2"
+  ],
+  "title": "The shroud — the only door that opens"
+}

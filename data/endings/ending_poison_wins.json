@@ -1,0 +1,25 @@
+{
+  "id": "ending_poison_wins",
+  "kind": "failure",
+  "name": "The Glass of Water",
+  "summary": "Albert remained quite bewildered with all that he had seen and heard.",
+  "tags": [
+    "ending"
+  ],
+  "unlockedBy": {
+    "of": [
+      {
+        "op": ">=",
+        "quest": "qst_procureur",
+        "stage": "stg_pro_trial",
+        "type": "quest"
+      },
+      {
+        "flag": "valentine_saved",
+        "type": "flag",
+        "value": false
+      }
+    ],
+    "type": "all"
+  }
+}

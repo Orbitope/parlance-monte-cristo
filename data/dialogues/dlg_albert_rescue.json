@@ -1,0 +1,55 @@
+{
+  "entry": "dlg_albert_rescue_open",
+  "id": "dlg_albert_rescue",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_albert_rescue_freed",
+          "id": "dlg_albert_rescue_word",
+          "showIf": {
+            "flag": "vampa_pact",
+            "type": "flag",
+            "value": true
+          },
+          "text": "One word to Vampa, and the boy walks out untouched."
+        }
+      ],
+      "id": "dlg_albert_rescue_open",
+      "text": "You could not apply to anyone better able to inform you on all these points, for I knew him when he was a child, and one day that I fell into his hands, going from Ferentino to Alatri, he, fortunately for me, recollected me, and set me free, not only without ransom, but made me a present of a very s"
+    },
+    {
+      "id": "dlg_albert_rescue_freed",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "albert_saved",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_albert",
+          "delta": 2,
+          "type": "adjust_relationship"
+        },
+        {
+          "delta": 1,
+          "faction": "fac_society",
+          "type": "adjust_reputation"
+        },
+        {
+          "quest": "qst_rome",
+          "toStage": "stg_rome_albert",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Did you, in the year 1814 or 1815, know anything of a young sailor named Dantès?"
+    }
+  ],
+  "speakerId": "npc_albert",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Albert — the catacombs of Saint Sebastian"
+}

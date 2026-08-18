@@ -1,0 +1,67 @@
+{
+  "entry": "dlg_pharaon_deck_open",
+  "id": "dlg_pharaon_deck",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "item": "item_letter_elba",
+              "type": "give_item"
+            },
+            {
+              "delta": 2,
+              "faction": "fac_bonapartist",
+              "type": "adjust_reputation"
+            },
+            {
+              "flag": "took_letter",
+              "type": "set_flag",
+              "value": true
+            }
+          ],
+          "goto": "dlg_pharaon_deck_taken",
+          "id": "dlg_pharaon_deck_take",
+          "text": "Take charge of the packet, as he asked."
+        },
+        {
+          "effects": [
+            {
+              "delta": 1,
+              "faction": "fac_royalist",
+              "type": "adjust_reputation"
+            }
+          ],
+          "goto": "dlg_pharaon_deck_refused",
+          "id": "dlg_pharaon_deck_refuse",
+          "text": "A dying man's politics are not your cargo. Decline."
+        }
+      ],
+      "id": "dlg_pharaon_deck_open",
+      "text": "Marseillaise accent, and a grin that displayed his ivory-white teeth."
+    },
+    {
+      "id": "dlg_pharaon_deck_taken",
+      "isEnd": true,
+      "text": "I wished to inquire why you stopped at the Island of Elba?"
+    },
+    {
+      "id": "dlg_pharaon_deck_refused",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "took_letter",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
+      "text": "Fernand’s paleness appeared to have communicated itself to Danglars."
+    }
+  ],
+  "tags": [
+    "object",
+    "act1"
+  ],
+  "title": "The Pharaon — what Captain Leclère left"
+}

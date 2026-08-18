@@ -1,0 +1,40 @@
+{
+  "entry": "dlg_faria_teach_1_open",
+  "id": "dlg_faria_teach_1",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "flag": "edu_1",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "quest": "qst_education",
+              "toStage": "stg_edu_tongues",
+              "type": "advance_quest"
+            }
+          ],
+          "goto": "dlg_faria_teach_1_year",
+          "id": "dlg_faria_teach_1_learn",
+          "text": "Give him your mornings. Then your evenings. Then the rest."
+        }
+      ],
+      "id": "dlg_faria_teach_1_open",
+      "text": "But cannot one learn philosophy?"
+    },
+    {
+      "id": "dlg_faria_teach_1_year",
+      "isEnd": true,
+      "text": "Some hours afterwards it began again, nearer and more distinct."
+    }
+  ],
+  "speakerId": "npc_faria",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "Faria — languages and the shape of things"
+}

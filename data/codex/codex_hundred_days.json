@@ -1,0 +1,12 @@
+{
+  "body": "The Emperor is on Elba, then he is not. For one season every letter in France is a loaded pistol.",
+  "category": "world",
+  "id": "codex_hundred_days",
+  "name": "The Hundred Days",
+  "tags": [],
+  "unlockedBy": {
+    "flag": "took_letter",
+    "type": "flag",
+    "value": true
+  }
+}

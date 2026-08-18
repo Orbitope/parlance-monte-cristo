@@ -1,0 +1,34 @@
+{
+  "description": "At this moment the boat came to a landing with a violent shock.",
+  "exits": [
+    {
+      "id": "ex_loc_catalans_loc_harbour",
+      "to": {
+        "location": "loc_harbour",
+        "spawn": "sp_loc_harbour"
+      }
+    }
+  ],
+  "id": "loc_catalans",
+  "interactables": [
+    {
+      "character": "npc_mercedes",
+      "id": "int_loc_catalans_npc_mercedes",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_fernand",
+      "id": "int_loc_catalans_npc_fernand",
+      "kind": "npc"
+    }
+  ],
+  "name": "The Catalans",
+  "spawns": [
+    {
+      "id": "sp_loc_catalans",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_marseilles"
+}

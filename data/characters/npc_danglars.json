@@ -1,0 +1,35 @@
+{
+  "description": "Supercargo, then baron. Counts everything, including favours.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_danglars_ruin",
+      "showIf": {
+        "flag": "telegraph_planted",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_danglars_shaken",
+      "showIf": {
+        "flag": "mme_d_shaken",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_danglars_credit",
+      "showIf": {
+        "flag": "identity_count",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_danglars_first"
+    }
+  ],
+  "id": "npc_danglars",
+  "name": "Danglars",
+  "role": "Supercargo, then baron. Counts everything, including favours."
+}

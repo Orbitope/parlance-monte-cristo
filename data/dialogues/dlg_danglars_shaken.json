@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_danglars_shaken_open",
+  "id": "dlg_danglars_shaken",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_danglars_shaken_aside",
+          "id": "dlg_danglars_shaken_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_danglars_shaken_out",
+          "id": "dlg_danglars_shaken_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_danglars_shaken_open",
+      "text": "Well, beneath this uniform beats one of the bravest and noblest hearts in the whole army."
+    },
+    {
+      "id": "dlg_danglars_shaken_aside",
+      "next": "dlg_danglars_shaken_out",
+      "text": "Albert has not deceived us, for the count is a most singular being. What say you, Morrel!"
+    },
+    {
+      "id": "dlg_danglars_shaken_out",
+      "isEnd": true,
+      "text": "Ali, with considerable animation, made a sign in the affirmative."
+    }
+  ],
+  "speakerId": "npc_danglars",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Danglars — a banker recalculating"
+}

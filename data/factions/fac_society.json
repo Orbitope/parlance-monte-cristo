@@ -1,0 +1,10 @@
+{
+  "id": "fac_society",
+  "name": "Parisian Society",
+  "opposes": [],
+  "reputationRange": {
+    "max": 10,
+    "min": -10
+  },
+  "summary": "The salons, the Opera boxes, and the credit that flows from being seen."
+}

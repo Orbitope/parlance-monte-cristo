@@ -1,0 +1,76 @@
+{
+  "description": "Violent Bonapartist; took an active part in the return from Elba.",
+  "exits": [
+    {
+      "id": "ex_loc_villefort_house_loc_paris_salon",
+      "to": {
+        "location": "loc_paris_salon",
+        "spawn": "sp_loc_paris_salon"
+      }
+    },
+    {
+      "id": "ex_loc_villefort_house_loc_auteuil",
+      "to": {
+        "location": "loc_auteuil",
+        "spawn": "sp_loc_auteuil"
+      }
+    }
+  ],
+  "id": "loc_villefort_house",
+  "interactables": [
+    {
+      "character": "npc_villefort",
+      "id": "int_loc_villefort_house_npc_villefort",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_heloise",
+      "id": "int_loc_villefort_house_npc_heloise",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_valentine",
+      "id": "int_loc_villefort_house_npc_valentine",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_noirtier",
+      "id": "int_loc_villefort_house_npc_noirtier",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_maximilien",
+      "id": "int_loc_villefort_house_npc_maximilien",
+      "kind": "npc"
+    },
+    {
+      "character": "npc_davrigny",
+      "id": "int_loc_villefort_house_npc_davrigny",
+      "kind": "npc"
+    },
+    {
+      "dialogue": "dlg_poison_watch",
+      "id": "int_loc_villefort_house_dlg_poison_watch",
+      "kind": "object",
+      "showIf": {
+        "flag": "poison_lesson",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "character": "npc_barrois",
+      "id": "int_loc_villefort_house_npc_barrois",
+      "kind": "npc"
+    }
+  ],
+  "name": "The Villefort house",
+  "spawns": [
+    {
+      "id": "sp_loc_villefort_house",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_paris"
+}

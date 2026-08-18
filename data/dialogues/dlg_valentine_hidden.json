@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_valentine_hidden_open",
+  "id": "dlg_valentine_hidden",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_valentine_hidden_aside",
+          "id": "dlg_valentine_hidden_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_valentine_hidden_out",
+          "id": "dlg_valentine_hidden_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_valentine_hidden_open",
+      "text": "The count will find there a charming hotel, with a court and garden."
+    },
+    {
+      "id": "dlg_valentine_hidden_aside",
+      "next": "dlg_valentine_hidden_out",
+      "text": "You have no idea, then, Morrel?"
+    },
+    {
+      "id": "dlg_valentine_hidden_out",
+      "isEnd": true,
+      "text": "Madame Danglars surveyed her husband with a look of withering contempt."
+    }
+  ],
+  "speakerId": "npc_valentine",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Valentine — alive, and officially not"
+}

@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_carconte_sour_open",
+  "id": "dlg_carconte_sour",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_carconte_sour_aside",
+          "id": "dlg_carconte_sour_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_carconte_sour_out",
+          "id": "dlg_carconte_sour_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_carconte_sour_open",
+      "text": "Speak out then, say what it was!"
+    },
+    {
+      "id": "dlg_carconte_sour_aside",
+      "next": "dlg_carconte_sour_out",
+      "text": "I don’t know but what you’re right!"
+    },
+    {
+      "id": "dlg_carconte_sour_out",
+      "isEnd": true,
+      "text": "The young man was overwhelmed as he read. Morrel said not a word."
+    }
+  ],
+  "speakerId": "npc_carconte",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "La Carconte — the inn's thin ledger"
+}

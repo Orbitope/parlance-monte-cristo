@@ -1,0 +1,27 @@
+{
+  "description": "Would rather have a career than a husband, and says so.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_eugenie_assessed",
+      "showIf": {
+        "flag": "benedetto_seeded",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_eugenie",
+      "showIf": {
+        "flag": "eugenie_noted",
+        "type": "flag",
+        "value": false
+      }
+    },
+    {
+      "dialogue": "dlg_eugenie_idle"
+    }
+  ],
+  "id": "npc_eugenie",
+  "name": "Eugénie Danglars",
+  "role": "Would rather have a career than a husband, and says so."
+}

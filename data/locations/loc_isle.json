@@ -1,0 +1,137 @@
+{
+  "description": "I swear to you, we shall act like powerful men who know their enemies.",
+  "exits": [
+    {
+      "gate": {
+        "flag": "identity_busoni",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_isle_loc_pont_inn",
+      "to": {
+        "location": "loc_pont_inn",
+        "spawn": "sp_loc_pont_inn"
+      }
+    },
+    {
+      "gate": {
+        "flag": "identity_wilmore",
+        "type": "flag",
+        "value": true
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_isle_loc_harbour",
+      "to": {
+        "location": "loc_harbour",
+        "spawn": "sp_loc_harbour"
+      }
+    },
+    {
+      "gate": {
+        "of": [
+          {
+            "has": true,
+            "item": "item_treasure",
+            "type": "item"
+          },
+          {
+            "flag": "jacopo_loyal",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "all"
+      },
+      "gateType": "act_gate",
+      "id": "ex_loc_isle_loc_rome",
+      "to": {
+        "location": "loc_rome",
+        "spawn": "sp_loc_rome"
+      }
+    }
+  ],
+  "id": "loc_isle",
+  "interactables": [
+    {
+      "character": "npc_jacopo",
+      "id": "int_loc_isle_npc_jacopo",
+      "kind": "npc"
+    },
+    {
+      "dialogue": "dlg_isle_landing",
+      "id": "int_loc_isle_dlg_isle_landing",
+      "kind": "object",
+      "showIf": {
+        "flag": "aboard_amelie",
+        "type": "flag",
+        "value": true
+      },
+      "trigger": "on_enter"
+    },
+    {
+      "dialogue": "dlg_grotto",
+      "id": "int_loc_isle_dlg_grotto",
+      "kind": "object",
+      "showIf": {
+        "flag": "knows_treasure",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_busoni_donning",
+      "id": "int_loc_isle_dlg_busoni_donning",
+      "kind": "object",
+      "showIf": {
+        "has": true,
+        "item": "item_treasure",
+        "type": "item"
+      }
+    },
+    {
+      "dialogue": "dlg_wilmore_donning",
+      "id": "int_loc_isle_dlg_wilmore_donning",
+      "kind": "object",
+      "showIf": {
+        "has": true,
+        "item": "item_treasure",
+        "type": "item"
+      }
+    },
+    {
+      "dialogue": "dlg_wait_and_hope",
+      "id": "int_loc_isle_dlg_wait_and_hope",
+      "kind": "object",
+      "showIf": {
+        "of": [
+          {
+            "flag": "villefort_done",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "fernand_ruined",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "danglars_ruined",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "all"
+      }
+    }
+  ],
+  "name": "The Isle of Monte Cristo",
+  "spawns": [
+    {
+      "id": "sp_loc_isle",
+      "isDefault": true
+    }
+  ],
+  "tags": [],
+  "zone": "zone_sea"
+}

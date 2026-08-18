@@ -1,0 +1,85 @@
+{
+  "entry": "dlg_louis_father_open",
+  "id": "dlg_louis_father",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 8,
+            "mode": "active",
+            "onFailure": "dlg_louis_father_quiet",
+            "onSuccess": "dlg_louis_father_debt",
+            "skill": "observation"
+          },
+          "id": "dlg_louis_father_money",
+          "text": "Ask what became of the money you left him."
+        },
+        {
+          "effects": [
+            {
+              "character": "npc_louis_dantes",
+              "delta": 1,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_louis_father_tender",
+          "id": "dlg_louis_father_joy",
+          "text": "Let the homecoming be a homecoming. Say nothing hard."
+        }
+      ],
+      "id": "dlg_louis_father_open",
+      "text": "I really must ask you to excuse me, M. Morrel. My first visit is due to my father, though I am not the less grateful for the honor you have done me."
+    },
+    {
+      "id": "dlg_louis_father_debt",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "knows_father_debt",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "flag": "greeted_father",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "character": "npc_louis_dantes",
+          "delta": 1,
+          "type": "adjust_relationship"
+        },
+        {
+          "counter": "suspicion",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "And how did this misfortune occur?"
+    },
+    {
+      "id": "dlg_louis_father_quiet",
+      "isEnd": true,
+      "text": "Is all safe and sound, M. Morrel, take my word for it; and I advise you not to take 25,000 francs for the profits of the voyage."
+    },
+    {
+      "id": "dlg_louis_father_tender",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "greeted_father",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "Stand by there to lower the topsails and jib; brail up the spanker!"
+    }
+  ],
+  "speakerId": "npc_louis_dantes",
+  "tags": [
+    "conversation",
+    "act1"
+  ],
+  "title": "Louis Dantès — the little room"
+}

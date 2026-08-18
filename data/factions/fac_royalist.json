@@ -1,0 +1,12 @@
+{
+  "id": "fac_royalist",
+  "name": "The Royalists",
+  "opposes": [
+    "fac_bonapartist"
+  ],
+  "reputationRange": {
+    "max": 10,
+    "min": -10
+  },
+  "summary": "Those who prospered by his going, and intend that he stay gone."
+}

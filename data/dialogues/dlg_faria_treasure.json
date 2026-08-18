@@ -1,0 +1,62 @@
+{
+  "entry": "dlg_faria_treasure_open",
+  "id": "dlg_faria_treasure",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "flag": "knows_treasure",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "quest": "qst_treasure",
+              "toStage": "stg_tre_secret",
+              "type": "advance_quest"
+            }
+          ],
+          "goto": "dlg_faria_treasure_isle",
+          "id": "dlg_faria_treasure_believe",
+          "text": "He has been right about everything else. Believe him."
+        },
+        {
+          "effects": [
+            {
+              "flag": "knows_treasure",
+              "type": "set_flag",
+              "value": true
+            },
+            {
+              "quest": "qst_treasure",
+              "toStage": "stg_tre_secret",
+              "type": "advance_quest"
+            },
+            {
+              "character": "npc_faria",
+              "delta": -1,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_faria_treasure_isle",
+          "id": "dlg_faria_treasure_humor",
+          "text": "Humor an old man's arithmetic of caverns and ingots."
+        }
+      ],
+      "id": "dlg_faria_treasure_open",
+      "text": "I may now avow to you, since I have the proof of your fidelity—this paper is my treasure, of which, from this day forth, one-half belongs to you."
+    },
+    {
+      "id": "dlg_faria_treasure_isle",
+      "isEnd": true,
+      "text": "Monte Cristo, forget not Monte Cristo!"
+    }
+  ],
+  "speakerId": "npc_faria",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "Faria — the Spada secret"
+}

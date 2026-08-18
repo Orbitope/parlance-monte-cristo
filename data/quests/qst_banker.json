@@ -1,0 +1,98 @@
+{
+  "availableWhen": {
+    "outcome": "out_doors",
+    "quest": "qst_rome",
+    "type": "questOutcome"
+  },
+  "id": "qst_banker",
+  "journalName": "Six Millions of Credit",
+  "name": "Six Millions of Credit",
+  "outcomes": [
+    {
+      "description": "M. de Villefort only replied by offering his arm to his daughter.",
+      "effects": [
+        {
+          "amount": 50,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_danglars",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "danglars_ruined",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "credit_opened",
+        "type": "flag",
+        "value": true
+      },
+      "description": "During the whole of this conversation Valentine had remained silent.",
+      "id": "stg_ban_credit",
+      "objectives": [
+        {
+          "id": "obj_stg_ban_credit",
+          "text": "Open the unlimited account."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "telegraph_planted",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Madeleine was the daughter of M. d’Avrigny, and Antoinette his niece.",
+      "id": "stg_ban_telegraph",
+      "objectives": [
+        {
+          "id": "obj_stg_ban_telegraph",
+          "text": "Buy one wrong signal."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "benedetto_seeded",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Valentine fell on her knees, and pressed her almost bursting heart.",
+      "id": "stg_ban_benedetto",
+      "objectives": [
+        {
+          "id": "obj_stg_ban_benedetto",
+          "text": "Supply a son-in-law of quality."
+        }
+      ],
+      "order": 3
+    },
+    {
+      "completeWhen": {
+        "flag": "danglars_ruined",
+        "type": "flag",
+        "value": true
+      },
+      "description": "The sound of a kiss was heard, and Valentine fled through the avenue.",
+      "id": "stg_ban_ruin",
+      "objectives": [
+        {
+          "id": "obj_stg_ban_ruin",
+          "text": "Let the fifth million do its work."
+        }
+      ],
+      "order": 4
+    }
+  ],
+  "summary": "Ruin a banker with nothing but his own arithmetic.",
+  "tags": [
+    "main"
+  ]
+}

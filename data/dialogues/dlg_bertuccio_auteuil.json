@@ -1,0 +1,39 @@
+{
+  "entry": "dlg_bertuccio_auteuil_open",
+  "id": "dlg_bertuccio_auteuil",
+  "nodes": [
+    {
+      "id": "dlg_bertuccio_auteuil_open",
+      "next": "dlg_bertuccio_auteuil_infant",
+      "text": "And this king’s attorney was named Villefort?"
+    },
+    {
+      "id": "dlg_bertuccio_auteuil_infant",
+      "next": "dlg_bertuccio_auteuil_told",
+      "text": "They descended to the first floor; Albert led his guest into the salon."
+    },
+    {
+      "id": "dlg_bertuccio_auteuil_told",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "auteuil_told",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_procureur",
+          "toStage": "stg_pro_auteuil",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Yes, and for a most curious one."
+    }
+  ],
+  "speakerId": "npc_bertuccio",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Bertuccio — the garden at Auteuil"
+}

@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_benedetto_idle_open",
+  "id": "dlg_benedetto_idle",
+  "nodes": [
+    {
+      "id": "dlg_benedetto_idle_open",
+      "isEnd": true,
+      "text": "There is half-past ten striking, Albert."
+    }
+  ],
+  "speakerId": "npc_benedetto",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Andrea — rehearsing his own biography"
+}

@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_renaud_club_open",
+  "id": "dlg_renaud_club",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_renaud_club_aside",
+          "id": "dlg_renaud_club_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_renaud_club_out",
+          "id": "dlg_renaud_club_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_renaud_club_open",
+      "text": "I recollect him perfectly. But how could you charge a Nubian to purchase a house, and a mute to furnish it?—he will do everything wrong."
+    },
+    {
+      "id": "dlg_renaud_club_aside",
+      "next": "dlg_renaud_club_out",
+      "text": "What, do you not know your house?"
+    },
+    {
+      "id": "dlg_renaud_club_out",
+      "isEnd": true,
+      "text": "If one’s lot is cast among fools, it is necessary to study folly."
+    }
+  ],
+  "speakerId": "npc_renaud",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Château-Renaud — club talk"
+}

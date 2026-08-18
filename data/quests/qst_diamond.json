@@ -1,0 +1,76 @@
+{
+  "availableWhen": {
+    "outcome": "out_rich",
+    "quest": "qst_treasure",
+    "type": "questOutcome"
+  },
+  "id": "qst_diamond",
+  "journalName": "The Priest's Diamond",
+  "name": "The Priest's Diamond",
+  "outcomes": [
+    {
+      "description": "The Count of Monte Cristo offered his arm to Madame de Villefort.",
+      "id": "out_tested",
+      "kind": "success",
+      "reachedWhen": {
+        "flag": "heard_inn_tale",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "description": "Danglars opened his bewildered eyes; the company clapped their hands.",
+      "effects": [
+        {
+          "amount": 50,
+          "type": "grant_xp"
+        }
+      ],
+      "id": "out_given",
+      "kind": "neutral",
+      "reachedWhen": {
+        "flag": "gave_diamond",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "identity_busoni",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Madame Danglars tried to utter a few words, but was not heard.",
+      "id": "stg_dia_donned",
+      "objectives": [
+        {
+          "id": "obj_stg_dia_donned",
+          "text": "Become the Abbé Busoni."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "heard_inn_tale",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Villefort pressed her hand to let her know it was not a dream.",
+      "id": "stg_dia_tale",
+      "objectives": [
+        {
+          "id": "obj_stg_dia_tale",
+          "text": "Hear what became of everyone."
+        }
+      ],
+      "order": 2
+    }
+  ],
+  "summary": "One stone, offered to a man's conscience to see which wins.",
+  "tags": [
+    "main"
+  ]
+}

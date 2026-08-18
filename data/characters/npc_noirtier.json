@@ -1,0 +1,37 @@
+{
+  "description": "Paralysed entirely, except for everything that matters.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_noirtier_gratitude",
+      "showIf": {
+        "flag": "valentine_saved",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_noirtier",
+      "showIf": {
+        "of": [
+          {
+            "flag": "household_dying",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "noirtier_ally",
+            "type": "flag",
+            "value": false
+          }
+        ],
+        "type": "all"
+      }
+    },
+    {
+      "dialogue": "dlg_noirtier_idle"
+    }
+  ],
+  "id": "npc_noirtier",
+  "name": "Noirtier",
+  "role": "Paralysed entirely, except for everything that matters."
+}

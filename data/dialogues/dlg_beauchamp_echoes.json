@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_beauchamp_echoes_open",
+  "id": "dlg_beauchamp_echoes",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_beauchamp_echoes_aside",
+          "id": "dlg_beauchamp_echoes_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_beauchamp_echoes_out",
+          "id": "dlg_beauchamp_echoes_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_beauchamp_echoes_open",
+      "text": "Would it be an indiscretion to ask to see those precious pills?"
+    },
+    {
+      "id": "dlg_beauchamp_echoes_aside",
+      "next": "dlg_beauchamp_echoes_out",
+      "text": "And is it your cook who prepares these pills?"
+    },
+    {
+      "id": "dlg_beauchamp_echoes_out",
+      "isEnd": true,
+      "text": "Count of Monte Cristo, and have given him an unlimited credit with me."
+    }
+  ],
+  "speakerId": "npc_beauchamp",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Beauchamp — the paragraph's echoes"
+}

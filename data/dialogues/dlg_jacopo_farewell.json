@@ -1,0 +1,64 @@
+{
+  "entry": "dlg_jacopo_farewell_open",
+  "id": "dlg_jacopo_farewell",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "effects": [
+            {
+              "character": "npc_jacopo",
+              "delta": 2,
+              "type": "adjust_relationship"
+            }
+          ],
+          "goto": "dlg_jacopo_farewell_loyal",
+          "id": "dlg_jacopo_farewell_give",
+          "showIf": {
+            "has": true,
+            "item": "item_treasure",
+            "type": "item"
+          },
+          "text": "A ship of his own. Watch him fail to understand, then understand."
+        },
+        {
+          "goto": "dlg_jacopo_farewell_tested",
+          "id": "dlg_jacopo_farewell_keep",
+          "text": "Not yet. Loyalty tested once more is loyalty proved."
+        }
+      ],
+      "id": "dlg_jacopo_farewell_open",
+      "text": "Hush, La Carconte. It is God’s pleasure that things should be so."
+    },
+    {
+      "id": "dlg_jacopo_farewell_loyal",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "jacopo_loyal",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "You are welcome, sir, most welcome!"
+    },
+    {
+      "id": "dlg_jacopo_farewell_tested",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "jacopo_loyal",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
+      "text": "You are, I presume, M. Caderousse?"
+    }
+  ],
+  "speakerId": "npc_jacopo",
+  "tags": [
+    "conversation",
+    "act3"
+  ],
+  "title": "Jacopo — the first gift"
+}

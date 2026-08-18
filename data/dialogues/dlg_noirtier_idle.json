@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_noirtier_idle_open",
+  "id": "dlg_noirtier_idle",
+  "nodes": [
+    {
+      "id": "dlg_noirtier_idle_open",
+      "isEnd": true,
+      "text": "I have both seen and heard her. I saw her at the theatre, and heard her one morning when I breakfasted with the count."
+    }
+  ],
+  "speakerId": "npc_noirtier",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Noirtier — the alphabet board, idle"
+}

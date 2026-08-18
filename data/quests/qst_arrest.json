@@ -1,0 +1,76 @@
+{
+  "availableWhen": {
+    "outcome": "out_betrothed",
+    "quest": "qst_betrothal",
+    "type": "questOutcome"
+  },
+  "id": "qst_arrest",
+  "journalName": "The King's Attorney",
+  "name": "The King's Attorney",
+  "outcomes": [
+    {
+      "description": "The strangers were, indeed, no other than the count and Haydée.",
+      "id": "out_buried",
+      "kind": "failure",
+      "reachedWhen": {
+        "flag": "in_cell",
+        "type": "flag",
+        "value": true
+      }
+    }
+  ],
+  "stages": [
+    {
+      "completeWhen": {
+        "flag": "arrested",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Having bowed to the two ladies, he extended his hand to Debray.",
+      "id": "stg_arr_seized",
+      "objectives": [
+        {
+          "id": "obj_stg_arr_seized",
+          "text": "Answer the soldiers at La Réserve."
+        }
+      ],
+      "order": 1
+    },
+    {
+      "completeWhen": {
+        "flag": "letter_burned",
+        "type": "flag",
+        "value": true
+      },
+      "description": "The count bowed, while Mademoiselle Danglars bent her head slightly.",
+      "id": "stg_arr_letter",
+      "objectives": [
+        {
+          "id": "obj_stg_arr_letter",
+          "text": "Answer Villefort about the letter."
+        }
+      ],
+      "order": 2
+    },
+    {
+      "completeWhen": {
+        "flag": "in_cell",
+        "type": "flag",
+        "value": true
+      },
+      "description": "Danglars’ box. Upon his return to Haydée he found her still very pale.",
+      "id": "stg_arr_cell",
+      "objectives": [
+        {
+          "id": "obj_stg_arr_cell",
+          "text": "Count the steps down to cell 34."
+        }
+      ],
+      "order": 3
+    }
+  ],
+  "summary": "A knock at the feast, and a room above the harbour.",
+  "tags": [
+    "main"
+  ]
+}

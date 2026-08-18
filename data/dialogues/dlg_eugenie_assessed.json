@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_eugenie_assessed_open",
+  "id": "dlg_eugenie_assessed",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_eugenie_assessed_aside",
+          "id": "dlg_eugenie_assessed_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_eugenie_assessed_out",
+          "id": "dlg_eugenie_assessed_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_eugenie_assessed_open",
+      "text": "How have I deviated from those principles, monsieur?"
+    },
+    {
+      "id": "dlg_eugenie_assessed_aside",
+      "next": "dlg_eugenie_assessed_out",
+      "text": "The affair is still in projection."
+    },
+    {
+      "id": "dlg_eugenie_assessed_out",
+      "isEnd": true,
+      "text": "Danglars rang and was answered by a servant in a showy livery."
+    }
+  ],
+  "speakerId": "npc_eugenie",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Eugénie — the fiancé, assessed"
+}

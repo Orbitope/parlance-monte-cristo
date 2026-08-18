@@ -1,0 +1,37 @@
+{
+  "description": "The baroness. Auteuil is a word she cannot hear calmly.",
+  "dialogues": [
+    {
+      "dialogue": "dlg_mme_danglars_ruin",
+      "showIf": {
+        "flag": "danglars_ruined",
+        "type": "flag",
+        "value": true
+      }
+    },
+    {
+      "dialogue": "dlg_mme_danglars_seance",
+      "showIf": {
+        "of": [
+          {
+            "flag": "auteuil_told",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "mme_d_shaken",
+            "type": "flag",
+            "value": false
+          }
+        ],
+        "type": "all"
+      }
+    },
+    {
+      "dialogue": "dlg_mme_danglars_idle"
+    }
+  ],
+  "id": "npc_mme_danglars",
+  "name": "Madame Danglars",
+  "role": "The baroness. Auteuil is a word she cannot hear calmly."
+}

@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_penelon_affair_open",
+  "id": "dlg_penelon_affair",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_penelon_affair_aside",
+          "id": "dlg_penelon_affair_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_penelon_affair_out",
+          "id": "dlg_penelon_affair_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_penelon_affair_open",
+      "text": "I cannot help being more frightened at the idea of the malediction of the dead than the hatred of the living."
+    },
+    {
+      "id": "dlg_penelon_affair_aside",
+      "next": "dlg_penelon_affair_out",
+      "text": "Do you, then, know in what manner Fernand injured Dantès?"
+    },
+    {
+      "id": "dlg_penelon_affair_out",
+      "isEnd": true,
+      "text": "However, when Morrel went down to his dinner, he appeared very calm."
+    }
+  ],
+  "speakerId": "npc_penelon",
+  "tags": [
+    "gossip",
+    "act3"
+  ],
+  "title": "Penelon — the Dantès affair, years on"
+}

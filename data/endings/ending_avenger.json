@@ -1,0 +1,39 @@
+{
+  "id": "ending_avenger",
+  "kind": "neutral",
+  "name": "The Avenger",
+  "summary": "Selim was still at his post, and smiled sadly on us as we entered.",
+  "tags": [
+    "ending"
+  ],
+  "unlockedBy": {
+    "of": [
+      {
+        "outcome": "out_fernand",
+        "quest": "qst_morcerf",
+        "type": "questOutcome"
+      },
+      {
+        "outcome": "out_danglars",
+        "quest": "qst_banker",
+        "type": "questOutcome"
+      },
+      {
+        "outcome": "out_villefort",
+        "quest": "qst_procureur",
+        "type": "questOutcome"
+      },
+      {
+        "flag": "story_closed",
+        "type": "flag",
+        "value": true
+      },
+      {
+        "flag": "danglars_spared",
+        "type": "flag",
+        "value": false
+      }
+    ],
+    "type": "all"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "ending_wait_and_hope",
+  "kind": "success",
+  "name": "Wait and Hope",
+  "summary": "They passed into the next drawing-room, where tea was prepared.",
+  "tags": [
+    "ending"
+  ],
+  "unlockedBy": {
+    "of": [
+      {
+        "outcome": "out_fernand",
+        "quest": "qst_morcerf",
+        "type": "questOutcome"
+      },
+      {
+        "outcome": "out_danglars",
+        "quest": "qst_banker",
+        "type": "questOutcome"
+      },
+      {
+        "outcome": "out_villefort",
+        "quest": "qst_procureur",
+        "type": "questOutcome"
+      },
+      {
+        "outcome": "out_mercy",
+        "quest": "qst_mercy",
+        "type": "questOutcome"
+      },
+      {
+        "flag": "story_closed",
+        "type": "flag",
+        "value": true
+      },
+      {
+        "flag": "haydee_stays",
+        "type": "flag",
+        "value": true
+      },
+      {
+        "flag": "maximilien_held",
+        "type": "flag",
+        "value": true
+      }
+    ],
+    "type": "all"
+  }
+}

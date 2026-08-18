@@ -1,0 +1,83 @@
+{
+  "entry": "dlg_valentine_vigil_open",
+  "id": "dlg_valentine_vigil",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "check": {
+            "difficulty": 12,
+            "mode": "active",
+            "onFailure": "dlg_valentine_vigil_unsteady",
+            "onSuccess": "dlg_valentine_vigil_saved",
+            "skill": "nerve"
+          },
+          "id": "dlg_valentine_vigil_feign",
+          "showIf": {
+            "of": [
+              {
+                "flag": "noirtier_ally",
+                "type": "flag",
+                "value": true
+              },
+              {
+                "flag": "vowed_valentine",
+                "type": "flag",
+                "value": true
+              },
+              {
+                "flag": "valentine_trusts",
+                "type": "flag",
+                "value": true
+              }
+            ],
+            "type": "all"
+          },
+          "text": "The draught that mimics death. Noirtier's tolerance, your chemistry."
+        }
+      ],
+      "id": "dlg_valentine_vigil_open",
+      "text": "Villefort’s face, I recognized him by the beating of my heart."
+    },
+    {
+      "id": "dlg_valentine_vigil_unsteady",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "counter": "suspicion",
+          "delta": 1,
+          "type": "adjust_counter"
+        }
+      ],
+      "text": "He comes possibly from the Holy Land, and one of his ancestors possessed Calvary, as the Mortemarts did the Dead Sea."
+    },
+    {
+      "id": "dlg_valentine_vigil_saved",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "valentine_saved",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_procureur",
+          "toStage": "stg_pro_valentine",
+          "type": "advance_quest"
+        },
+        {
+          "quest": "qst_mercy",
+          "toStage": "stg_mer_valentine",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Well, he of whom I speak is the lord and master of this grain of sand, of this atom; he has purchased the title of count somewhere in Tuscany."
+    }
+  ],
+  "speakerId": "npc_valentine",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Valentine — the glass of water"
+}

@@ -1,0 +1,38 @@
+{
+  "entry": "dlg_maximilien_thanks_open",
+  "id": "dlg_maximilien_thanks",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_maximilien_thanks_aside",
+          "id": "dlg_maximilien_thanks_more",
+          "text": "Let them talk. People say more to a listener than to a question."
+        },
+        {
+          "goto": "dlg_maximilien_thanks_out",
+          "id": "dlg_maximilien_thanks_leave",
+          "text": "Nod, and keep your own counsel."
+        }
+      ],
+      "id": "dlg_maximilien_thanks_open",
+      "text": "That would be invaluable to us in Africa, who have not always any food to eat, and rarely anything to drink."
+    },
+    {
+      "id": "dlg_maximilien_thanks_aside",
+      "next": "dlg_maximilien_thanks_out",
+      "text": "May we inquire what is this recipe?"
+    },
+    {
+      "id": "dlg_maximilien_thanks_out",
+      "isEnd": true,
+      "text": "Arabic language what he had just been saying to Baptistin in French."
+    }
+  ],
+  "speakerId": "npc_maximilien",
+  "tags": [
+    "gossip",
+    "act4"
+  ],
+  "title": "Maximilien — the son of a saved man"
+}

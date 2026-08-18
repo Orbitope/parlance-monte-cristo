@@ -1,0 +1,42 @@
+{
+  "entry": "dlg_faria_meet_open",
+  "id": "dlg_faria_meet",
+  "nodes": [
+    {
+      "id": "dlg_faria_meet_open",
+      "next": "dlg_faria_meet_abbe",
+      "text": "speak again, though the sound of your voice terrifies me. Who are you?"
+    },
+    {
+      "id": "dlg_faria_meet_abbe",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "met_faria",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "item": "item_file",
+          "type": "give_item"
+        },
+        {
+          "character": "npc_faria",
+          "delta": 2,
+          "type": "adjust_relationship"
+        },
+        {
+          "quest": "qst_tunnel",
+          "toStage": "stg_tun_meet",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "I am the Abbé Faria, born at Rome. I was for twenty years Cardinal Spada’s secretary; I was arrested, why, I know not, toward the beginning of the year 1811; since then I have demanded my liberty from the Italian and French government."
+    }
+  ],
+  "tags": [
+    "object",
+    "act2"
+  ],
+  "title": "The breach — another man's candle"
+}

@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "cluster": "mind",
+      "description": "Seeing the one detail a degree out of place.",
+      "id": "observation",
+      "name": "Observation"
+    },
+    {
+      "cluster": "social",
+      "description": "Making a true thing sound better, or a false one sound true.",
+      "id": "rhetoric",
+      "name": "Rhetoric"
+    },
+    {
+      "cluster": "spirit",
+      "description": "Holding still when holding still is the harder thing.",
+      "id": "nerve",
+      "name": "Nerve"
+    },
+    {
+      "cluster": "social",
+      "description": "Knowing which of two facts to leave in the room.",
+      "id": "discretion",
+      "name": "Discretion"
+    }
+  ]
+}

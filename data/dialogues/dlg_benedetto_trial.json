@@ -1,0 +1,28 @@
+{
+  "entry": "dlg_benedetto_trial_open",
+  "id": "dlg_benedetto_trial",
+  "nodes": [
+    {
+      "id": "dlg_benedetto_trial_open",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "villefort_unmasked",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_procureur",
+          "toStage": "stg_pro_trial",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "And this king’s attorney was named Villefort?"
+    }
+  ],
+  "tags": [
+    "object",
+    "act4"
+  ],
+  "title": "The assizes — the prisoner names his father"
+}

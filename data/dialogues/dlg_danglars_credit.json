@@ -1,0 +1,45 @@
+{
+  "entry": "dlg_danglars_credit_open",
+  "id": "dlg_danglars_credit",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_danglars_credit_dazzled",
+          "id": "dlg_danglars_credit_open",
+          "showIf": {
+            "has": true,
+            "item": "item_treasure",
+            "type": "item"
+          },
+          "text": "Unlimited credit, drawn how and when it pleases you to fear."
+        }
+      ],
+      "id": "dlg_danglars_credit_open",
+      "text": "To be sure; besides, every millionaire is as noble as a bastard—that is, he can be."
+    },
+    {
+      "id": "dlg_danglars_credit_dazzled",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "credit_opened",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_banker",
+          "toStage": "stg_ban_credit",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "You all know that I had the fancy of going to Africa."
+    }
+  ],
+  "speakerId": "npc_danglars",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Danglars — six millions of credit"
+}

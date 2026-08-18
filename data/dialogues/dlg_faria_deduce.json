@@ -1,0 +1,71 @@
+{
+  "entry": "dlg_faria_deduce_open",
+  "id": "dlg_faria_deduce",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_faria_deduce_named",
+          "id": "dlg_faria_deduce_danglars",
+          "showIf": {
+            "flag": "noticed_danglars",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Danglars wrote it. You saw the envy at the accounts."
+        },
+        {
+          "goto": "dlg_faria_deduce_named",
+          "id": "dlg_faria_deduce_fernand",
+          "showIf": {
+            "flag": "noticed_fernand",
+            "type": "flag",
+            "value": true
+          },
+          "text": "Fernand posted it. You saw what your hand cost him to shake."
+        },
+        {
+          "check": {
+            "difficulty": 12,
+            "mode": "active",
+            "onFailure": "dlg_faria_deduce_led",
+            "onSuccess": "dlg_faria_deduce_named",
+            "skill": "observation"
+          },
+          "id": "dlg_faria_deduce_blind",
+          "text": "You do not know. You have never known."
+        }
+      ],
+      "id": "dlg_faria_deduce_open",
+      "text": "‘Seek whom the crime will profit,’ says an axiom of jurisprudence."
+    },
+    {
+      "id": "dlg_faria_deduce_led",
+      "next": "dlg_faria_deduce_named",
+      "text": "The night passed in perfect silence. Edmond did not close his eyes."
+    },
+    {
+      "id": "dlg_faria_deduce_named",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "knows_betrayers",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_education",
+          "toStage": "stg_edu_deduction",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "I will let you know that directly I have seen M. de Villefort, whom I shall endeavor to interest in Edmond’s favor. I am aware he is a furious royalist; but, in spite of that, and of his being king’s attorney, he is a man like ourselves, and I fancy not a bad sort of one."
+    }
+  ],
+  "speakerId": "npc_faria",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "Faria — the deduction"
+}

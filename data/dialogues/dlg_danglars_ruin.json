@@ -1,0 +1,55 @@
+{
+  "entry": "dlg_danglars_ruin_open",
+  "id": "dlg_danglars_ruin",
+  "nodes": [
+    {
+      "choices": [
+        {
+          "goto": "dlg_danglars_ruin_broken",
+          "id": "dlg_danglars_ruin_draw",
+          "showIf": {
+            "of": [
+              {
+                "flag": "telegraph_planted",
+                "type": "flag",
+                "value": true
+              },
+              {
+                "flag": "mme_d_shaken",
+                "type": "flag",
+                "value": true
+              }
+            ],
+            "type": "all"
+          },
+          "text": "Draw the last of the six millions on the day the false signal lands."
+        }
+      ],
+      "id": "dlg_danglars_ruin_open",
+      "text": "Did he not conduct you to the ruins of the Colosseum and suck your blood?"
+    },
+    {
+      "id": "dlg_danglars_ruin_broken",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "danglars_ruined",
+          "type": "set_flag",
+          "value": true
+        },
+        {
+          "quest": "qst_banker",
+          "toStage": "stg_ban_ruin",
+          "type": "advance_quest"
+        }
+      ],
+      "text": "Well, with the five minutes’ grace, we have only ten left."
+    }
+  ],
+  "speakerId": "npc_danglars",
+  "tags": [
+    "conversation",
+    "act4"
+  ],
+  "title": "Danglars — the fifth million"
+}
