@@ -1,0 +1,23 @@
+{
+  "assertEnd": {
+    "flags": {
+      "morrel_saved": true
+    }
+  },
+  "description": "The red purse on the mantel. morrel_saved gates Maximilien's vow, which gates the vigil, which gates Wait and Hope — the longest causal chain in the project, and it starts here.",
+  "dialogueId": "dlg_julie_purse",
+  "id": "rt_purse_saves_the_house",
+  "startState": {
+    "flags": {
+      "morrel_bought": true
+    },
+    "inventory": [
+      "item_red_purse"
+    ]
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_julie_purse_send"
+    }
+  ]
+}

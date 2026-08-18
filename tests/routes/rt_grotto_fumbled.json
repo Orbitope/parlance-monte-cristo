@@ -1,0 +1,16 @@
+{
+  "description": "The treasure is not a skill gate. Both branches of the dig arrive at the gold; a fumbled roll costs nothing, because everything after Act III assumes the fortune exists.",
+  "dialogueId": "dlg_grotto",
+  "id": "rt_grotto_fumbled",
+  "startState": {
+    "flags": {
+      "knows_treasure": true
+    }
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_grotto_dig",
+      "forced": "fail"
+    }
+  ]
+}

@@ -32,6 +32,13 @@
     {
       "id": "dlg_morrel_rescue_respite",
       "isEnd": true,
+      "onEnter": [
+        {
+          "character": "npc_julie",
+          "dialogue": "dlg_julie_purse",
+          "type": "set_active_dialogue"
+        }
+      ],
       "text": "Morrel again changed color. Julie threw herself into his arms."
     }
   ],

@@ -1,0 +1,20 @@
+{
+  "assertEnd": {
+    "flags": {
+      "danglars_spared": true
+    }
+  },
+  "description": "Leaving one man alive to be old. The mercy quest turns on this, and it is the difference between Wait and Hope and The Avenger.",
+  "dialogueId": "dlg_vampa_larder",
+  "id": "rt_larder_mercy",
+  "startState": {
+    "flags": {
+      "danglars_ruined": true
+    }
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_vampa_larder_spare"
+    }
+  ]
+}

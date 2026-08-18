@@ -122,7 +122,7 @@ def write_all():
     # Clear ONLY the generated trees. This used to rmtree(OUT) — and since OUT
     # defaults to the repo root, running it in place deleted the repository,
     # tools and .git included. Never remove the output root itself.
-    for sub in ("data", "lore"):
+    for sub in ("data", "lore", "tests"):
         target = OUT / sub
         if target.exists():
             shutil.rmtree(target)
@@ -1410,6 +1410,7 @@ ROUTE_LIST = [
     ("dlg_wilmore_donning",   "npc_penelon",     "dlg_penelon_affair"),
     ("dlg_caderousse_diamond","npc_caderousse",  "dlg_caderousse_spending"),
     ("dlg_caderousse_diamond","npc_carconte",    "dlg_carconte_diamond"),
+    ("dlg_morrel_rescue",     "npc_julie",       "dlg_julie_purse"),
     ("dlg_julie_purse",       "npc_morrel",      "dlg_morrel_toast"),
     ("dlg_julie_purse",       "npc_maximilien",  "dlg_maximilien_thanks"),
 
@@ -1463,6 +1464,177 @@ for _src, _char, _tgt in ROUTE_LIST:
                 _rung["showIf"] = {"flag": _pin, "type": "flag", "value": True}
             FLAG_R.add(_pin)
             break
+
+
+# ===================== SAVED ROUTES (tests/routes) ==========================
+# Route ENTITIES are a different thing from the flow-map "routes" above: these
+# are recorded, asserted playthroughs of a single dialogue. `forced` pins a
+# check's outcome so the assertion is deterministic — which is exactly what an
+# undirected walker cannot give you. Each one guards an invariant that would
+# otherwise only break silently.
+
+def RT(rid, dialogue, steps, assert_end, description, start=None, seed=None):
+    r = {"description": description, "dialogueId": dialogue, "id": rid, "steps": steps}
+    if assert_end: r["assertEnd"] = assert_end
+    if start: r["startState"] = start
+    if seed is not None: r["seed"] = seed
+    FILES[f"tests/routes/{rid}.json"] = r
+
+RT("rt_letter_taken", "dlg_pharaon_deck",
+   [{"choiceId": "dlg_pharaon_deck_take"}],
+   {"flags": {"took_letter": True}},
+   "Taking Leclère's packet is what arms the whole plot. If this stops setting "
+   "took_letter, Villefort's interrogation loses its honest branch and Act I "
+   "quietly becomes unlosable.")
+
+RT("rt_letter_refused", "dlg_pharaon_deck",
+   [{"choiceId": "dlg_pharaon_deck_refuse"}],
+   {"forbiddenFlags": ["took_letter"]},
+   "Refusing the packet must leave took_letter false — that is the branch that "
+   "opens the 'innocent' answer to Villefort.")
+
+RT("rt_interrogation_failed", "dlg_villefort_interrogation",
+   [{"choiceId": "dlg_villefort_interrogation_truth", "forced": "fail"}],
+   {"flags": {"letter_burned": True, "condemned": True}},
+   "The priced check pays its way: telling the truth badly still ends with the "
+   "letter burned and Dantès condemned. If a failed roll ever leaves condemned "
+   "false, the check has stopped being priced and become a wall — Act II "
+   "unreachable, and nothing else would notice.",
+   start={"inventory": ["item_letter_elba"], "flags": {"took_letter": True}})
+
+RT("rt_interrogation_truth", "dlg_villefort_interrogation",
+   [{"choiceId": "dlg_villefort_interrogation_truth", "forced": "pass"}],
+   {"flags": {"letter_burned": True, "condemned": True}},
+   "Passing changes the route through the scene but not its destination. Both "
+   "branches must converge on the cell; Villefort burns the letter either way, "
+   "because his own father is the addressee.",
+   start={"inventory": ["item_letter_elba"], "flags": {"took_letter": True}})
+
+RT("rt_faria_blind_deduction", "dlg_faria_deduce",
+   [{"choiceId": "dlg_faria_deduce_blind", "forced": "fail"}],
+   {"flags": {"knows_betrayers": True}},
+   "Faria reaches the answer even when Dantès cannot. Failing the deduction "
+   "routes through 'led' and still arrives at the three names — the education "
+   "quest must not be gated on the player being clever.")
+
+RT("rt_grotto_fumbled", "dlg_grotto",
+   [{"choiceId": "dlg_grotto_dig", "forced": "fail"}],
+   {},
+   "The treasure is not a skill gate. Both branches of the dig arrive at the "
+   "gold; a fumbled roll costs nothing, because everything after Act III "
+   "assumes the fortune exists.",
+   start={"flags": {"knows_treasure": True}})
+
+RT("rt_diamond_given", "dlg_caderousse_diamond",
+   [{"choiceId": "dlg_caderousse_diamond_probe", "forced": "pass"},
+    {"choiceId": "dlg_caderousse_diamond_give"}],
+   {"flags": {"heard_inn_tale": True, "gave_diamond": True}},
+   "The inn scene must both inform and offer the choice: hearing the tale sets "
+   "heard_inn_tale, and the stone can then be given. Losing the second step "
+   "would collapse the moral test into an exposition dump.",
+   start={"inventory": ["item_diamond"], "flags": {"identity_busoni": True}})
+
+RT("rt_diamond_withheld", "dlg_caderousse_diamond",
+   [{"choiceId": "dlg_caderousse_diamond_probe", "forced": "pass"},
+    {"choiceId": "dlg_caderousse_diamond_hold"}],
+   {"flags": {"heard_inn_tale": True}, "forbiddenFlags": ["gave_diamond"]},
+   "Withholding is a real option, not a dead end — the quest still completes "
+   "on heard_inn_tale. Only the neutral outcome differs.",
+   start={"inventory": ["item_diamond"], "flags": {"identity_busoni": True}})
+
+RT("rt_mercedes_spares_the_son", "dlg_mercedes_plea",
+   [{"choiceId": "dlg_mercedes_plea_spare"}],
+   {"flags": {"duel_spared": True}, "forbiddenFlags": ["duel_hard"]},
+   "Mercédès can only reach Edmond through what she has earned: the sparing "
+   "choice is gated on relationship >= 2. If that gate ever admits a stranger, "
+   "the mercy ending stops costing anything.",
+   start={"relationships": {"npc_mercedes": 2}, "flags": {"duel_pending": True}})
+
+RT("rt_vigil_saves_valentine", "dlg_valentine_vigil",
+   [{"choiceId": "dlg_valentine_vigil_feign", "forced": "pass"}],
+   {"flags": {"valentine_saved": True}},
+   "The one life kept out of the ledger. Wait and Hope is unreachable without "
+   "this flag, so a change that breaks the vigil silently removes the good "
+   "ending rather than failing loudly.",
+   start={"flags": {"noirtier_ally": True, "vowed_valentine": True,
+                    "valentine_trusts": True, "household_dying": True}})
+
+RT("rt_vigil_fumbled", "dlg_valentine_vigil",
+   [{"choiceId": "dlg_valentine_vigil_feign", "forced": "fail"}],
+   {"forbiddenFlags": ["valentine_saved"]},
+   "A fumbled vigil must NOT count as a rescue. This is the guard on the "
+   "punishment-spiral fix: failure costs suspicion and leaves the attempt open, "
+   "rather than paying out the reward flag.",
+   start={"flags": {"noirtier_ally": True, "vowed_valentine": True,
+                    "valentine_trusts": True, "household_dying": True}})
+
+RT("rt_larder_mercy", "dlg_vampa_larder",
+   [{"choiceId": "dlg_vampa_larder_spare"}],
+   {"flags": {"danglars_spared": True}},
+   "Leaving one man alive to be old. The mercy quest turns on this, and it is "
+   "the difference between Wait and Hope and The Avenger.",
+   start={"flags": {"danglars_ruined": True}})
+
+# --- Cross-dialogue routes: the act transitions that stranded content -------
+# These walk THROUGH a cutscene into the next scene. Each guards a transition
+# that broke silently during authoring — the validator was green while Act III
+# was unreachable, because reachability is not something it checks.
+
+RT("rt_escape_into_the_sea", "dlg_shroud",
+   [{"choiceId": "dlg_shroud_swap", "forced": "pass"},
+    {"cutscene": "cs_escape_shroud"},
+    {"choiceId": "dlg_jacopo_rescue_story", "forced": "pass"}],
+   {"flags": {"escaped": True, "aboard_amelie": True}, "pendingCutscene": None},
+   "The whole of Act III hangs on this three-part transition: the shroud, the "
+   "cutscene, and being pulled aboard the Jeune-Amélie. If the cutscene loses "
+   "its entersDialogue the chain breaks here and Monte Cristo becomes "
+   "unreachable — with every individual dialogue still validating perfectly.",
+   start={"inventory": ["item_file"], "flags": {"faria_dead": True}})
+
+RT("rt_rome_into_paris", "dlg_albert_invitation",
+   [{"choiceId": "dlg_albert_invitation_accept"},
+    {"cutscene": "cs_paris_entrance"}],
+   {"flags": {"paris_invitation": True, "identity_count": True},
+    "pendingCutscene": None},
+   "Rome hands off to Paris through cs_paris_entrance. That cutscene shipped "
+   "with no entersDialogue at first, so the Count arrived nowhere and all four "
+   "Paris quests sat behind a door that never opened.",
+   start={"flags": {"albert_saved": True}})
+
+RT("rt_the_letter", "dlg_wait_and_hope",
+   [{"advance": 1}],
+   {"flags": {"story_closed": True}},
+   "The finale is a listen-only beat reached by `next`, not a choice. A runtime "
+   "that treats a choiceless node as the end of the conversation never fires "
+   "story_closed, and both good endings quietly become unreachable — which is "
+   "exactly the bug that hid the lantern in mistfall-inn.",
+   start={"flags": {"villefort_done": True, "fernand_ruined": True,
+                    "danglars_ruined": True}})
+
+RT("rt_morrel_debts_bought", "dlg_morrel_rescue",
+   [{"choiceId": "dlg_morrel_rescue_buy"}],
+   {"flags": {"morrel_bought": True}},
+   "Buying the house's debts is step one of the mercy thread, and it is only "
+   "reachable if Act III can return to Marseilles. The exit that makes this "
+   "possible was missing for a while; see tools/check_reachability.py, which "
+   "guards the geography this route assumes.",
+   start={"inventory": ["item_treasure"], "flags": {"identity_wilmore": True}})
+
+RT("rt_purse_saves_the_house", "dlg_julie_purse",
+   [{"choiceId": "dlg_julie_purse_send"}],
+   {"flags": {"morrel_saved": True}},
+   "The red purse on the mantel. morrel_saved gates Maximilien's vow, which "
+   "gates the vigil, which gates Wait and Hope — the longest causal chain in "
+   "the project, and it starts here.",
+   start={"inventory": ["item_red_purse"], "flags": {"morrel_bought": True}})
+
+RT("rt_larder_relents", "dlg_vampa_larder",
+   [{"choiceId": "dlg_vampa_larder_starve", "forced": "fail"}],
+   {"flags": {"danglars_spared": True}},
+   "Even choosing to starve him relents in the end — both branches set "
+   "danglars_spared, because the novel's point is that vengeance runs out "
+   "before the prisoner does.",
+   start={"flags": {"danglars_ruined": True}})
 
 # ===================== VARIABLES + SELF-LINT + WRITE =======================
 # A marker exists to be depended upon; leaf quests should not mint state

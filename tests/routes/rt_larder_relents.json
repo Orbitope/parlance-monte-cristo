@@ -1,0 +1,21 @@
+{
+  "assertEnd": {
+    "flags": {
+      "danglars_spared": true
+    }
+  },
+  "description": "Even choosing to starve him relents in the end — both branches set danglars_spared, because the novel's point is that vengeance runs out before the prisoner does.",
+  "dialogueId": "dlg_vampa_larder",
+  "id": "rt_larder_relents",
+  "startState": {
+    "flags": {
+      "danglars_ruined": true
+    }
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_vampa_larder_starve",
+      "forced": "fail"
+    }
+  ]
+}

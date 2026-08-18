@@ -1,0 +1,24 @@
+{
+  "assertEnd": {
+    "forbiddenFlags": [
+      "valentine_saved"
+    ]
+  },
+  "description": "A fumbled vigil must NOT count as a rescue. This is the guard on the punishment-spiral fix: failure costs suspicion and leaves the attempt open, rather than paying out the reward flag.",
+  "dialogueId": "dlg_valentine_vigil",
+  "id": "rt_vigil_fumbled",
+  "startState": {
+    "flags": {
+      "household_dying": true,
+      "noirtier_ally": true,
+      "valentine_trusts": true,
+      "vowed_valentine": true
+    }
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_valentine_vigil_feign",
+      "forced": "fail"
+    }
+  ]
+}

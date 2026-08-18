@@ -1,0 +1,26 @@
+{
+  "assertEnd": {
+    "flags": {
+      "duel_spared": true
+    },
+    "forbiddenFlags": [
+      "duel_hard"
+    ]
+  },
+  "description": "Mercédès can only reach Edmond through what she has earned: the sparing choice is gated on relationship >= 2. If that gate ever admits a stranger, the mercy ending stops costing anything.",
+  "dialogueId": "dlg_mercedes_plea",
+  "id": "rt_mercedes_spares_the_son",
+  "startState": {
+    "flags": {
+      "duel_pending": true
+    },
+    "relationships": {
+      "npc_mercedes": 2
+    }
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_mercedes_plea_spare"
+    }
+  ]
+}

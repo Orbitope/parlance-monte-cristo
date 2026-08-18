@@ -1,0 +1,33 @@
+{
+  "assertEnd": {
+    "flags": {
+      "aboard_amelie": true,
+      "escaped": true
+    },
+    "pendingCutscene": null
+  },
+  "description": "The whole of Act III hangs on this three-part transition: the shroud, the cutscene, and being pulled aboard the Jeune-Amélie. If the cutscene loses its entersDialogue the chain breaks here and Monte Cristo becomes unreachable — with every individual dialogue still validating perfectly.",
+  "dialogueId": "dlg_shroud",
+  "id": "rt_escape_into_the_sea",
+  "startState": {
+    "flags": {
+      "faria_dead": true
+    },
+    "inventory": [
+      "item_file"
+    ]
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_shroud_swap",
+      "forced": "pass"
+    },
+    {
+      "cutscene": "cs_escape_shroud"
+    },
+    {
+      "choiceId": "dlg_jacopo_rescue_story",
+      "forced": "pass"
+    }
+  ]
+}

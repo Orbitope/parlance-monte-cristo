@@ -49,6 +49,11 @@
           "type": "advance_quest"
         },
         {
+          "flag": "active_dialogue__npc_julie",
+          "type": "set_flag",
+          "value": false
+        },
+        {
           "character": "npc_morrel",
           "dialogue": "dlg_morrel_toast",
           "type": "set_active_dialogue"

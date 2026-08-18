@@ -1,0 +1,30 @@
+{
+  "assertEnd": {
+    "flags": {
+      "heard_inn_tale": true
+    },
+    "forbiddenFlags": [
+      "gave_diamond"
+    ]
+  },
+  "description": "Withholding is a real option, not a dead end — the quest still completes on heard_inn_tale. Only the neutral outcome differs.",
+  "dialogueId": "dlg_caderousse_diamond",
+  "id": "rt_diamond_withheld",
+  "startState": {
+    "flags": {
+      "identity_busoni": true
+    },
+    "inventory": [
+      "item_diamond"
+    ]
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_caderousse_diamond_probe",
+      "forced": "pass"
+    },
+    {
+      "choiceId": "dlg_caderousse_diamond_hold"
+    }
+  ]
+}

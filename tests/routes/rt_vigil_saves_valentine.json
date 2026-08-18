@@ -1,0 +1,24 @@
+{
+  "assertEnd": {
+    "flags": {
+      "valentine_saved": true
+    }
+  },
+  "description": "The one life kept out of the ledger. Wait and Hope is unreachable without this flag, so a change that breaks the vigil silently removes the good ending rather than failing loudly.",
+  "dialogueId": "dlg_valentine_vigil",
+  "id": "rt_vigil_saves_valentine",
+  "startState": {
+    "flags": {
+      "household_dying": true,
+      "noirtier_ally": true,
+      "valentine_trusts": true,
+      "vowed_valentine": true
+    }
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_valentine_vigil_feign",
+      "forced": "pass"
+    }
+  ]
+}

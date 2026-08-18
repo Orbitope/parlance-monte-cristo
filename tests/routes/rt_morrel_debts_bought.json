@@ -1,0 +1,23 @@
+{
+  "assertEnd": {
+    "flags": {
+      "morrel_bought": true
+    }
+  },
+  "description": "Buying the house's debts is step one of the mercy thread, and it is only reachable if Act III can return to Marseilles. The exit that makes this possible was missing for a while; see tools/check_reachability.py, which guards the geography this route assumes.",
+  "dialogueId": "dlg_morrel_rescue",
+  "id": "rt_morrel_debts_bought",
+  "startState": {
+    "flags": {
+      "identity_wilmore": true
+    },
+    "inventory": [
+      "item_treasure"
+    ]
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_morrel_rescue_buy"
+    }
+  ]
+}

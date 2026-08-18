@@ -1,0 +1,22 @@
+{
+  "assertEnd": {
+    "flags": {
+      "story_closed": true
+    }
+  },
+  "description": "The finale is a listen-only beat reached by `next`, not a choice. A runtime that treats a choiceless node as the end of the conversation never fires story_closed, and both good endings quietly become unreachable — which is exactly the bug that hid the lantern in mistfall-inn.",
+  "dialogueId": "dlg_wait_and_hope",
+  "id": "rt_the_letter",
+  "startState": {
+    "flags": {
+      "danglars_ruined": true,
+      "fernand_ruined": true,
+      "villefort_done": true
+    }
+  },
+  "steps": [
+    {
+      "advance": 1
+    }
+  ]
+}

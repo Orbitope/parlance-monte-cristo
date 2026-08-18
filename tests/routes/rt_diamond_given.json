@@ -1,0 +1,28 @@
+{
+  "assertEnd": {
+    "flags": {
+      "gave_diamond": true,
+      "heard_inn_tale": true
+    }
+  },
+  "description": "The inn scene must both inform and offer the choice: hearing the tale sets heard_inn_tale, and the stone can then be given. Losing the second step would collapse the moral test into an exposition dump.",
+  "dialogueId": "dlg_caderousse_diamond",
+  "id": "rt_diamond_given",
+  "startState": {
+    "flags": {
+      "identity_busoni": true
+    },
+    "inventory": [
+      "item_diamond"
+    ]
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_caderousse_diamond_probe",
+      "forced": "pass"
+    },
+    {
+      "choiceId": "dlg_caderousse_diamond_give"
+    }
+  ]
+}

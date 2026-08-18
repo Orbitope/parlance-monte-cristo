@@ -86,6 +86,12 @@
     },
     {
       "default": false,
+      "description": "First written at 'dlg_morrel_rescue'.",
+      "id": "active_dialogue__npc_julie",
+      "kind": "flag"
+    },
+    {
+      "default": false,
       "description": "First written at 'dlg_valentine_vigil'.",
       "id": "active_dialogue__npc_maximilien",
       "kind": "flag"

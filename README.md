@@ -51,6 +51,36 @@ What each view has to show, and where to look:
 | **Playtest** | `dlg_faria_deduce` | Set `observation` and watch the deduction fork; seeded, so a run repeats |
 | **Ladders** | `npc_villefort`, `npc_faria` | 5 rungs each |
 
+## Testing: routes and reachability
+
+Two guards, covering different failure modes.
+
+**`tests/routes/` — 18 saved routes.** Recorded playthroughs with `forced`
+pinning check outcomes, so assertions are deterministic. They protect
+invariants that otherwise break in silence:
+
+| Route | Guards |
+|---|---|
+| `rt_interrogation_failed` | The priced check pays its way — failing still ends condemned. If it ever doesn't, Act II is unreachable |
+| `rt_vigil_fumbled` | A fumbled vigil must **not** count as a rescue |
+| `rt_escape_into_the_sea` | The shroud → cutscene → Jeune-Amélie chain; if the cutscene loses `entersDialogue`, Act III vanishes |
+| `rt_the_letter` | The finale is reached by `next`, not a choice — a runtime treating choiceless nodes as terminal never fires it |
+| `rt_larder_relents` | Both branches spare Danglars; vengeance runs out before the prisoner does |
+
+**`tools/check_reachability.py` — the check routes cannot do.** Routes walk
+*dialogue* graphs; they cannot tell you whether the player can reach the room a
+dialogue lives in. Delete one exit and every schema, reference and route still
+passes while a third of the game becomes unvisitable.
+
+```bash
+python3 tools/check_reachability.py
+```
+
+It asserts every location can reach the start (no traps) and every dialogue is
+presented by something. Removing the Act III return to Marseilles — a real bug
+during authoring — reports 9 stranded locations, while `validate.py --strict`
+reports no errors at all.
+
 ## Quest dependencies
 
 The 14 quests form a real dependency graph — a Marseilles-to-treasure spine,

@@ -1,0 +1,25 @@
+{
+  "assertEnd": {
+    "flags": {
+      "condemned": true,
+      "letter_burned": true
+    }
+  },
+  "description": "The priced check pays its way: telling the truth badly still ends with the letter burned and Dantès condemned. If a failed roll ever leaves condemned false, the check has stopped being priced and become a wall — Act II unreachable, and nothing else would notice.",
+  "dialogueId": "dlg_villefort_interrogation",
+  "id": "rt_interrogation_failed",
+  "startState": {
+    "flags": {
+      "took_letter": true
+    },
+    "inventory": [
+      "item_letter_elba"
+    ]
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_villefort_interrogation_truth",
+      "forced": "fail"
+    }
+  ]
+}

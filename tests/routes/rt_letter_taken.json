@@ -1,0 +1,15 @@
+{
+  "assertEnd": {
+    "flags": {
+      "took_letter": true
+    }
+  },
+  "description": "Taking Leclère's packet is what arms the whole plot. If this stops setting took_letter, Villefort's interrogation loses its honest branch and Act I quietly becomes unlosable.",
+  "dialogueId": "dlg_pharaon_deck",
+  "id": "rt_letter_taken",
+  "steps": [
+    {
+      "choiceId": "dlg_pharaon_deck_take"
+    }
+  ]
+}

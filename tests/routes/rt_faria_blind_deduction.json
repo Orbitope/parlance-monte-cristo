@@ -1,0 +1,16 @@
+{
+  "assertEnd": {
+    "flags": {
+      "knows_betrayers": true
+    }
+  },
+  "description": "Faria reaches the answer even when Dantès cannot. Failing the deduction routes through 'led' and still arrives at the three names — the education quest must not be gated on the player being clever.",
+  "dialogueId": "dlg_faria_deduce",
+  "id": "rt_faria_blind_deduction",
+  "steps": [
+    {
+      "choiceId": "dlg_faria_deduce_blind",
+      "forced": "fail"
+    }
+  ]
+}

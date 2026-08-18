@@ -1,0 +1,15 @@
+{
+  "assertEnd": {
+    "forbiddenFlags": [
+      "took_letter"
+    ]
+  },
+  "description": "Refusing the packet must leave took_letter false — that is the branch that opens the 'innocent' answer to Villefort.",
+  "dialogueId": "dlg_pharaon_deck",
+  "id": "rt_letter_refused",
+  "steps": [
+    {
+      "choiceId": "dlg_pharaon_deck_refuse"
+    }
+  ]
+}

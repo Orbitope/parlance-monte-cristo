@@ -1,0 +1,25 @@
+{
+  "assertEnd": {
+    "flags": {
+      "identity_count": true,
+      "paris_invitation": true
+    },
+    "pendingCutscene": null
+  },
+  "description": "Rome hands off to Paris through cs_paris_entrance. That cutscene shipped with no entersDialogue at first, so the Count arrived nowhere and all four Paris quests sat behind a door that never opened.",
+  "dialogueId": "dlg_albert_invitation",
+  "id": "rt_rome_into_paris",
+  "startState": {
+    "flags": {
+      "albert_saved": true
+    }
+  },
+  "steps": [
+    {
+      "choiceId": "dlg_albert_invitation_accept"
+    },
+    {
+      "cutscene": "cs_paris_entrance"
+    }
+  ]
+}
