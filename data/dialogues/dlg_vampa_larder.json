@@ -41,6 +41,11 @@
             "value": true
           },
           "text": "One more day. Hunger is an honest creditor."
+        },
+        {
+          "goto": "dlg_vampa_larder_pass",
+          "id": "dlg_vampa_larder_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_vampa_larder_open",
@@ -67,6 +72,11 @@
         }
       ],
       "text": "I will profit by them to tell you something about my guest."
+    },
+    {
+      "id": "dlg_vampa_larder_pass",
+      "isEnd": true,
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_vampa",

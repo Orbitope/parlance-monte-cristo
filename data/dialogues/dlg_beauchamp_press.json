@@ -19,6 +19,11 @@
             "value": true
           },
           "text": "Wonder aloud what a French officer was paid for Ali Pasha's fortress."
+        },
+        {
+          "goto": "dlg_beauchamp_press_pass",
+          "id": "dlg_beauchamp_press_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_beauchamp_press_open",
@@ -44,6 +49,11 @@
     {
       "id": "dlg_beauchamp_press_waved",
       "isEnd": true,
+      "text": "I understand; you must lay in a stock of hilarity."
+    },
+    {
+      "id": "dlg_beauchamp_press_pass",
+      "isEnd": true,
       "onEnter": [
         {
           "character": "npc_beauchamp",
@@ -51,7 +61,7 @@
           "type": "set_active_dialogue"
         }
       ],
-      "text": "I understand; you must lay in a stock of hilarity."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_beauchamp",

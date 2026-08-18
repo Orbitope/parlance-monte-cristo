@@ -19,6 +19,11 @@
             "value": true
           },
           "text": "Twenty-five thousand francs against one wrong signal."
+        },
+        {
+          "goto": "dlg_telegraph_man_pass",
+          "id": "dlg_telegraph_man_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_telegraph_man_open",
@@ -53,14 +58,21 @@
           "quest": "qst_banker",
           "toStage": "stg_ban_telegraph",
           "type": "advance_quest"
-        },
+        }
+      ],
+      "text": "You are mistaken, for I have made a vow never to return to Africa."
+    },
+    {
+      "id": "dlg_telegraph_man_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_debray",
           "dialogue": "dlg_debray_telegraph",
           "type": "set_active_dialogue"
         }
       ],
-      "text": "You are mistaken, for I have made a vow never to return to Africa."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "tags": [

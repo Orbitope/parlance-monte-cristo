@@ -34,6 +34,11 @@
             "type": "all"
           },
           "text": "The draught that mimics death. Noirtier's tolerance, your chemistry."
+        },
+        {
+          "goto": "dlg_valentine_vigil_pass",
+          "id": "dlg_valentine_vigil_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_valentine_vigil_open",
@@ -71,6 +76,18 @@
           "type": "advance_quest"
         },
         {
+          "flag": "active_dialogue__npc_valentine",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
+      "text": "Well, he of whom I speak is the lord and master of this grain of sand, of this atom; he has purchased the title of count somewhere in Tuscany."
+    },
+    {
+      "id": "dlg_valentine_vigil_pass",
+      "isEnd": true,
+      "onEnter": [
+        {
           "character": "npc_maximilien",
           "dialogue": "dlg_morrel_despair",
           "type": "set_active_dialogue"
@@ -81,7 +98,7 @@
           "value": false
         }
       ],
-      "text": "Well, he of whom I speak is the lord and master of this grain of sand, of this atom; he has purchased the title of count somewhere in Tuscany."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_valentine",

@@ -23,6 +23,11 @@
             "type": "all"
           },
           "text": "Present the dossier and the witness."
+        },
+        {
+          "goto": "dlg_chamber_trial_pass",
+          "id": "dlg_chamber_trial_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_chamber_trial_open",
@@ -46,7 +51,14 @@
           "delta": -1,
           "faction": "fac_society",
           "type": "adjust_reputation"
-        },
+        }
+      ],
+      "text": "Ah, yes; what you tell me recalls to mind something about the name of Fernand Mondego. I have heard that name in Greece."
+    },
+    {
+      "id": "dlg_chamber_trial_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_haydee",
           "dialogue": "dlg_haydee_verdict",
@@ -63,7 +75,7 @@
           "type": "set_active_dialogue"
         }
       ],
-      "text": "Ah, yes; what you tell me recalls to mind something about the name of Fernand Mondego. I have heard that name in Greece."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "tags": [

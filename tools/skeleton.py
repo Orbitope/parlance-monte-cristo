@@ -110,6 +110,20 @@ def D(did, title, speaker, tags, nodes, entry=None):
             if "check" in ch:
                 ch["check"]["onSuccess"] = f"{did}_{ch['check']['onSuccess']}"
                 ch["check"]["onFailure"] = f"{did}_{ch['check']['onFailure']}"
+    # A node whose choices are ALL gated can leave the player with nothing to
+    # click if every condition fails. The editor's FLOW pass catches this; the
+    # CLI validator does not. Give any such node an unconditional way out.
+    _needs_out = [n for n in nodes
+                  if n.get("choices") and all("showIf" in c for c in n["choices"])]
+    if _needs_out:
+        _esc = {"id": f"{did}_pass", "isEnd": True,
+                "text": "You let the moment go by without taking it."}
+        nodes.append(_esc)
+        for _n in _needs_out:
+            _n["choices"].append({"id": f"{_n['id']}_wait",
+                                  "text": "Say nothing. Not yet.",
+                                  "goto": f"{did}_pass"})
+
     d = {"entry": f"{did}_{entry or nodes[0]['id'].split('_')[-1]}", "id": did,
          "nodes": nodes, "tags": tags, "title": title}
     d["entry"] = nodes[0]["id"] if entry is None else f"{did}_{entry}"

@@ -23,6 +23,11 @@
             "type": "all"
           },
           "text": "Take off twenty-three years as if they were a coat. Name yourself."
+        },
+        {
+          "goto": "dlg_fernand_end_pass",
+          "id": "dlg_fernand_end_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_fernand_end_open",
@@ -41,7 +46,14 @@
           "quest": "qst_morcerf",
           "toStage": "stg_mor_ruin",
           "type": "advance_quest"
-        },
+        }
+      ],
+      "text": "That did more honor to your heart than to your experience, M. Bertuccio. Had you known this Edmond Dantès, of whom they spoke?"
+    },
+    {
+      "id": "dlg_fernand_end_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_mercedes",
           "dialogue": "dlg_mercedes_widow",
@@ -53,7 +65,7 @@
           "type": "set_active_dialogue"
         }
       ],
-      "text": "That did more honor to your heart than to your experience, M. Bertuccio. Had you known this Edmond Dantès, of whom they spoke?"
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_fernand",

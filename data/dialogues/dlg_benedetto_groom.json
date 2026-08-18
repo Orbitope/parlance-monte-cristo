@@ -13,6 +13,11 @@
             "value": true
           },
           "text": "Coach the counterfeit: the walk, the income, the fiancée."
+        },
+        {
+          "goto": "dlg_benedetto_groom_pass",
+          "id": "dlg_benedetto_groom_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_benedetto_groom_open",
@@ -36,14 +41,21 @@
           "quest": "qst_banker",
           "toStage": "stg_ban_benedetto",
           "type": "advance_quest"
-        },
+        }
+      ],
+      "text": "No, his horse; of which we each of us ate a slice with a hearty appetite. It was very hard."
+    },
+    {
+      "id": "dlg_benedetto_groom_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_eugenie",
           "dialogue": "dlg_eugenie_assessed",
           "type": "set_active_dialogue"
         }
       ],
-      "text": "No, his horse; of which we each of us ate a slice with a hearty appetite. It was very hard."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_benedetto",

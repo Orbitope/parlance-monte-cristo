@@ -23,6 +23,11 @@
             "value": true
           },
           "text": "Tell him now and forfeit the lesson. He has bled enough."
+        },
+        {
+          "goto": "dlg_morrel_despair_pass",
+          "id": "dlg_morrel_despair_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_morrel_despair_open",
@@ -49,6 +54,18 @@
         }
       ],
       "text": "And you have seen this cavern, Morcerf?"
+    },
+    {
+      "id": "dlg_morrel_despair_pass",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_maximilien",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_maximilien",

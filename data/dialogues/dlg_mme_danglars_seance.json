@@ -19,6 +19,11 @@
             "value": true
           },
           "text": "Describe the garden. The tree. The box no larger than a child."
+        },
+        {
+          "goto": "dlg_mme_danglars_seance_pass",
+          "id": "dlg_mme_danglars_seance_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_mme_danglars_seance_open",
@@ -40,6 +45,11 @@
         }
       ],
       "text": "I have something better to offer my readers than a speech of M."
+    },
+    {
+      "id": "dlg_mme_danglars_seance_pass",
+      "isEnd": true,
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_mme_danglars",

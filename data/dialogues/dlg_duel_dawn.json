@@ -23,6 +23,11 @@
             "value": true
           },
           "text": "No apology came. Take your ground."
+        },
+        {
+          "goto": "dlg_duel_dawn_pass",
+          "id": "dlg_duel_dawn_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_duel_dawn_open",
@@ -39,6 +44,11 @@
         }
       ],
       "text": "Château-Renaud can tell us while we eat our breakfast."
+    },
+    {
+      "id": "dlg_duel_dawn_pass",
+      "isEnd": true,
+      "text": "You let the moment go by without taking it."
     }
   ],
   "tags": [

@@ -19,6 +19,11 @@
             "value": true
           },
           "text": "The corner of the second opening, as the paper said."
+        },
+        {
+          "goto": "dlg_grotto_pass",
+          "id": "dlg_grotto_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_grotto_open",
@@ -36,14 +41,21 @@
           "quest": "qst_treasure",
           "toStage": "stg_tre_found",
           "type": "advance_quest"
-        },
+        }
+      ],
+      "text": "He pretended to know of an immense treasure, and offered vast sums to the government if they would liberate him."
+    },
+    {
+      "id": "dlg_grotto_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_jacopo",
           "dialogue": "dlg_jacopo_farewell",
           "type": "set_active_dialogue"
         }
       ],
-      "text": "He pretended to know of an immense treasure, and offered vast sums to the government if they would liberate him."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "tags": [

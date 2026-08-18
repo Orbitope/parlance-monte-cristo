@@ -23,6 +23,11 @@
             "type": "all"
           },
           "text": "Draw the last of the six millions on the day the false signal lands."
+        },
+        {
+          "goto": "dlg_danglars_ruin_pass",
+          "id": "dlg_danglars_ruin_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_danglars_ruin_open",
@@ -41,14 +46,21 @@
           "quest": "qst_banker",
           "toStage": "stg_ban_ruin",
           "type": "advance_quest"
-        },
+        }
+      ],
+      "text": "Well, with the five minutes’ grace, we have only ten left."
+    },
+    {
+      "id": "dlg_danglars_ruin_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_mme_danglars",
           "dialogue": "dlg_mme_danglars_ruin",
           "type": "set_active_dialogue"
         }
       ],
-      "text": "Well, with the five minutes’ grace, we have only ten left."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_danglars",

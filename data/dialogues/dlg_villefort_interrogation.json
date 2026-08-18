@@ -45,6 +45,11 @@
             "value": false
           },
           "text": "You never took the packet. Say so, and it is even true."
+        },
+        {
+          "goto": "dlg_villefort_interrogation_pass",
+          "id": "dlg_villefort_interrogation_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_villefort_interrogation_open",
@@ -86,6 +91,11 @@
         }
       ],
       "text": "the letter is destroyed; you and I alone know of its existence; should you, therefore, be questioned, deny all knowledge of it—deny it boldly, and you are saved."
+    },
+    {
+      "id": "dlg_villefort_interrogation_pass",
+      "isEnd": true,
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_villefort",

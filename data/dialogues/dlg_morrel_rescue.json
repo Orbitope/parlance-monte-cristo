@@ -24,6 +24,11 @@
             "type": "item"
           },
           "text": "As agent of Thomson & French, buy every debt the house owes."
+        },
+        {
+          "goto": "dlg_morrel_rescue_pass",
+          "id": "dlg_morrel_rescue_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_morrel_rescue_open",
@@ -32,6 +37,11 @@
     {
       "id": "dlg_morrel_rescue_respite",
       "isEnd": true,
+      "text": "Morrel again changed color. Julie threw herself into his arms."
+    },
+    {
+      "id": "dlg_morrel_rescue_pass",
+      "isEnd": true,
       "onEnter": [
         {
           "character": "npc_julie",
@@ -39,7 +49,7 @@
           "type": "set_active_dialogue"
         }
       ],
-      "text": "Morrel again changed color. Julie threw herself into his arms."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_morrel",

@@ -13,6 +13,11 @@
             "value": true
           },
           "text": "One word to Vampa, and the boy walks out untouched."
+        },
+        {
+          "goto": "dlg_albert_rescue_pass",
+          "id": "dlg_albert_rescue_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_albert_rescue_open",
@@ -41,7 +46,14 @@
           "quest": "qst_rome",
           "toStage": "stg_rome_albert",
           "type": "advance_quest"
-        },
+        }
+      ],
+      "text": "Did you, in the year 1814 or 1815, know anything of a young sailor named Dantès?"
+    },
+    {
+      "id": "dlg_albert_rescue_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_albert",
           "dialogue": "dlg_albert_invitation",
@@ -58,7 +70,7 @@
           "type": "set_active_dialogue"
         }
       ],
-      "text": "Did you, in the year 1814 or 1815, know anything of a young sailor named Dantès?"
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_albert",

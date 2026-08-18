@@ -13,6 +13,11 @@
             "type": "item"
           },
           "text": "Unlimited credit, drawn how and when it pleases you to fear."
+        },
+        {
+          "goto": "dlg_danglars_credit_pass",
+          "id": "dlg_danglars_credit_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_danglars_credit_open",
@@ -34,6 +39,11 @@
         }
       ],
       "text": "You all know that I had the fancy of going to Africa."
+    },
+    {
+      "id": "dlg_danglars_credit_pass",
+      "isEnd": true,
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_danglars",

@@ -19,6 +19,11 @@
             "type": "item"
           },
           "text": "Send her to the Allées de Meilhan. The purse on the mantel."
+        },
+        {
+          "goto": "dlg_julie_purse_pass",
+          "id": "dlg_julie_purse_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_julie_purse_open",
@@ -52,6 +57,18 @@
           "flag": "active_dialogue__npc_julie",
           "type": "set_flag",
           "value": false
+        }
+      ],
+      "text": "Have you not saved Peppino’s life?"
+    },
+    {
+      "id": "dlg_julie_purse_pass",
+      "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_julie",
+          "type": "set_flag",
+          "value": false
         },
         {
           "character": "npc_morrel",
@@ -64,7 +81,7 @@
           "type": "set_active_dialogue"
         }
       ],
-      "text": "Have you not saved Peppino’s life?"
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_julie",

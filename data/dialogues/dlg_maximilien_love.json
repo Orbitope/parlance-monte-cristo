@@ -20,6 +20,11 @@
             "value": true
           },
           "text": "Promise him her life on your own. Say it like a debt."
+        },
+        {
+          "goto": "dlg_maximilien_love_pass",
+          "id": "dlg_maximilien_love_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_maximilien_love_open",
@@ -36,6 +41,11 @@
         }
       ],
       "text": "Does anyone know anything of a Count of Monte Cristo?"
+    },
+    {
+      "id": "dlg_maximilien_love_pass",
+      "isEnd": true,
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_maximilien",

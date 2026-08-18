@@ -13,6 +13,11 @@
             "value": true
           },
           "text": "Yes-blink by yes-blink, build the plan to shield Valentine."
+        },
+        {
+          "goto": "dlg_noirtier_pass",
+          "id": "dlg_noirtier_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_noirtier_open",
@@ -31,14 +36,21 @@
           "character": "npc_valentine",
           "delta": 1,
           "type": "adjust_relationship"
-        },
+        }
+      ],
+      "text": "He had not even a knitting-needle."
+    },
+    {
+      "id": "dlg_noirtier_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_valentine",
           "dialogue": "dlg_valentine_vigil",
           "type": "set_active_dialogue"
         }
       ],
-      "text": "He had not even a knitting-needle."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_noirtier",

@@ -19,6 +19,11 @@
             "value": true
           },
           "text": "Speak of justice as an instrument. Watch which word makes him still."
+        },
+        {
+          "goto": "dlg_villefort_fence_pass",
+          "id": "dlg_villefort_fence_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_villefort_fence_open",
@@ -39,6 +44,11 @@
     {
       "id": "dlg_villefort_fence_smooth",
       "isEnd": true,
+      "text": "I narrowly escaped catching a fever there."
+    },
+    {
+      "id": "dlg_villefort_fence_pass",
+      "isEnd": true,
       "onEnter": [
         {
           "character": "npc_villefort",
@@ -46,7 +56,7 @@
           "type": "set_active_dialogue"
         }
       ],
-      "text": "I narrowly escaped catching a fever there."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "speakerId": "npc_villefort",

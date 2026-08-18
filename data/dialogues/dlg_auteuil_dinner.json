@@ -19,6 +19,11 @@
             "value": true
           },
           "text": "Tell the table what was found beneath the tree in this garden."
+        },
+        {
+          "goto": "dlg_auteuil_dinner_pass",
+          "id": "dlg_auteuil_dinner_open_wait",
+          "text": "Say nothing. Not yet."
         }
       ],
       "id": "dlg_auteuil_dinner_open",
@@ -49,14 +54,21 @@
           "quest": "qst_procureur",
           "toStage": "stg_pro_dinner",
           "type": "advance_quest"
-        },
+        }
+      ],
+      "text": "I was at Rome during the last Carnival."
+    },
+    {
+      "id": "dlg_auteuil_dinner_pass",
+      "isEnd": true,
+      "onEnter": [
         {
           "character": "npc_bertuccio",
           "dialogue": "dlg_bertuccio_lighter",
           "type": "set_active_dialogue"
         }
       ],
-      "text": "I was at Rome during the last Carnival."
+      "text": "You let the moment go by without taking it."
     }
   ],
   "tags": [
