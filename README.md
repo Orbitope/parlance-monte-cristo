@@ -28,6 +28,31 @@ coverage reports, reference indexes. Read
 [Mistfall Inn](https://github.com/Orbitope/mistfall-inn) if you want a small
 example to learn the format from.
 
+## Quest dependencies
+
+The 14 quests form a real dependency graph — a Marseilles-to-treasure spine,
+then a fan-out into the Paris threads:
+
+```
+qst_pharaon ─┬─ qst_conspiracy
+             └─ qst_betrothal ─ qst_arrest ─ qst_tunnel ─ qst_education
+                                                    └─ qst_escape ─ qst_treasure
+                                                          ├─ qst_diamond
+                                                          └─ qst_rome ─┬─ qst_morcerf
+                                                                       ├─ qst_banker
+                                                                       ├─ qst_procureur
+                                                                       └─ qst_mercy
+```
+
+Worth knowing how those edges are *derived*, because it is not obvious: a
+dependency exists where one quest **writes** a flag (via `stage.onComplete` or
+`outcome.effects`) that a later quest's `availableWhen` **needs**. Flags written
+by dialogue `onEnter` are invisible to that derivation. So each quest emits a
+`{quest}_complete` marker from its terminal outcome, and downstream quests
+depend on the marker. Outcome `reachedWhen` conditions deliberately stay on
+dialogue-written flags, so endings still resolve in runtimes that do not
+implement `resolveQuests`.
+
 ## The part worth studying: ladders
 
 Characters carry ordered dialogue ladders — first rung whose condition passes

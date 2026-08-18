@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_rich",
-    "quest": "qst_treasure",
-    "type": "questOutcome"
+    "flag": "qst_treasure_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_diamond",
   "journalName": "The Priest's Diamond",

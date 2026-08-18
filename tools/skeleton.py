@@ -119,7 +119,14 @@ def D(did, title, speaker, tags, nodes, entry=None):
     return did
 
 def write_all():
-    if OUT.exists(): shutil.rmtree(OUT)
+    # Clear ONLY the generated trees. This used to rmtree(OUT) — and since OUT
+    # defaults to the repo root, running it in place deleted the repository,
+    # tools and .git included. Never remove the output root itself.
+    for sub in ("data", "lore"):
+        target = OUT / sub
+        if target.exists():
+            shutil.rmtree(target)
+    OUT.mkdir(parents=True, exist_ok=True)
     for rel, obj in FILES.items():
         p = OUT / rel; p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(json.dumps(obj, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
@@ -1032,7 +1039,16 @@ def Q(qid, name, summary, stages, outcomes, available=None, starts=False):
         stg.append({"completeWhen": cw, "description": narr("act4"),
                     "id": sid, "objectives": [{"id": f"obj_{sid}", "text": obj_text}],
                     "order": i + 1})
-    for o in outcomes: _scan_cond(o["reachedWhen"])
+    # Dependency-graph edges are derived from flags a quest PRODUCES
+    # (stage.onComplete / outcome.effects) against flags a later quest's
+    # availableWhen NEEDS. Dialogue-written flags are invisible to that
+    # derivation, so each quest emits its own completion marker. Prefer the
+    # success outcome, else the first — qst_arrest completes by failing.
+    _marked = next((o for o in outcomes if o["kind"] == "success"), outcomes[0])
+    _marked.setdefault("effects", []).append(F(f"{qid}_complete"))
+    for o in outcomes:
+        _scan_cond(o["reachedWhen"])
+        _scan_effects(o.get("effects"), f"{qid}/{o['id']}")
     quest = {"id": qid, "journalName": name, "name": name, "outcomes": outcomes,
              "stages": stg, "summary": summary, "tags": ["main"]}
     if starts: quest["startsAvailable"] = True
@@ -1053,7 +1069,7 @@ Q("qst_pharaon", "The Homecoming", "The Pharaon is home and her captain is not."
 Q("qst_betrothal", "The Marriage Feast", "Mercédès said yes before the ship had docked.", [
     ("stg_bet_feast", f("betrothed"), "Ask her properly, at the Catalans."),
 ], [OC("out_betrothed", "success", f("betrothed"))],
-  available=qo("qst_pharaon", "out_captain"))
+  available=f("qst_pharaon_complete"))
 
 Q("qst_conspiracy", "Three Men at a Table", "Envy, jealousy, and a man too drunk to object.", [
     ("stg_con_danglars", f("noticed_danglars"), "Watch Danglars when the captaincy is mentioned."),
@@ -1062,55 +1078,55 @@ Q("qst_conspiracy", "Three Men at a Table", "Envy, jealousy, and a man too drunk
 ], [OC("out_eyes_open", "success",
         all_(f("noticed_danglars"), f("noticed_fernand"),
              {"counter": "suspicion", "op": ">=", "type": "counter", "value": 2}))],
-  available=qo("qst_pharaon", "out_captain"))
+  available=f("qst_pharaon_complete"))
 
 Q("qst_arrest", "The King's Attorney", "A knock at the feast, and a room above the harbour.", [
     ("stg_arr_seized", f("arrested"), "Answer the soldiers at La Réserve."),
     ("stg_arr_letter", f("letter_burned"), "Answer Villefort about the letter."),
     ("stg_arr_cell", f("in_cell"), "Count the steps down to cell 34."),
 ], [OC("out_buried", "failure", f("in_cell"))],
-  available=qo("qst_betrothal", "out_betrothed"))
+  available=f("qst_betrothal_complete"))
 
 Q("qst_tunnel", "The Sound in the Wall", "Fourteen inches of stone, and something on the other side.", [
     ("stg_tun_sound", f("heard_scratching"), "Make sense of the scratching."),
     ("stg_tun_meet", f("met_faria"), "Answer it."),
 ], [OC("out_companion", "success", f("met_faria"), xp=50)],
-  available=qo("qst_arrest", "out_buried"))
+  available=f("qst_arrest_complete"))
 
 Q("qst_education", "The Second Life", "Everything Faria knows, poured into the years.", [
     ("stg_edu_tongues", f("edu_1"), "Languages, first."),
     ("stg_edu_sciences", f("edu_2"), "Then everything else."),
     ("stg_edu_deduction", f("knows_betrayers"), "Then the one deduction that matters."),
 ], [OC("out_scholar", "success", f("knows_betrayers"), xp=200)],
-  available=qo("qst_tunnel", "out_companion"))
+  available=f("qst_tunnel_complete"))
 
 Q("qst_escape", "The Only Door", "Nobody leaves the Château d'If alive. Precisely.", [
     ("stg_esc_dead", f("faria_dead"), "Bury your friend."),
     ("stg_esc_shroud", f("escaped"), "Take his place."),
     ("stg_esc_amelie", f("aboard_amelie"), "Be someone else by the time you are pulled from the sea."),
 ], [OC("out_free", "success", f("aboard_amelie"), xp=100)],
-  available=qo("qst_education", "out_scholar"))
+  available=f("qst_education_complete"))
 
 Q("qst_treasure", "The Spada Fortune", "An arithmetic of caverns and ingots, tested against rock.", [
     ("stg_tre_secret", f("knows_treasure"), "Hear the abbé out."),
     ("stg_tre_isle", f("on_isle"), "Reach the island alone."),
     ("stg_tre_found", has("item_treasure"), "The second opening, the far corner."),
 ], [OC("out_rich", "success", has("item_treasure"), xp=100)],
-  available=qo("qst_escape", "out_free"))
+  available=f("qst_escape_complete"))
 
 Q("qst_diamond", "The Priest's Diamond", "One stone, offered to a man's conscience to see which wins.", [
     ("stg_dia_donned", f("identity_busoni"), "Become the Abbé Busoni."),
     ("stg_dia_tale", f("heard_inn_tale"), "Hear what became of everyone."),
 ], [OC("out_tested", "success", f("heard_inn_tale")),
     OC("out_given", "neutral", f("gave_diamond"), xp=50)],
-  available=qo("qst_treasure", "out_rich"))
+  available=f("qst_treasure_complete"))
 
 Q("qst_rome", "The Roman Door", "Paris does not open to money. It opens to a story.", [
     ("stg_rome_pact", f("vampa_pact"), "Come to terms with Vampa."),
     ("stg_rome_albert", f("albert_saved"), "Let the Morcerf boy owe you his life."),
     ("stg_rome_invite", f("paris_invitation"), "Accept breakfast, three months hence, precisely."),
 ], [OC("out_doors", "success", f("paris_invitation"), xp=50)],
-  available=qo("qst_treasure", "out_rich"))
+  available=f("qst_treasure_complete"))
 
 Q("qst_morcerf", "Yanina", "What a French officer sold, and what his son must not pay for.", [
     ("stg_mor_arrive", f("identity_count"), "Arrive in Paris as the Count."),
@@ -1119,7 +1135,7 @@ Q("qst_morcerf", "Yanina", "What a French officer sold, and what his son must no
     ("stg_mor_duel", f("duel_done"), "Meet the son at eight in the morning."),
     ("stg_mor_ruin", f("fernand_ruined"), "Show the father twenty-three years, all at once."),
 ], [OC("out_fernand", "success", f("fernand_ruined"), xp=50)],
-  available=qo("qst_rome", "out_doors"))
+  available=f("qst_rome_complete"))
 
 Q("qst_banker", "Six Millions of Credit", "Ruin a banker with nothing but his own arithmetic.", [
     ("stg_ban_credit", f("credit_opened"), "Open the unlimited account."),
@@ -1127,7 +1143,7 @@ Q("qst_banker", "Six Millions of Credit", "Ruin a banker with nothing but his ow
     ("stg_ban_benedetto", f("benedetto_seeded"), "Supply a son-in-law of quality."),
     ("stg_ban_ruin", f("danglars_ruined"), "Let the fifth million do its work."),
 ], [OC("out_danglars", "success", f("danglars_ruined"), xp=50)],
-  available=qo("qst_rome", "out_doors"))
+  available=f("qst_rome_complete"))
 
 Q("qst_procureur", "The House of Villefort", "Justice, applied at last to the man who dispensed it.", [
     ("stg_pro_auteuil", f("auteuil_told"), "Hear Bertuccio's confession."),
@@ -1138,7 +1154,7 @@ Q("qst_procureur", "The House of Villefort", "Justice, applied at last to the ma
     ("stg_pro_trial", f("villefort_unmasked"), "Attend the assizes."),
     ("stg_pro_done", f("villefort_done"), "See what is left in the garden."),
 ], [OC("out_villefort", "success", f("villefort_done"), xp=50)],
-  available=qo("qst_rome", "out_doors"))
+  available=f("qst_rome_complete"))
 
 Q("qst_mercy", "What Is Owed", "Vengeance keeps accounts. So does the other thing.", [
     ("stg_mer_purse", f("morrel_saved"), "The red purse, on the mantel, as it once was."),
@@ -1146,7 +1162,7 @@ Q("qst_mercy", "What Is Owed", "Vengeance keeps accounts. So does the other thin
     ("stg_mer_spare", f("danglars_spared"), "Leave one man alive to be old."),
     ("stg_mer_letter", f("story_closed"), "Write the letter, and leave it on the island."),
 ], [OC("out_mercy", "success", all_(f("danglars_spared"), f("valentine_saved")))],
-  available=qo("qst_rome", "out_doors"))
+  available=f("qst_rome_complete"))
 
 # ===================== ENDINGS =============================================
 def E(eid, kind, name, when):
@@ -1357,6 +1373,28 @@ alternative is not knowing what happens at his table.
 }
 
 # ===================== VARIABLES + SELF-LINT + WRITE =======================
+# A marker exists to be depended upon; leaf quests should not mint state
+# nobody reads.
+_needed = {fl for fl in FLAG_R if fl.endswith("_complete")}
+for _rel, _obj in FILES.items():
+    if not _rel.startswith("data/quests/"):
+        continue
+    for _oc in _obj.get("outcomes", []):
+        _effs = _oc.get("effects")
+        if not _effs:
+            continue
+        _keep = []
+        for _e in _effs:
+            if (_e["type"] == "set_flag" and _e["flag"].endswith("_complete")
+                    and _e["flag"] not in _needed):
+                FLAG_W.pop(_e["flag"], None)
+            else:
+                _keep.append(_e)
+        if _keep:
+            _oc["effects"] = _keep
+        else:
+            _oc.pop("effects", None)
+
 problems = []
 for flag in sorted(FLAG_R - set(FLAG_W)):
     problems.append(f"flag READ but never WRITTEN: {flag}")

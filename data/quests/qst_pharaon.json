@@ -9,6 +9,11 @@
         {
           "amount": 50,
           "type": "grant_xp"
+        },
+        {
+          "flag": "qst_pharaon_complete",
+          "type": "set_flag",
+          "value": true
         }
       ],
       "id": "out_captain",

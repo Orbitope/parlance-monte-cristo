@@ -332,6 +332,54 @@
     },
     {
       "default": false,
+      "description": "First written at 'qst_arrest/out_buried'.",
+      "id": "qst_arrest_complete",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'qst_betrothal/out_betrothed'.",
+      "id": "qst_betrothal_complete",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'qst_education/out_scholar'.",
+      "id": "qst_education_complete",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'qst_escape/out_free'.",
+      "id": "qst_escape_complete",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'qst_pharaon/out_captain'.",
+      "id": "qst_pharaon_complete",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'qst_rome/out_doors'.",
+      "id": "qst_rome_complete",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'qst_treasure/out_rich'.",
+      "id": "qst_treasure_complete",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'qst_tunnel/out_companion'.",
+      "id": "qst_tunnel_complete",
+      "kind": "flag"
+    },
+    {
+      "default": false,
       "description": "First written at 'letter'.",
       "id": "story_closed",
       "kind": "flag"

@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_companion",
-    "quest": "qst_tunnel",
-    "type": "questOutcome"
+    "flag": "qst_tunnel_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_education",
   "journalName": "The Second Life",
@@ -14,6 +14,11 @@
         {
           "amount": 200,
           "type": "grant_xp"
+        },
+        {
+          "flag": "qst_education_complete",
+          "type": "set_flag",
+          "value": true
         }
       ],
       "id": "out_scholar",

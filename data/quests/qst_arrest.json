@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_betrothed",
-    "quest": "qst_betrothal",
-    "type": "questOutcome"
+    "flag": "qst_betrothal_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_arrest",
   "journalName": "The King's Attorney",
@@ -10,6 +10,13 @@
   "outcomes": [
     {
       "description": "The strangers were, indeed, no other than the count and Haydée.",
+      "effects": [
+        {
+          "flag": "qst_arrest_complete",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
       "id": "out_buried",
       "kind": "failure",
       "reachedWhen": {

@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_free",
-    "quest": "qst_escape",
-    "type": "questOutcome"
+    "flag": "qst_escape_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_treasure",
   "journalName": "The Spada Fortune",
@@ -14,6 +14,11 @@
         {
           "amount": 100,
           "type": "grant_xp"
+        },
+        {
+          "flag": "qst_treasure_complete",
+          "type": "set_flag",
+          "value": true
         }
       ],
       "id": "out_rich",

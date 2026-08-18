@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_rich",
-    "quest": "qst_treasure",
-    "type": "questOutcome"
+    "flag": "qst_treasure_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_rome",
   "journalName": "The Roman Door",
@@ -14,6 +14,11 @@
         {
           "amount": 50,
           "type": "grant_xp"
+        },
+        {
+          "flag": "qst_rome_complete",
+          "type": "set_flag",
+          "value": true
         }
       ],
       "id": "out_doors",

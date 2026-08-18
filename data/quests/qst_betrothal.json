@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_captain",
-    "quest": "qst_pharaon",
-    "type": "questOutcome"
+    "flag": "qst_pharaon_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_betrothal",
   "journalName": "The Marriage Feast",
@@ -10,6 +10,13 @@
   "outcomes": [
     {
       "description": "After the usual civilities, the count inquired after M. de Villefort.",
+      "effects": [
+        {
+          "flag": "qst_betrothal_complete",
+          "type": "set_flag",
+          "value": true
+        }
+      ],
       "id": "out_betrothed",
       "kind": "success",
       "reachedWhen": {

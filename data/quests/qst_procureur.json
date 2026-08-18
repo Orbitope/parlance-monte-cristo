@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_doors",
-    "quest": "qst_rome",
-    "type": "questOutcome"
+    "flag": "qst_rome_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_procureur",
   "journalName": "The House of Villefort",

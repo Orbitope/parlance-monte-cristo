@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_captain",
-    "quest": "qst_pharaon",
-    "type": "questOutcome"
+    "flag": "qst_pharaon_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_conspiracy",
   "journalName": "Three Men at a Table",

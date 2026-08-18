@@ -1,8 +1,8 @@
 {
   "availableWhen": {
-    "outcome": "out_scholar",
-    "quest": "qst_education",
-    "type": "questOutcome"
+    "flag": "qst_education_complete",
+    "type": "flag",
+    "value": true
   },
   "id": "qst_escape",
   "journalName": "The Only Door",
@@ -14,6 +14,11 @@
         {
           "amount": 100,
           "type": "grant_xp"
+        },
+        {
+          "flag": "qst_escape_complete",
+          "type": "set_flag",
+          "value": true
         }
       ],
       "id": "out_free",
