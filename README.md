@@ -30,10 +30,9 @@ example to learn the format from.
 
 ## Open it in the editor
 
-```bash
-cd <parlance>/editor
-PARLANCE_ROOT=<path-to>/parlance-monte-cristo npm run dev
-```
+Download or clone this repo, launch Parlance, and point it at the folder — it
+has a `data/` directory and a `parlance.config.json`, so the app recognises it
+immediately.
 
 What each view has to show, and where to look:
 
