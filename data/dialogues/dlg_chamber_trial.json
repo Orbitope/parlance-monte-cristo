@@ -51,6 +51,16 @@
           "character": "npc_haydee",
           "dialogue": "dlg_haydee_verdict",
           "type": "set_active_dialogue"
+        },
+        {
+          "character": "npc_albert",
+          "dialogue": "dlg_albert_challenge",
+          "type": "set_active_dialogue"
+        },
+        {
+          "character": "npc_renaud",
+          "dialogue": "dlg_renaud_scandal",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Ah, yes; what you tell me recalls to mind something about the name of Fernand Mondego. I have heard that name in Greece."

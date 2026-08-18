@@ -26,6 +26,13 @@
     {
       "id": "dlg_pastrini_rescue_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_pastrini",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "There was a crowd on the pier. All the crowd gave way before Morrel."
     }
   ],

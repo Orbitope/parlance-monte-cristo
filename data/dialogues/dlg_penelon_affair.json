@@ -26,6 +26,13 @@
     {
       "id": "dlg_penelon_affair_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_penelon",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "However, when Morrel went down to his dinner, he appeared very calm."
     }
   ],

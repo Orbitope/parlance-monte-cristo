@@ -26,6 +26,13 @@
     {
       "id": "dlg_villefort_rattled_talk_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_villefort",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "He bowed. Just at that moment voices were heard hailing the concierge."
     }
   ],

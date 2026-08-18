@@ -14,6 +14,12 @@
     },
     {
       "default": false,
+      "description": "First written at 'dlg_poison_watch'.",
+      "id": "active_dialogue__npc_barrois",
+      "kind": "flag"
+    },
+    {
+      "default": false,
       "description": "First written at 'dlg_beauchamp_press'.",
       "id": "active_dialogue__npc_beauchamp",
       "kind": "flag"
@@ -26,8 +32,32 @@
     },
     {
       "default": false,
+      "description": "First written at 'dlg_caderousse_diamond'.",
+      "id": "active_dialogue__npc_caderousse",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_caderousse_diamond'.",
+      "id": "active_dialogue__npc_carconte",
+      "kind": "flag"
+    },
+    {
+      "default": false,
       "description": "First written at 'dlg_poison_watch'.",
       "id": "active_dialogue__npc_davrigny",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_telegraph_man'.",
+      "id": "active_dialogue__npc_debray",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_benedetto_groom'.",
+      "id": "active_dialogue__npc_eugenie",
       "kind": "flag"
     },
     {
@@ -38,8 +68,20 @@
     },
     {
       "default": false,
+      "description": "First written at 'dlg_albert_rescue'.",
+      "id": "active_dialogue__npc_franz",
+      "kind": "flag"
+    },
+    {
+      "default": false,
       "description": "First written at 'dlg_chamber_trial'.",
       "id": "active_dialogue__npc_haydee",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_grotto'.",
+      "id": "active_dialogue__npc_jacopo",
       "kind": "flag"
     },
     {
@@ -50,8 +92,44 @@
     },
     {
       "default": false,
+      "description": "First written at 'dlg_albert_challenge'.",
+      "id": "active_dialogue__npc_mercedes",
+      "kind": "flag"
+    },
+    {
+      "default": false,
       "description": "First written at 'dlg_danglars_ruin'.",
       "id": "active_dialogue__npc_mme_danglars",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_julie_purse'.",
+      "id": "active_dialogue__npc_morrel",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_albert_rescue'.",
+      "id": "active_dialogue__npc_pastrini",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_wilmore_donning'.",
+      "id": "active_dialogue__npc_penelon",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_chamber_trial'.",
+      "id": "active_dialogue__npc_renaud",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_noirtier'.",
+      "id": "active_dialogue__npc_valentine",
       "kind": "flag"
     },
     {

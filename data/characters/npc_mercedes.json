@@ -4,17 +4,37 @@
     {
       "dialogue": "dlg_mercedes_widow",
       "showIf": {
-        "flag": "fernand_ruined",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_mercedes",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "fernand_ruined",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {
       "dialogue": "dlg_mercedes_plea",
       "showIf": {
-        "flag": "duel_pending",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_mercedes",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "duel_pending",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

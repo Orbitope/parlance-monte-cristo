@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_caderousse_spending",
       "showIf": {
-        "flag": "gave_diamond",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_caderousse",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "gave_diamond",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

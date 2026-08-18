@@ -29,6 +29,11 @@
           "character": "npc_davrigny",
           "dialogue": "dlg_davrigny",
           "type": "set_active_dialogue"
+        },
+        {
+          "character": "npc_barrois",
+          "dialogue": "dlg_barrois_deaths",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Bertuccio knocked, the door opened, and the concierge appeared."

@@ -26,6 +26,13 @@
     {
       "id": "dlg_eugenie_assessed_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_eugenie",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Danglars rang and was answered by a servant in a showy livery."
     }
   ],

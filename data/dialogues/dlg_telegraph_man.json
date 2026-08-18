@@ -53,6 +53,11 @@
           "quest": "qst_banker",
           "toStage": "stg_ban_telegraph",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_debray",
+          "dialogue": "dlg_debray_telegraph",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "You are mistaken, for I have made a vow never to return to Africa."

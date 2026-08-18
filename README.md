@@ -39,7 +39,7 @@ What each view has to show, and where to look:
 
 | View | Try | Why |
 |---|---|---|
-| **Flow map** (Dialogues, none open) | — | 112 dialogues; 11 `set_active_dialogue` routes and 2 cutscene chains. Follow `dlg_albert_rescue → dlg_albert_invitation → cs_paris_entrance → dlg_paris_entrance` for a multi-hop jump across acts |
+| **Flow map** (Dialogues, none open) | — | 112 dialogues, 34 edges: 32 `set_active_dialogue` routes and 2 cutscene chains. Look for the hubs — `dlg_chamber_trial` and `dlg_albert_rescue` each re-point three characters at once — and follow `dlg_albert_rescue → dlg_albert_invitation → cs_paris_entrance → dlg_paris_entrance` across acts |
 | **Node graph** | `dlg_caderousse_diamond` | 6 nodes: a check, a `next` chain, and a moral fork |
 | | `dlg_villefort_interrogation` | Three mutually exclusive openings gated on what you carry |
 | **Quest canvas** | `qst_procureur` | 7 stages, each with a journal objective |

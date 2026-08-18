@@ -41,6 +41,16 @@
           "quest": "qst_morcerf",
           "toStage": "stg_mor_ruin",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_mercedes",
+          "dialogue": "dlg_mercedes_widow",
+          "type": "set_active_dialogue"
+        },
+        {
+          "character": "npc_haydee",
+          "dialogue": "dlg_haydee_choice",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "That did more honor to your heart than to your experience, M. Bertuccio. Had you known this Edmond Dantès, of whom they spoke?"

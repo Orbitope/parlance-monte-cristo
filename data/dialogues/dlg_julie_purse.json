@@ -47,6 +47,16 @@
           "quest": "qst_mercy",
           "toStage": "stg_mer_purse",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_morrel",
+          "dialogue": "dlg_morrel_toast",
+          "type": "set_active_dialogue"
+        },
+        {
+          "character": "npc_maximilien",
+          "dialogue": "dlg_maximilien_thanks",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Have you not saved Peppino’s life?"

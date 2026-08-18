@@ -28,6 +28,18 @@
     {
       "id": "dlg_albert_challenge_fixed",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_albert",
+          "type": "set_flag",
+          "value": false
+        },
+        {
+          "character": "npc_mercedes",
+          "dialogue": "dlg_mercedes_plea",
+          "type": "set_active_dialogue"
+        }
+      ],
       "text": "M. de Château-Renaud exaggerates."
     }
   ],

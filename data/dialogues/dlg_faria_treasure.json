@@ -55,6 +55,11 @@
           "flag": "active_dialogue__npc_faria",
           "type": "set_flag",
           "value": false
+        },
+        {
+          "character": "npc_faria",
+          "dialogue": "dlg_faria_death",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Monte Cristo, forget not Monte Cristo!"

@@ -32,6 +32,11 @@
           "flag": "haydee_stays",
           "type": "set_flag",
           "value": true
+        },
+        {
+          "flag": "active_dialogue__npc_haydee",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "Are you mad, or are you laughing at us?"

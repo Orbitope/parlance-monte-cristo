@@ -33,6 +33,11 @@
           "flag": "active_dialogue__npc_faria",
           "type": "set_flag",
           "value": false
+        },
+        {
+          "character": "npc_faria",
+          "dialogue": "dlg_faria_deduce",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "What! For the emperor’s return?—the emperor is no longer on the throne, then?"

@@ -32,6 +32,11 @@
           "flag": "franz_settled",
           "type": "set_flag",
           "value": true
+        },
+        {
+          "flag": "active_dialogue__npc_franz",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "He died a more wretched, hopeless, heart-broken prisoner than the felons who pay the penalty of their crimes at the galleys of Toulon."

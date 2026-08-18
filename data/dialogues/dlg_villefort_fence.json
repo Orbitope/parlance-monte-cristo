@@ -39,6 +39,13 @@
     {
       "id": "dlg_villefort_fence_smooth",
       "isEnd": true,
+      "onEnter": [
+        {
+          "character": "npc_villefort",
+          "dialogue": "dlg_villefort_rattled_talk",
+          "type": "set_active_dialogue"
+        }
+      ],
       "text": "I narrowly escaped catching a fever there."
     }
   ],

@@ -35,6 +35,11 @@
           "flag": "active_dialogue__npc_albert",
           "type": "set_flag",
           "value": false
+        },
+        {
+          "character": "npc_albert",
+          "dialogue": "dlg_albert_paris",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Of what, think you, do young and strong men die in prison, when they have scarcely numbered their thirtieth year, unless it be of imprisonment?"

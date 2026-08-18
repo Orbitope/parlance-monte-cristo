@@ -1400,6 +1400,35 @@ ROUTE_LIST = [
     ("dlg_poison_watch",      "npc_davrigny",    "dlg_davrigny"),
     ("dlg_valentine_vigil",   "npc_maximilien",  "dlg_morrel_despair"),
         ("dlg_danglars_ruin",     "npc_mme_danglars","dlg_mme_danglars_ruin"),
+
+    # Faria's tutorials run end to end, so his five rungs read as one spine.
+    ("dlg_faria_teach_2",     "npc_faria",       "dlg_faria_deduce"),
+    ("dlg_faria_treasure",    "npc_faria",       "dlg_faria_death"),
+
+    # Marseilles and the isle.
+    ("dlg_grotto",            "npc_jacopo",      "dlg_jacopo_farewell"),
+    ("dlg_wilmore_donning",   "npc_penelon",     "dlg_penelon_affair"),
+    ("dlg_caderousse_diamond","npc_caderousse",  "dlg_caderousse_spending"),
+    ("dlg_caderousse_diamond","npc_carconte",    "dlg_carconte_diamond"),
+    ("dlg_julie_purse",       "npc_morrel",      "dlg_morrel_toast"),
+    ("dlg_julie_purse",       "npc_maximilien",  "dlg_maximilien_thanks"),
+
+    # Rome — the rescue is the talk of the hotel.
+    ("dlg_albert_rescue",     "npc_pastrini",    "dlg_pastrini_rescue"),
+    ("dlg_albert_rescue",     "npc_franz",       "dlg_franz_doubt"),
+    ("dlg_albert_invitation", "npc_albert",      "dlg_albert_paris"),
+
+    # Paris — one event, several people who now have something to say.
+    ("dlg_chamber_trial",     "npc_albert",      "dlg_albert_challenge"),
+    ("dlg_chamber_trial",     "npc_renaud",      "dlg_renaud_scandal"),
+    ("dlg_albert_challenge",  "npc_mercedes",    "dlg_mercedes_plea"),
+    ("dlg_fernand_end",       "npc_mercedes",    "dlg_mercedes_widow"),
+    ("dlg_fernand_end",       "npc_haydee",      "dlg_haydee_choice"),
+    ("dlg_villefort_fence",   "npc_villefort",   "dlg_villefort_rattled_talk"),
+    ("dlg_telegraph_man",     "npc_debray",      "dlg_debray_telegraph"),
+    ("dlg_benedetto_groom",   "npc_eugenie",     "dlg_eugenie_assessed"),
+    ("dlg_poison_watch",      "npc_barrois",     "dlg_barrois_deaths"),
+    ("dlg_noirtier",          "npc_valentine",   "dlg_valentine_vigil"),
 ]
 
 for _src, _char, _tgt in ROUTE_LIST:
@@ -1410,9 +1439,18 @@ for _src, _char, _tgt in ROUTE_LIST:
     _target_node.setdefault("onEnter", []).append(
         {"character": _char, "dialogue": _tgt, "type": "set_active_dialogue"})
     FLAG_W.setdefault(_pin, _src)
-    # Clear the pin as the target ends, so it does not stick.
+    # Clear the pin as the target ends — but NOT on a failure branch. A
+    # fumbled attempt should leave the character still wanting to talk about
+    # it, so you can come back; clearing there would also mean a failed roll
+    # silently reorders the ladder, which is the punishment spiral the
+    # validator warns about.
+    _fail_nodes = set()
     for _n in DIALOGUES[_tgt]["nodes"]:
-        if _n.get("isEnd"):
+        for _ch in _n.get("choices", []):
+            if "check" in _ch:
+                _fail_nodes.add(_ch["check"]["onFailure"])
+    for _n in DIALOGUES[_tgt]["nodes"]:
+        if _n.get("isEnd") and _n["id"] not in _fail_nodes:
             _n.setdefault("onEnter", []).append({"flag": _pin, "type": "set_flag", "value": False})
     # The target's rung accepts the pin OR its own story condition.
     _cfile = FILES[f"data/characters/{_char}.json"]

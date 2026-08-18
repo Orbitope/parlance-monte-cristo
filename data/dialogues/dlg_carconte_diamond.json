@@ -26,6 +26,13 @@
     {
       "id": "dlg_carconte_diamond_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_carconte",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "To you, perhaps, they will accord the time they have refused to me."
     }
   ],

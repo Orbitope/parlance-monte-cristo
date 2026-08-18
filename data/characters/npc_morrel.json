@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_morrel_toast",
       "showIf": {
-        "flag": "morrel_saved",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_morrel",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "morrel_saved",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

@@ -36,6 +36,11 @@
           "quest": "qst_treasure",
           "toStage": "stg_tre_found",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_jacopo",
+          "dialogue": "dlg_jacopo_farewell",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "He pretended to know of an immense treasure, and offered vast sums to the government if they would liberate him."

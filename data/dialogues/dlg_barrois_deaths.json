@@ -26,6 +26,13 @@
     {
       "id": "dlg_barrois_deaths_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_barrois",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Panting with loss of breath, he returned to the room he had just left."
     }
   ],

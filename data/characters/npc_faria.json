@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_faria_death",
       "showIf": {
-        "flag": "knows_treasure",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_faria",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "knows_treasure",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {
@@ -30,9 +40,19 @@
     {
       "dialogue": "dlg_faria_deduce",
       "showIf": {
-        "flag": "edu_2",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_faria",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "edu_2",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

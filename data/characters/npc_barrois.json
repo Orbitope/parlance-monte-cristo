@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_barrois_deaths",
       "showIf": {
-        "flag": "household_dying",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_barrois",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "household_dying",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

@@ -26,6 +26,13 @@
     {
       "id": "dlg_renaud_scandal_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_renaud",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "I shall wait till I am of age, which will be in about ten months."
     }
   ],

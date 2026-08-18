@@ -26,6 +26,13 @@
     {
       "id": "dlg_mercedes_widow_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_mercedes",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Bertuccio bowed respectfully, and turned away, sighing heavily."
     }
   ],

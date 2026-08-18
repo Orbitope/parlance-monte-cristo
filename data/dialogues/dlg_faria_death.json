@@ -25,6 +25,11 @@
           "quest": "qst_escape",
           "toStage": "stg_esc_dead",
           "type": "advance_quest"
+        },
+        {
+          "flag": "active_dialogue__npc_faria",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "Dantès strove to do this with his nails, but they were too weak."

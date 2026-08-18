@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_renaud_scandal",
       "showIf": {
-        "flag": "fernand_unmasked",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_renaud",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "fernand_unmasked",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

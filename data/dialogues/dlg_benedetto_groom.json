@@ -36,6 +36,11 @@
           "quest": "qst_banker",
           "toStage": "stg_ban_benedetto",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_eugenie",
+          "dialogue": "dlg_eugenie_assessed",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "No, his horse; of which we each of us ate a slice with a hearty appetite. It was very hard."

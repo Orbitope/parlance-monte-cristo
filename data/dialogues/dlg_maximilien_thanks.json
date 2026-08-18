@@ -26,6 +26,13 @@
     {
       "id": "dlg_maximilien_thanks_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_maximilien",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Arabic language what he had just been saying to Baptistin in French."
     }
   ],

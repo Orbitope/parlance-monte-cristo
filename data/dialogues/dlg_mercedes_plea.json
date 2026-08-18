@@ -55,6 +55,11 @@
           "flag": "duel_hard",
           "type": "set_flag",
           "value": true
+        },
+        {
+          "flag": "active_dialogue__npc_mercedes",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "We gather from all this, baron, that Captain Morrel saved your life."

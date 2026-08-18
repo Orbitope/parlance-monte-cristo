@@ -26,6 +26,13 @@
     {
       "id": "dlg_debray_telegraph_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_debray",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "That evening he had a long conference with several friends; and M."
     }
   ],

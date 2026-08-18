@@ -26,6 +26,13 @@
     {
       "id": "dlg_morrel_toast_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_morrel",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Captain Gaumard, recovered from his illness, had returned from Palma."
     }
   ],

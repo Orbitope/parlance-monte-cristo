@@ -38,6 +38,11 @@
           "flag": "jacopo_loyal",
           "type": "set_flag",
           "value": true
+        },
+        {
+          "flag": "active_dialogue__npc_jacopo",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "You are welcome, sir, most welcome!"
@@ -50,6 +55,11 @@
           "flag": "jacopo_loyal",
           "type": "set_flag",
           "value": true
+        },
+        {
+          "flag": "active_dialogue__npc_jacopo",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "You are, I presume, M. Caderousse?"

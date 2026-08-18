@@ -46,6 +46,16 @@
           "character": "npc_albert",
           "dialogue": "dlg_albert_invitation",
           "type": "set_active_dialogue"
+        },
+        {
+          "character": "npc_pastrini",
+          "dialogue": "dlg_pastrini_rescue",
+          "type": "set_active_dialogue"
+        },
+        {
+          "character": "npc_franz",
+          "dialogue": "dlg_franz_doubt",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Did you, in the year 1814 or 1815, know anything of a young sailor named Dantès?"

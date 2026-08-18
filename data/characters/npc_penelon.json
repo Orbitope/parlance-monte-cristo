@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_penelon_affair",
       "showIf": {
-        "flag": "identity_wilmore",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_penelon",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "identity_wilmore",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

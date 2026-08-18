@@ -10,6 +10,11 @@
           "flag": "identity_wilmore",
           "type": "set_flag",
           "value": true
+        },
+        {
+          "character": "npc_penelon",
+          "dialogue": "dlg_penelon_affair",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Thomson & French alone, returned and signed to him that he could enter."
