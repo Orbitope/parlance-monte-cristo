@@ -57,6 +57,11 @@
           "quest": "qst_education",
           "toStage": "stg_edu_deduction",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_faria",
+          "dialogue": "dlg_faria_treasure",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "I will let you know that directly I have seen M. de Villefort, whom I shall endeavor to interest in Edmond’s favor. I am aware he is a furious royalist; but, in spite of that, and of his being king’s attorney, he is a man like ourselves, and I fancy not a bad sort of one."

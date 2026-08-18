@@ -8,6 +8,60 @@
     },
     {
       "default": false,
+      "description": "First written at 'dlg_albert_rescue'.",
+      "id": "active_dialogue__npc_albert",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_beauchamp_press'.",
+      "id": "active_dialogue__npc_beauchamp",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_auteuil_dinner'.",
+      "id": "active_dialogue__npc_bertuccio",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_poison_watch'.",
+      "id": "active_dialogue__npc_davrigny",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_faria_meet'.",
+      "id": "active_dialogue__npc_faria",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_chamber_trial'.",
+      "id": "active_dialogue__npc_haydee",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_valentine_vigil'.",
+      "id": "active_dialogue__npc_maximilien",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_danglars_ruin'.",
+      "id": "active_dialogue__npc_mme_danglars",
+      "kind": "flag"
+    },
+    {
+      "default": false,
+      "description": "First written at 'dlg_benedetto_trial'.",
+      "id": "active_dialogue__npc_villefort",
+      "kind": "flag"
+    },
+    {
+      "default": false,
       "description": "First written at 'freed'.",
       "id": "albert_saved",
       "kind": "flag"

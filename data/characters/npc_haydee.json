@@ -12,9 +12,19 @@
     {
       "dialogue": "dlg_haydee_verdict",
       "showIf": {
-        "flag": "fernand_unmasked",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_haydee",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "fernand_unmasked",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

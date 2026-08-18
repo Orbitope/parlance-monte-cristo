@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_villefort_madness",
       "showIf": {
-        "flag": "villefort_unmasked",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_villefort",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "villefort_unmasked",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

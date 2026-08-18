@@ -28,6 +28,18 @@
     {
       "id": "dlg_faria_teach_1_year",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_faria",
+          "type": "set_flag",
+          "value": false
+        },
+        {
+          "character": "npc_faria",
+          "dialogue": "dlg_faria_teach_2",
+          "type": "set_active_dialogue"
+        }
+      ],
       "text": "Some hours afterwards it began again, nearer and more distinct."
     }
   ],

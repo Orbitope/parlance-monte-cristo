@@ -28,6 +28,29 @@ coverage reports, reference indexes. Read
 [Mistfall Inn](https://github.com/Orbitope/mistfall-inn) if you want a small
 example to learn the format from.
 
+## Open it in the editor
+
+```bash
+cd <parlance>/editor
+PARLANCE_ROOT=<path-to>/parlance-monte-cristo npm run dev
+```
+
+What each view has to show, and where to look:
+
+| View | Try | Why |
+|---|---|---|
+| **Flow map** (Dialogues, none open) | — | 112 dialogues; 11 `set_active_dialogue` routes and 2 cutscene chains. Follow `dlg_albert_rescue → dlg_albert_invitation → cs_paris_entrance → dlg_paris_entrance` for a multi-hop jump across acts |
+| **Node graph** | `dlg_caderousse_diamond` | 6 nodes: a check, a `next` chain, and a moral fork |
+| | `dlg_villefort_interrogation` | Three mutually exclusive openings gated on what you carry |
+| **Quest canvas** | `qst_procureur` | 7 stages, each with a journal objective |
+| **Quest dependency graph** | — | 13 edges: a Marseilles-to-treasure spine, then a four-way fan-out |
+| **Location map** | — | 15 locations, exits gated on items and story flags |
+| **Reference index** | `identity_count` | 8 sites — the Count's arrival re-points half of Paris |
+| | `valentine_saved` | 9 sites, spanning quest outcomes and endings |
+| **Reports / coverage** | — | Clean: no orphan characters, unreachable nodes, or dead flags |
+| **Playtest** | `dlg_faria_deduce` | Set `observation` and watch the deduction fork; seeded, so a run repeats |
+| **Ladders** | `npc_villefort`, `npc_faria` | 5 rungs each |
+
 ## Quest dependencies
 
 The 14 quests form a real dependency graph — a Marseilles-to-treasure spine,

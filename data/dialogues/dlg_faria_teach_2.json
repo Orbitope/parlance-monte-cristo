@@ -28,6 +28,13 @@
     {
       "id": "dlg_faria_teach_2_more",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_faria",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "What! For the emperor’s return?—the emperor is no longer on the throne, then?"
     }
   ],

@@ -41,6 +41,11 @@
           "quest": "qst_banker",
           "toStage": "stg_ban_ruin",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_mme_danglars",
+          "dialogue": "dlg_mme_danglars_ruin",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Well, with the five minutes’ grace, we have only ten left."

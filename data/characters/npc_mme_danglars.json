@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_mme_danglars_ruin",
       "showIf": {
-        "flag": "danglars_ruined",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_mme_danglars",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "danglars_ruined",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

@@ -26,6 +26,13 @@
     {
       "id": "dlg_mme_danglars_ruin_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_mme_danglars",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Europe, and still wealth such as yours has been wholly unknown to me."
     }
   ],

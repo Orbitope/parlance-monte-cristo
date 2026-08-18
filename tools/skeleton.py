@@ -820,6 +820,8 @@ D("dlg_benedetto_idle", "Andrea — rehearsing his own biography", "npc_benedett
   ["conversation", "act4"], [N("open", "act4", end=True)])
 D("dlg_jailer_idle", "The jailer — no answer through the grate", "npc_jailer",
   ["conversation", "act2"], [N("open", "act2", end=True)])
+D("dlg_faria_idle", "Faria — the abbé is working", "npc_faria",
+  ["conversation", "act2"], [N("open", "act2", end=True)])
 
 
 def G(did, title, speaker, act, rungs=2):
@@ -890,7 +892,7 @@ CH("npc_faria", "Abbé Faria", "A prisoner who made a library of his own memory.
     R("dlg_faria_treasure", f("knows_betrayers")),
     R("dlg_faria_deduce", f("edu_2")),
     R("dlg_faria_teach_2", f("edu_1")),
-    R("dlg_faria_teach_1")])
+    R("dlg_faria_teach_1"), R("dlg_faria_idle")])
 CH("npc_jacopo", "Jacopo", "A smuggler who pulled a stranger from the sea and never regretted it.", [
     R("dlg_jacopo_captain", f("jacopo_loyal")), R("dlg_jacopo_farewell", has("item_treasure")), R("dlg_jacopo_rescue")])
 CH("npc_vampa", "Luigi Vampa", "Bandit chief. Keeps his word for his own reasons.", [
@@ -1212,6 +1214,7 @@ FILES["data/cutscenes/cs_escape_shroud.json"] = {
 FILES["data/cutscenes/cs_paris_entrance.json"] = {
     "arrivesAt": {"location": "loc_paris_salon", "spawn": "sp_loc_paris_salon"},
     "asset": "Cutscenes/ParisEntrance", "effectsOnComplete": [],
+    "entersDialogue": "dlg_paris_entrance",
     "id": "cs_paris_entrance", "name": "Number 30, Champs-Élysées", "skippable": True}
 
 FILES["data/progression.json"] = {
@@ -1371,6 +1374,57 @@ prince, a smuggler, or a ghost — and invites him regardless, because the
 alternative is not knowing what happens at his table.
 """,
 }
+
+
+# ===================== ROUTES: scene-to-scene jumps =========================
+# `set_active_dialogue` re-points a character's ladder at a specific next
+# conversation — "after this, they want to talk about that". It is also what
+# the editor's flow map draws its edges from, so a story whose connections
+# live only in ladder gates analyses as N disconnected scenes.
+#
+# Each route: the SOURCE dialogue's terminal beats pin the character; the
+# TARGET's rung accepts the pin as an alternative to its story condition, and
+# clears it on the way out. One pin per character at a time — the flag is a
+# boolean, so these are single hops, never chains.
+
+ROUTE_LIST = [
+    # (source dialogue, character, target dialogue)
+    ("dlg_faria_meet",        "npc_faria",       "dlg_faria_teach_1"),
+    ("dlg_faria_teach_1",     "npc_faria",       "dlg_faria_teach_2"),
+    ("dlg_faria_deduce",      "npc_faria",       "dlg_faria_treasure"),
+    ("dlg_albert_rescue",     "npc_albert",      "dlg_albert_invitation"),
+    ("dlg_chamber_trial",     "npc_haydee",      "dlg_haydee_verdict"),
+    ("dlg_beauchamp_press",   "npc_beauchamp",   "dlg_beauchamp_echoes"),
+    ("dlg_auteuil_dinner",    "npc_bertuccio",   "dlg_bertuccio_lighter"),
+    ("dlg_benedetto_trial",   "npc_villefort",   "dlg_villefort_madness"),
+    ("dlg_poison_watch",      "npc_davrigny",    "dlg_davrigny"),
+    ("dlg_valentine_vigil",   "npc_maximilien",  "dlg_morrel_despair"),
+        ("dlg_danglars_ruin",     "npc_mme_danglars","dlg_mme_danglars_ruin"),
+]
+
+for _src, _char, _tgt in ROUTE_LIST:
+    _pin = "active_dialogue__" + _char
+    _srcd = DIALOGUES[_src]
+    _ends = [n for n in _srcd["nodes"] if n.get("isEnd")]
+    _target_node = _ends[-1] if _ends else _srcd["nodes"][-1]
+    _target_node.setdefault("onEnter", []).append(
+        {"character": _char, "dialogue": _tgt, "type": "set_active_dialogue"})
+    FLAG_W.setdefault(_pin, _src)
+    # Clear the pin as the target ends, so it does not stick.
+    for _n in DIALOGUES[_tgt]["nodes"]:
+        if _n.get("isEnd"):
+            _n.setdefault("onEnter", []).append({"flag": _pin, "type": "set_flag", "value": False})
+    # The target's rung accepts the pin OR its own story condition.
+    _cfile = FILES[f"data/characters/{_char}.json"]
+    for _rung in _cfile["dialogues"]:
+        if _rung["dialogue"] == _tgt:
+            if "showIf" in _rung:
+                _rung["showIf"] = {"of": [{"flag": _pin, "type": "flag", "value": True},
+                                          _rung["showIf"]], "type": "any"}
+            else:
+                _rung["showIf"] = {"flag": _pin, "type": "flag", "value": True}
+            FLAG_R.add(_pin)
+            break
 
 # ===================== VARIABLES + SELF-LINT + WRITE =======================
 # A marker exists to be depended upon; leaf quests should not mint state

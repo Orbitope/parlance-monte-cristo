@@ -41,6 +41,11 @@
           "quest": "qst_rome",
           "toStage": "stg_rome_albert",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_albert",
+          "dialogue": "dlg_albert_invitation",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Did you, in the year 1814 or 1815, know anything of a young sailor named Dantès?"

@@ -29,6 +29,11 @@
           "quest": "qst_tunnel",
           "toStage": "stg_tun_meet",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_faria",
+          "dialogue": "dlg_faria_teach_1",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "I am the Abbé Faria, born at Rome. I was for twenty years Cardinal Spada’s secretary; I was arrested, why, I know not, toward the beginning of the year 1811; since then I have demanded my liberty from the Italian and French government."

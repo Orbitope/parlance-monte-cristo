@@ -26,6 +26,13 @@
     {
       "id": "dlg_haydee_verdict_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_haydee",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Scarcely had Ali disappeared when the valet entered the chamber."
     }
   ],

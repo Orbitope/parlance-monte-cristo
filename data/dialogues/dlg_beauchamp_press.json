@@ -44,6 +44,13 @@
     {
       "id": "dlg_beauchamp_press_waved",
       "isEnd": true,
+      "onEnter": [
+        {
+          "character": "npc_beauchamp",
+          "dialogue": "dlg_beauchamp_echoes",
+          "type": "set_active_dialogue"
+        }
+      ],
       "text": "I understand; you must lay in a stock of hilarity."
     }
   ],

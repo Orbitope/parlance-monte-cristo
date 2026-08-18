@@ -50,6 +50,13 @@
     {
       "id": "dlg_faria_treasure_isle",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_faria",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Monte Cristo, forget not Monte Cristo!"
     }
   ],

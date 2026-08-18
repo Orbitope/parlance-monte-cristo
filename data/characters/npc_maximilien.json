@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_morrel_despair",
       "showIf": {
-        "flag": "villefort_unmasked",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_maximilien",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "villefort_unmasked",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

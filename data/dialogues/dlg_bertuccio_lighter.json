@@ -26,6 +26,13 @@
     {
       "id": "dlg_bertuccio_lighter_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_bertuccio",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "The banker thought the time had come for him to take the upper hand."
     }
   ],

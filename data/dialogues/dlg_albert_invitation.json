@@ -30,6 +30,11 @@
         {
           "cutscene": "cs_paris_entrance",
           "type": "play_cutscene"
+        },
+        {
+          "flag": "active_dialogue__npc_albert",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "Of what, think you, do young and strong men die in prison, when they have scarcely numbered their thirtieth year, unless it be of imprisonment?"

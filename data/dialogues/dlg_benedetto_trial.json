@@ -15,6 +15,11 @@
           "quest": "qst_procureur",
           "toStage": "stg_pro_trial",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_villefort",
+          "dialogue": "dlg_villefort_madness",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "And this king’s attorney was named Villefort?"

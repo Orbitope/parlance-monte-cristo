@@ -41,6 +41,11 @@
           "character": "npc_maximilien",
           "delta": 1,
           "type": "adjust_relationship"
+        },
+        {
+          "flag": "active_dialogue__npc_maximilien",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "And you have seen this cavern, Morcerf?"

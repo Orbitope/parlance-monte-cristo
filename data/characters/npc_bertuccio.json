@@ -4,9 +4,19 @@
     {
       "dialogue": "dlg_bertuccio_lighter",
       "showIf": {
-        "flag": "dinner_told",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_bertuccio",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "dinner_told",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

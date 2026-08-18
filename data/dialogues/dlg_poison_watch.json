@@ -24,6 +24,11 @@
           "quest": "qst_procureur",
           "toStage": "stg_pro_dying",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_davrigny",
+          "dialogue": "dlg_davrigny",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Bertuccio knocked, the door opened, and the concierge appeared."

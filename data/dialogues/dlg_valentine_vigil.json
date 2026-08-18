@@ -69,6 +69,11 @@
           "quest": "qst_mercy",
           "toStage": "stg_mer_valentine",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_maximilien",
+          "dialogue": "dlg_morrel_despair",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Well, he of whom I speak is the lord and master of this grain of sand, of this atom; he has purchased the title of count somewhere in Tuscany."

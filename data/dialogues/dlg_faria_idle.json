@@ -1,0 +1,17 @@
+{
+  "entry": "dlg_faria_idle_open",
+  "id": "dlg_faria_idle",
+  "nodes": [
+    {
+      "id": "dlg_faria_idle_open",
+      "isEnd": true,
+      "text": "What does your chamber open on?"
+    }
+  ],
+  "speakerId": "npc_faria",
+  "tags": [
+    "conversation",
+    "act2"
+  ],
+  "title": "Faria — the abbé is working"
+}

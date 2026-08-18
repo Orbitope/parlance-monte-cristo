@@ -26,6 +26,13 @@
     {
       "id": "dlg_beauchamp_echoes_out",
       "isEnd": true,
+      "onEnter": [
+        {
+          "flag": "active_dialogue__npc_beauchamp",
+          "type": "set_flag",
+          "value": false
+        }
+      ],
       "text": "Count of Monte Cristo, and have given him an unlimited credit with me."
     }
   ],

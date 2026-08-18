@@ -20,9 +20,19 @@
     {
       "dialogue": "dlg_albert_invitation",
       "showIf": {
-        "flag": "albert_saved",
-        "type": "flag",
-        "value": true
+        "of": [
+          {
+            "flag": "active_dialogue__npc_albert",
+            "type": "flag",
+            "value": true
+          },
+          {
+            "flag": "albert_saved",
+            "type": "flag",
+            "value": true
+          }
+        ],
+        "type": "any"
       }
     },
     {

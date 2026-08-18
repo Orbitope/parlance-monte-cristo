@@ -31,6 +31,11 @@
           "quest": "qst_procureur",
           "toStage": "stg_pro_done",
           "type": "advance_quest"
+        },
+        {
+          "flag": "active_dialogue__npc_villefort",
+          "type": "set_flag",
+          "value": false
         }
       ],
       "text": "That is what deceives you, Debray."

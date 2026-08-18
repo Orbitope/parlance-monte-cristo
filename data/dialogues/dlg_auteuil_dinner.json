@@ -49,6 +49,11 @@
           "quest": "qst_procureur",
           "toStage": "stg_pro_dinner",
           "type": "advance_quest"
+        },
+        {
+          "character": "npc_bertuccio",
+          "dialogue": "dlg_bertuccio_lighter",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "I was at Rome during the last Carnival."

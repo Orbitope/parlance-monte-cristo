@@ -46,6 +46,11 @@
           "delta": -1,
           "faction": "fac_society",
           "type": "adjust_reputation"
+        },
+        {
+          "character": "npc_haydee",
+          "dialogue": "dlg_haydee_verdict",
+          "type": "set_active_dialogue"
         }
       ],
       "text": "Ah, yes; what you tell me recalls to mind something about the name of Fernand Mondego. I have heard that name in Greece."
