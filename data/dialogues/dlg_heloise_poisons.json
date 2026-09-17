@@ -58,6 +58,24 @@
       "text": "No, he arrived accompanied simply by the guest I am going to present to you."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "dinner_told",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "poison_lesson",
+          "type": "flag",
+          "value": false
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_heloise",
   "tags": [
     "conversation",

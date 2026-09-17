@@ -1,54 +1,5 @@
 {
   "description": "Of the Catalans. The only person in Paris who was in Marseilles.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_mercedes_widow",
-      "showIf": {
-        "of": [
-          {
-            "flag": "active_dialogue__npc_mercedes",
-            "type": "flag",
-            "value": true
-          },
-          {
-            "flag": "fernand_ruined",
-            "type": "flag",
-            "value": true
-          }
-        ],
-        "type": "any"
-      }
-    },
-    {
-      "dialogue": "dlg_mercedes_plea",
-      "showIf": {
-        "of": [
-          {
-            "flag": "active_dialogue__npc_mercedes",
-            "type": "flag",
-            "value": true
-          },
-          {
-            "flag": "duel_pending",
-            "type": "flag",
-            "value": true
-          }
-        ],
-        "type": "any"
-      }
-    },
-    {
-      "dialogue": "dlg_mercedes_waiting",
-      "showIf": {
-        "flag": "identity_wilmore",
-        "type": "flag",
-        "value": true
-      }
-    },
-    {
-      "dialogue": "dlg_mercedes_first"
-    }
-  ],
   "id": "npc_mercedes",
   "name": "Mercédès",
   "role": "Of the Catalans. The only person in Paris who was in Marseilles."

@@ -64,6 +64,24 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "identity_count",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "yanina_seed",
+          "type": "flag",
+          "value": false
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_beauchamp",
   "tags": [
     "conversation",

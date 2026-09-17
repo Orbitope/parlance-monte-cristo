@@ -36,6 +36,34 @@
       "text": "There was a crowd on the pier. All the crowd gave way before Morrel."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_pastrini",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "of": [
+            {
+              "flag": "active_dialogue__npc_pastrini",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "albert_saved",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_pastrini",
   "tags": [
     "gossip",

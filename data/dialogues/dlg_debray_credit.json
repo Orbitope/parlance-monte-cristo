@@ -29,6 +29,14 @@
       "text": "And Morcerf with a forced smile arose, and, making a low bow to M."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "credit_opened",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_debray",
   "tags": [
     "gossip",

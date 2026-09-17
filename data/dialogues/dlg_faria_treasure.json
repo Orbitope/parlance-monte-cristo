@@ -65,6 +65,34 @@
       "text": "Monte Cristo, forget not Monte Cristo!"
     }
   ],
+  "offer": {
+    "priority": 5,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_faria",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "of": [
+            {
+              "flag": "active_dialogue__npc_faria",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "knows_betrayers",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_faria",
   "tags": [
     "conversation",

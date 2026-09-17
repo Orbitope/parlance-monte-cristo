@@ -36,6 +36,34 @@
       "text": "To you, perhaps, they will accord the time they have refused to me."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_carconte",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "of": [
+            {
+              "flag": "active_dialogue__npc_carconte",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "gave_diamond",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_carconte",
   "tags": [
     "gossip",

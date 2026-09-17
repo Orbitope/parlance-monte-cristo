@@ -68,6 +68,14 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "duel_done",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_fernand",
   "tags": [
     "conversation",

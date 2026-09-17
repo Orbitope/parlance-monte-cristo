@@ -29,6 +29,14 @@
       "text": "I’ll take precautions accordingly. We are carrying too much canvas."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "identity_wilmore",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_mercedes",
   "tags": [
     "gossip",

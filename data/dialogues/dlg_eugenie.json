@@ -33,6 +33,14 @@
       "text": "I think him capable of everything."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "eugenie_noted",
+      "type": "flag",
+      "value": false
+    }
+  },
   "speakerId": "npc_eugenie",
   "tags": [
     "conversation",

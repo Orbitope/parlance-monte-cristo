@@ -49,6 +49,14 @@
       "text": "Well, don’t you intend to bring me another plate?"
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "in_cell",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_jailer",
   "tags": [
     "conversation",

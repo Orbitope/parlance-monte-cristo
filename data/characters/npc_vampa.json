@@ -1,18 +1,5 @@
 {
   "description": "Bandit chief. Keeps his word for his own reasons.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_vampa_larder",
-      "showIf": {
-        "flag": "danglars_ruined",
-        "type": "flag",
-        "value": true
-      }
-    },
-    {
-      "dialogue": "dlg_vampa_pact"
-    }
-  ],
   "id": "npc_vampa",
   "name": "Luigi Vampa",
   "role": "Bandit chief. Keeps his word for his own reasons."

@@ -63,6 +63,14 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "priority": 2,
+    "when": {
+      "flag": "telegraph_planted",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_danglars",
   "tags": [
     "conversation",

@@ -48,6 +48,14 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "household_dying",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_maximilien",
   "tags": [
     "conversation",

@@ -8,6 +8,7 @@
       "text": "Has your bed been moved since you have been a prisoner?"
     }
   ],
+  "offer": {},
   "speakerId": "npc_jailer",
   "tags": [
     "conversation",

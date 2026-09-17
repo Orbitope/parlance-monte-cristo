@@ -76,6 +76,14 @@
       "text": "Stand by there to lower the topsails and jib; brail up the spanker!"
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "greeted_father",
+      "type": "flag",
+      "value": false
+    }
+  },
   "speakerId": "npc_louis_dantes",
   "tags": [
     "conversation",

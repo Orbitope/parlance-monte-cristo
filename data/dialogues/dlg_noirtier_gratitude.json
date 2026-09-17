@@ -29,6 +29,14 @@
       "text": "Monte Cristo repeated all the titles he had read on the baron’s card."
     }
   ],
+  "offer": {
+    "priority": 2,
+    "when": {
+      "flag": "valentine_saved",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_noirtier",
   "tags": [
     "gossip",

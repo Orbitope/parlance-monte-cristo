@@ -41,6 +41,44 @@
       "text": "No, he is a man about my own size."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_davrigny",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "of": [
+            {
+              "flag": "active_dialogue__npc_davrigny",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "of": [
+                {
+                  "flag": "household_dying",
+                  "type": "flag",
+                  "value": true
+                },
+                {
+                  "flag": "doctor_certain",
+                  "type": "flag",
+                  "value": false
+                }
+              ],
+              "type": "all"
+            }
+          ],
+          "type": "any"
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_davrigny",
   "tags": [
     "conversation",

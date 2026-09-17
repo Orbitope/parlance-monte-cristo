@@ -1,18 +1,5 @@
 {
   "description": "Soup at the same hour for fourteen years.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_jailer",
-      "showIf": {
-        "flag": "in_cell",
-        "type": "flag",
-        "value": true
-      }
-    },
-    {
-      "dialogue": "dlg_jailer_idle"
-    }
-  ],
   "id": "npc_jailer",
   "name": "The Jailer",
   "role": "Soup at the same hour for fourteen years."

@@ -36,6 +36,34 @@
       "text": "Europe, and still wealth such as yours has been wholly unknown to me."
     }
   ],
+  "offer": {
+    "priority": 2,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_mme_danglars",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "of": [
+            {
+              "flag": "active_dialogue__npc_mme_danglars",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "danglars_ruined",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_mme_danglars",
   "tags": [
     "gossip",

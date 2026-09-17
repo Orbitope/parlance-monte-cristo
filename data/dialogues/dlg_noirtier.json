@@ -53,6 +53,24 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "household_dying",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "noirtier_ally",
+          "type": "flag",
+          "value": false
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_noirtier",
   "tags": [
     "conversation",

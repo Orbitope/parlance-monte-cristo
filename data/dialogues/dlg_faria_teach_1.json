@@ -43,6 +43,14 @@
       "text": "Some hours afterwards it began again, nearer and more distinct."
     }
   ],
+  "offer": {
+    "priority": 3,
+    "when": {
+      "flag": "active_dialogue__npc_faria",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_faria",
   "tags": [
     "conversation",

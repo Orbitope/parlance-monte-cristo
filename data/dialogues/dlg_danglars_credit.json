@@ -46,6 +46,14 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "identity_count",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_danglars",
   "tags": [
     "conversation",

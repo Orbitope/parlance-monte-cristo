@@ -36,6 +36,34 @@
       "text": "Count of Monte Cristo, and have given him an unlimited credit with me."
     }
   ],
+  "offer": {
+    "priority": 2,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_beauchamp",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "of": [
+            {
+              "flag": "active_dialogue__npc_beauchamp",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "yanina_seed",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_beauchamp",
   "tags": [
     "gossip",

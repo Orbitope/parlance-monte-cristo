@@ -29,6 +29,14 @@
       "text": "Madame Danglars surveyed her husband with a look of withering contempt."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "flag": "valentine_saved",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_valentine",
   "tags": [
     "gossip",

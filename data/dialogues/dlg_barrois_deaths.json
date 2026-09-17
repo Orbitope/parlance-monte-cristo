@@ -36,6 +36,34 @@
       "text": "Panting with loss of breath, he returned to the room he had just left."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_barrois",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "of": [
+            {
+              "flag": "active_dialogue__npc_barrois",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "household_dying",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_barrois",
   "tags": [
     "gossip",

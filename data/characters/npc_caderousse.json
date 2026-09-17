@@ -1,36 +1,5 @@
 {
   "description": "A tailor with debts, then an innkeeper with worse.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_caderousse_spending",
-      "showIf": {
-        "of": [
-          {
-            "flag": "active_dialogue__npc_caderousse",
-            "type": "flag",
-            "value": true
-          },
-          {
-            "flag": "gave_diamond",
-            "type": "flag",
-            "value": true
-          }
-        ],
-        "type": "any"
-      }
-    },
-    {
-      "dialogue": "dlg_caderousse_diamond",
-      "showIf": {
-        "flag": "identity_busoni",
-        "type": "flag",
-        "value": true
-      }
-    },
-    {
-      "dialogue": "dlg_caderousse_first"
-    }
-  ],
   "id": "npc_caderousse",
   "name": "Caderousse",
   "role": "A tailor with debts, then an innkeeper with worse."

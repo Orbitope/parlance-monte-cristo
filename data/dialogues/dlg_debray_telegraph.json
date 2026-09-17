@@ -36,6 +36,34 @@
       "text": "That evening he had a long conference with several friends; and M."
     }
   ],
+  "offer": {
+    "priority": 2,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_debray",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "of": [
+            {
+              "flag": "active_dialogue__npc_debray",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "telegraph_planted",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
+        }
+      ],
+      "type": "all"
+    }
+  },
   "speakerId": "npc_debray",
   "tags": [
     "gossip",
