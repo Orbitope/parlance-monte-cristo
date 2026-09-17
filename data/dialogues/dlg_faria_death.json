@@ -36,7 +36,7 @@
     }
   ],
   "offer": {
-    "priority": 2,
+    "priority": 1,
     "when": {
       "of": [
         {
@@ -45,12 +45,22 @@
           "value": true
         },
         {
-          "flag": "knows_treasure",
-          "type": "flag",
-          "value": true
+          "of": [
+            {
+              "flag": "active_dialogue__npc_faria",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "knows_treasure",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_faria",

@@ -69,6 +69,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "duel_done",
       "type": "flag",

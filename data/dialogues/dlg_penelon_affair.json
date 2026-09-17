@@ -37,6 +37,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "of": [
         {
@@ -45,12 +46,22 @@
           "value": true
         },
         {
-          "flag": "identity_wilmore",
-          "type": "flag",
-          "value": true
+          "of": [
+            {
+              "flag": "active_dialogue__npc_penelon",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "identity_wilmore",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_penelon",

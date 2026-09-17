@@ -80,6 +80,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "danglars_ruined",
       "type": "flag",

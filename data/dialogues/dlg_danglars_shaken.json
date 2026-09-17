@@ -30,7 +30,7 @@
     }
   ],
   "offer": {
-    "priority": 1,
+    "priority": 3,
     "when": {
       "flag": "mme_d_shaken",
       "type": "flag",

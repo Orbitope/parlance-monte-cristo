@@ -66,7 +66,7 @@
     }
   ],
   "offer": {
-    "priority": 2,
+    "priority": 5,
     "when": {
       "of": [
         {
@@ -75,12 +75,22 @@
           "value": true
         },
         {
-          "flag": "knows_betrayers",
-          "type": "flag",
-          "value": true
+          "of": [
+            {
+              "flag": "active_dialogue__npc_faria",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "knows_betrayers",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_faria",

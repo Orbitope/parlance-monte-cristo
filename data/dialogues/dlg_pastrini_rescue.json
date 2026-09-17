@@ -37,6 +37,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "of": [
         {
@@ -45,12 +46,22 @@
           "value": true
         },
         {
-          "flag": "albert_saved",
-          "type": "flag",
-          "value": true
+          "of": [
+            {
+              "flag": "active_dialogue__npc_pastrini",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "albert_saved",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_pastrini",

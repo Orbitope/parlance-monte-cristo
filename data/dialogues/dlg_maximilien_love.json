@@ -49,6 +49,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "household_dying",
       "type": "flag",

@@ -30,6 +30,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "jacopo_loyal",
       "type": "flag",

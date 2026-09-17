@@ -59,6 +59,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "benedetto_seeded",
       "type": "flag",

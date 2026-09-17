@@ -30,6 +30,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "valentine_saved",
       "type": "flag",

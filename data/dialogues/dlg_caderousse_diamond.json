@@ -102,6 +102,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "identity_busoni",
       "type": "flag",

@@ -30,6 +30,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "credit_opened",
       "type": "flag",

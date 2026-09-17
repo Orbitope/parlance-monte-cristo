@@ -44,6 +44,7 @@
     }
   ],
   "offer": {
+    "priority": 3,
     "when": {
       "flag": "active_dialogue__npc_faria",
       "type": "flag",

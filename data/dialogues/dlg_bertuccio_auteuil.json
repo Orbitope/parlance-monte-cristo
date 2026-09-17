@@ -31,6 +31,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "auteuil_told",
       "type": "flag",

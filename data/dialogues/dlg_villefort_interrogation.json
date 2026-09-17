@@ -99,6 +99,7 @@
     }
   ],
   "offer": {
+    "priority": 2,
     "when": {
       "flag": "arrested",
       "type": "flag",

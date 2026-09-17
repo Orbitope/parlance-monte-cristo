@@ -64,7 +64,7 @@
     }
   ],
   "offer": {
-    "priority": 1,
+    "priority": 2,
     "when": {
       "flag": "telegraph_planted",
       "type": "flag",

@@ -60,6 +60,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "identity_count",
       "type": "flag",

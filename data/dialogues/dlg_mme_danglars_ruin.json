@@ -37,7 +37,7 @@
     }
   ],
   "offer": {
-    "priority": 1,
+    "priority": 2,
     "when": {
       "of": [
         {
@@ -46,12 +46,22 @@
           "value": true
         },
         {
-          "flag": "danglars_ruined",
-          "type": "flag",
-          "value": true
+          "of": [
+            {
+              "flag": "active_dialogue__npc_mme_danglars",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "danglars_ruined",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_mme_danglars",

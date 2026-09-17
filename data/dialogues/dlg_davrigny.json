@@ -42,6 +42,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "of": [
         {
@@ -52,20 +53,30 @@
         {
           "of": [
             {
-              "flag": "household_dying",
+              "flag": "active_dialogue__npc_davrigny",
               "type": "flag",
               "value": true
             },
             {
-              "flag": "doctor_certain",
-              "type": "flag",
-              "value": false
+              "of": [
+                {
+                  "flag": "household_dying",
+                  "type": "flag",
+                  "value": true
+                },
+                {
+                  "flag": "doctor_certain",
+                  "type": "flag",
+                  "value": false
+                }
+              ],
+              "type": "all"
             }
           ],
-          "type": "all"
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_davrigny",

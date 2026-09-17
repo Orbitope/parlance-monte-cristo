@@ -44,7 +44,7 @@
     }
   ],
   "offer": {
-    "priority": 1,
+    "priority": 2,
     "when": {
       "of": [
         {
@@ -53,12 +53,22 @@
           "value": true
         },
         {
-          "flag": "fernand_unmasked",
-          "type": "flag",
-          "value": true
+          "of": [
+            {
+              "flag": "active_dialogue__npc_albert",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "fernand_unmasked",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_albert",

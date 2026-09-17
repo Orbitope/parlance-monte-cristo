@@ -66,6 +66,7 @@
     }
   ],
   "offer": {
+    "priority": 2,
     "when": {
       "of": [
         {
@@ -74,12 +75,22 @@
           "value": true
         },
         {
-          "has": true,
-          "item": "item_treasure",
-          "type": "item"
+          "of": [
+            {
+              "flag": "active_dialogue__npc_jacopo",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "has": true,
+              "item": "item_treasure",
+              "type": "item"
+            }
+          ],
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_jacopo",

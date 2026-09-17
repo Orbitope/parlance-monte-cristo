@@ -74,6 +74,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "vampa_pact",
       "type": "flag",

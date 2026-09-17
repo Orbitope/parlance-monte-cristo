@@ -53,6 +53,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "of": [
         {

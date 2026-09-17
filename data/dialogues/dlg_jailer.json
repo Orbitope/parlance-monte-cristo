@@ -50,6 +50,7 @@
     }
   ],
   "offer": {
+    "priority": 1,
     "when": {
       "flag": "in_cell",
       "type": "flag",

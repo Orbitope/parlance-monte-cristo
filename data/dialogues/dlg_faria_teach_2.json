@@ -44,7 +44,7 @@
     }
   ],
   "offer": {
-    "priority": 1,
+    "priority": 4,
     "when": {
       "of": [
         {
@@ -53,12 +53,22 @@
           "value": true
         },
         {
-          "flag": "edu_1",
-          "type": "flag",
-          "value": true
+          "of": [
+            {
+              "flag": "active_dialogue__npc_faria",
+              "type": "flag",
+              "value": true
+            },
+            {
+              "flag": "edu_1",
+              "type": "flag",
+              "value": true
+            }
+          ],
+          "type": "any"
         }
       ],
-      "type": "any"
+      "type": "all"
     }
   },
   "speakerId": "npc_faria",
