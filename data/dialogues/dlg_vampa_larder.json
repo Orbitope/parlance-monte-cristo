@@ -79,6 +79,13 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "danglars_ruined",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_vampa",
   "tags": [
     "conversation",

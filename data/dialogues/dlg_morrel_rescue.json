@@ -52,6 +52,13 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "identity_wilmore",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_morrel",
   "tags": [
     "conversation",

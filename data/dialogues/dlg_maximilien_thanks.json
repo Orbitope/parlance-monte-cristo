@@ -36,6 +36,23 @@
       "text": "Arabic language what he had just been saying to Baptistin in French."
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_maximilien",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "morrel_saved",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_maximilien",
   "tags": [
     "gossip",

@@ -54,6 +54,23 @@
       "text": "I was called to see him on his dying bed, that I might administer to him the consolations of religion."
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_franz",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "franz_settled",
+          "type": "flag",
+          "value": false
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_franz",
   "tags": [
     "conversation",

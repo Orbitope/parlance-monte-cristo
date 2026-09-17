@@ -65,6 +65,23 @@
       "text": "You are, I presume, M. Caderousse?"
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_jacopo",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "has": true,
+          "item": "item_treasure",
+          "type": "item"
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_jacopo",
   "tags": [
     "conversation",

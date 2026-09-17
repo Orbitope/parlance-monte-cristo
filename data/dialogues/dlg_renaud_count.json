@@ -29,6 +29,13 @@
       "text": "Morrel obeyed to the letter, to the great discomfiture of Barrois."
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "identity_count",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_renaud",
   "tags": [
     "gossip",

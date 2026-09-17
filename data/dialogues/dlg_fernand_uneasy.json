@@ -29,6 +29,13 @@
       "text": "As Debray walked towards the window, Danglars approached his wife."
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "yanina_seed",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_fernand",
   "tags": [
     "gossip",

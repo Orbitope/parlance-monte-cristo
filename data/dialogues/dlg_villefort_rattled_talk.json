@@ -36,6 +36,24 @@
       "text": "He bowed. Just at that moment voices were heard hailing the concierge."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_villefort",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "villefort_rattled",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_villefort",
   "tags": [
     "gossip",

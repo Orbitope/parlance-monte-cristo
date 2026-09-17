@@ -1,18 +1,5 @@
 {
   "description": "A forger's masterpiece: a prince made of paper.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_benedetto_groom",
-      "showIf": {
-        "flag": "benedetto_seeded",
-        "type": "flag",
-        "value": false
-      }
-    },
-    {
-      "dialogue": "dlg_benedetto_idle"
-    }
-  ],
   "id": "npc_benedetto",
   "name": "Andrea Cavalcanti",
   "role": "A forger's masterpiece: a prince made of paper."

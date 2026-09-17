@@ -30,6 +30,13 @@
       "text": "Yes, and for a most curious one."
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "auteuil_told",
+      "type": "flag",
+      "value": false
+    }
+  },
   "speakerId": "npc_bertuccio",
   "tags": [
     "conversation",

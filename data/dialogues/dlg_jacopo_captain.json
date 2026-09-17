@@ -29,6 +29,13 @@
       "text": "As he descended the staircase, Morrel met Penelon, who was going up."
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "jacopo_loyal",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_jacopo",
   "tags": [
     "gossip",

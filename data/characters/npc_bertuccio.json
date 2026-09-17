@@ -1,36 +1,5 @@
 {
   "description": "A steward with one confession, kept like a scar.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_bertuccio_lighter",
-      "showIf": {
-        "of": [
-          {
-            "flag": "active_dialogue__npc_bertuccio",
-            "type": "flag",
-            "value": true
-          },
-          {
-            "flag": "dinner_told",
-            "type": "flag",
-            "value": true
-          }
-        ],
-        "type": "any"
-      }
-    },
-    {
-      "dialogue": "dlg_bertuccio_auteuil",
-      "showIf": {
-        "flag": "auteuil_told",
-        "type": "flag",
-        "value": false
-      }
-    },
-    {
-      "dialogue": "dlg_bertuccio_idle"
-    }
-  ],
   "id": "npc_bertuccio",
   "name": "Bertuccio",
   "role": "A steward with one confession, kept like a scar."

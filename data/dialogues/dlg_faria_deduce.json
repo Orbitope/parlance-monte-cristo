@@ -72,6 +72,24 @@
       "text": "I will let you know that directly I have seen M. de Villefort, whom I shall endeavor to interest in Edmond’s favor. I am aware he is a furious royalist; but, in spite of that, and of his being king’s attorney, he is a man like ourselves, and I fancy not a bad sort of one."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_faria",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "edu_2",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_faria",
   "tags": [
     "conversation",

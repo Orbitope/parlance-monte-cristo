@@ -43,6 +43,24 @@
       "text": "M. de Château-Renaud exaggerates."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_albert",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "fernand_unmasked",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_albert",
   "tags": [
     "conversation",

@@ -36,6 +36,24 @@
       "text": "Danglars rang and was answered by a servant in a showy livery."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_eugenie",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "benedetto_seeded",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_eugenie",
   "tags": [
     "gossip",

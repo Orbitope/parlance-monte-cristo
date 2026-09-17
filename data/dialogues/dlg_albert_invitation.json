@@ -45,6 +45,23 @@
       "text": "Of what, think you, do young and strong men die in prison, when they have scarcely numbered their thirtieth year, unless it be of imprisonment?"
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_albert",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "albert_saved",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_albert",
   "tags": [
     "conversation",

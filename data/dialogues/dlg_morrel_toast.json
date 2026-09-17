@@ -36,6 +36,24 @@
       "text": "Captain Gaumard, recovered from his illness, had returned from Palma."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_morrel",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "morrel_saved",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_morrel",
   "tags": [
     "gossip",

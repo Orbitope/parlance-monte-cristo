@@ -35,6 +35,24 @@
       "text": "Dantès strove to do this with his nails, but they were too weak."
     }
   ],
+  "offer": {
+    "priority": 2,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_faria",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "knows_treasure",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_faria",
   "tags": [
     "conversation",

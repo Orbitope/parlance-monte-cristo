@@ -1,28 +1,5 @@
 {
   "description": "Caderousse's wife. Fever-eyed, and quicker at sums than her husband.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_carconte_diamond",
-      "showIf": {
-        "of": [
-          {
-            "flag": "active_dialogue__npc_carconte",
-            "type": "flag",
-            "value": true
-          },
-          {
-            "flag": "gave_diamond",
-            "type": "flag",
-            "value": true
-          }
-        ],
-        "type": "any"
-      }
-    },
-    {
-      "dialogue": "dlg_carconte_sour"
-    }
-  ],
   "id": "npc_carconte",
   "name": "La Carconte",
   "role": "Caderousse's wife. Fever-eyed, and quicker at sums than her husband."

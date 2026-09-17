@@ -65,6 +65,23 @@
       "text": "We gather from all this, baron, that Captain Morrel saved your life."
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_mercedes",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "duel_pending",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_mercedes",
   "tags": [
     "conversation",

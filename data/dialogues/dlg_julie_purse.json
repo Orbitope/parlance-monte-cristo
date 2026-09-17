@@ -84,6 +84,23 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_julie",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "morrel_bought",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_julie",
   "tags": [
     "conversation",

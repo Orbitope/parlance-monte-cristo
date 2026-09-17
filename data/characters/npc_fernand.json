@@ -1,26 +1,5 @@
 {
   "description": "A fisherman, then a count. The distance between is Yanina.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_fernand_end",
-      "showIf": {
-        "flag": "duel_done",
-        "type": "flag",
-        "value": true
-      }
-    },
-    {
-      "dialogue": "dlg_fernand_uneasy",
-      "showIf": {
-        "flag": "yanina_seed",
-        "type": "flag",
-        "value": true
-      }
-    },
-    {
-      "dialogue": "dlg_fernand_first"
-    }
-  ],
   "id": "npc_fernand",
   "name": "Fernand",
   "role": "A fisherman, then a count. The distance between is Yanina."

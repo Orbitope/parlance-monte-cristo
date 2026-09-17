@@ -36,6 +36,24 @@
       "text": "Bertuccio bowed respectfully, and turned away, sighing heavily."
     }
   ],
+  "offer": {
+    "priority": 1,
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_mercedes",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "fernand_ruined",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_mercedes",
   "tags": [
     "gossip",

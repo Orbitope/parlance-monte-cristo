@@ -1,28 +1,5 @@
 {
   "description": "Master of the Hôtel de Londres. Sells rooms, meals, and legends.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_pastrini_rescue",
-      "showIf": {
-        "of": [
-          {
-            "flag": "active_dialogue__npc_pastrini",
-            "type": "flag",
-            "value": true
-          },
-          {
-            "flag": "albert_saved",
-            "type": "flag",
-            "value": true
-          }
-        ],
-        "type": "any"
-      }
-    },
-    {
-      "dialogue": "dlg_pastrini_vampa"
-    }
-  ],
   "id": "npc_pastrini",
   "name": "Signor Pastrini",
   "role": "Master of the Hôtel de Londres. Sells rooms, meals, and legends."

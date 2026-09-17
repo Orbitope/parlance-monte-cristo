@@ -58,6 +58,13 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "benedetto_seeded",
+      "type": "flag",
+      "value": false
+    }
+  },
   "speakerId": "npc_benedetto",
   "tags": [
     "conversation",

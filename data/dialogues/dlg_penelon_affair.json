@@ -36,6 +36,23 @@
       "text": "However, when Morrel went down to his dinner, he appeared very calm."
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_penelon",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "identity_wilmore",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_penelon",
   "tags": [
     "gossip",

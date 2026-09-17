@@ -59,6 +59,13 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "identity_count",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_villefort",
   "tags": [
     "conversation",

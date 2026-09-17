@@ -42,6 +42,23 @@
       "text": "Are you mad, or are you laughing at us?"
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_haydee",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "fernand_ruined",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_haydee",
   "tags": [
     "conversation",

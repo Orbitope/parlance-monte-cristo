@@ -101,6 +101,13 @@
       "text": "Yes,—Christian and surname are the same. You formerly lived, I believe in the Allées de Meilhan, on the fourth floor?"
     }
   ],
+  "offer": {
+    "when": {
+      "flag": "identity_busoni",
+      "type": "flag",
+      "value": true
+    }
+  },
   "speakerId": "npc_caderousse",
   "tags": [
     "conversation",

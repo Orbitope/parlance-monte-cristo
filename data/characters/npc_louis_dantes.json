@@ -1,18 +1,5 @@
 {
   "description": "Edmond's father. Pride, and an empty cupboard hidden behind it.",
-  "dialogues": [
-    {
-      "dialogue": "dlg_louis_father",
-      "showIf": {
-        "flag": "greeted_father",
-        "type": "flag",
-        "value": false
-      }
-    },
-    {
-      "dialogue": "dlg_louis_idle"
-    }
-  ],
   "id": "npc_louis_dantes",
   "name": "Louis Dantès",
   "role": "Edmond's father. Pride, and an empty cupboard hidden behind it."

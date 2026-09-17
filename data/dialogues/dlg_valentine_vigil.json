@@ -101,6 +101,23 @@
       "text": "You let the moment go by without taking it."
     }
   ],
+  "offer": {
+    "when": {
+      "of": [
+        {
+          "flag": "active_dialogue__npc_valentine",
+          "type": "flag",
+          "value": true
+        },
+        {
+          "flag": "household_dying",
+          "type": "flag",
+          "value": true
+        }
+      ],
+      "type": "any"
+    }
+  },
   "speakerId": "npc_valentine",
   "tags": [
     "conversation",
