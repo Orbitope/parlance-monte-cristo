@@ -142,5 +142,6 @@ default build needs no network.
 - Text: the 1846 English translation of *Le Comte de Monte-Cristo*, US public
   domain, via the verbatim Project Gutenberg file in `tools/mc.txt`.
 - Everything else (structure, tooling, this file): MIT — see [LICENSE](LICENSE).
-- Validated with Parlance's validator (18 check families) under `--strict`;
+- Validated with Parlance's reference validator (`tooling/validate.py`, every
+  check family) under `--strict`;
   playable end-to-end via [parlance-gdscript](https://github.com/Orbitope/parlance-gdscript).

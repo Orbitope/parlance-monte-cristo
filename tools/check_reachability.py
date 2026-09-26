@@ -16,8 +16,11 @@ Two passes:
               are flag/item conditions the player can satisfy; a missing EXIT
               is unsatisfiable, and that is the bug class this catches.
   DIALOGUES — every dialogue referenced by something that can present it: a
-              location interactable, a character ladder, a cutscene chain, an
-              exit's denialDialogue, or a set_active_dialogue route.
+              location interactable, a character offer (a dialogue carrying an
+              `offer` object, presented by `offer.character`, else its speaker —
+              Parlance 0.14 replaced the character ladder with these), a
+              cutscene chain, an exit's denialDialogue, or a set_active_dialogue
+              route.
 
 Exit code 1 on any finding.
 """
@@ -80,9 +83,15 @@ for loc in locations.values():
     for ex in loc.get("exits", []):
         if ex.get("denialDialogue"):
             presented.add(ex["denialDialogue"])
-for ch in characters.values():
-    for rung in ch.get("dialogues", []):
-        presented.add(rung["dialogue"])
+for d in dialogues.values():
+    offer = d.get("offer")
+    if offer is None:
+        continue  # no offer object: never a candidate for any character
+    who = offer.get("character", d.get("speakerId"))
+    if who in characters:
+        presented.add(d["id"])
+    else:
+        problems.append(f"dialogue '{d['id']}' offers for unknown character '{who}'")
 for cs in cutscenes.values():
     if cs.get("entersDialogue"):
         presented.add(cs["entersDialogue"])
