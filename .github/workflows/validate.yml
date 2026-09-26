@@ -1,0 +1,28 @@
+name: Validate narrative
+
+# The story is data, so a broken reference, a failing saved route or a stranded
+# location is a build break like any other. Pinned to the Parlance release the
+# project was last checked against.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Schema, references and the full rule set; warnings fail too.
+      - uses: Orbitope/parlance-releases/validate@v0.15.0
+        with:
+          strict: "true"
+
+      # Replays every tests/routes/*.json. The CLI exits 1 if any route fails.
+      - name: Saved routes
+        run: npx --yes @orbitope/parlance-cli@0.15.0 route --all
+
+      # Location/exit reachability — the check routes cannot do (stdlib only).
+      - name: Reachability
+        run: python3 tools/check_reachability.py
