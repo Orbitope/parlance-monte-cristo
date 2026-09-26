@@ -4,8 +4,8 @@
 narrative project — a large, hand-authored demonstration of the format at scale.
 
 ```
-111 dialogues · 273 nodes · 31 characters · 15 locations
-14 quests · 3 endings · 12 codex entries · 4 factions · 67 flags
+112 dialogues · 296 nodes · 31 characters · 15 locations
+14 quests · 3 endings · 12 codex entries · 4 factions · 98 flags
 python validate.py --strict → OK, no errors
 ```
 
