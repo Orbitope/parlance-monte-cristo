@@ -24,6 +24,9 @@
       "forced": "pass"
     },
     {
+      "advance": 2
+    },
+    {
       "choiceId": "dlg_caderousse_diamond_hold"
     }
   ]

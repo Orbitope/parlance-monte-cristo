@@ -1541,6 +1541,12 @@ _emit_offers()
 # check's outcome so the assertion is deterministic — which is exactly what an
 # undirected walker cannot give you. Each one guards an invariant that would
 # otherwise only break silently.
+#
+# The walker never chases a `next` chain on its own: a check that lands on a
+# listen-only node rests THERE, so a route whose flag is set by a node further
+# down the chain needs an explicit {"advance": n} — otherwise assertEnd reads
+# the state before that node's onEnter ever fired, and a choice on a later node
+# reports as "hidden" at the node the session is actually resting on.
 
 def RT(rid, dialogue, steps, assert_end, description, start=None, seed=None):
     r = {"description": description, "dialogueId": dialogue, "id": rid, "steps": steps}
@@ -1563,7 +1569,8 @@ RT("rt_letter_refused", "dlg_pharaon_deck",
    "opens the 'innocent' answer to Villefort.")
 
 RT("rt_interrogation_failed", "dlg_villefort_interrogation",
-   [{"choiceId": "dlg_villefort_interrogation_truth", "forced": "fail"}],
+   [{"choiceId": "dlg_villefort_interrogation_truth", "forced": "fail"},
+    {"advance": 1}],
    {"flags": {"letter_burned": True, "condemned": True}},
    "The priced check pays its way: telling the truth badly still ends with the "
    "letter burned and Dantès condemned. If a failed roll ever leaves condemned "
@@ -1572,7 +1579,8 @@ RT("rt_interrogation_failed", "dlg_villefort_interrogation",
    start={"inventory": ["item_letter_elba"], "flags": {"took_letter": True}})
 
 RT("rt_interrogation_truth", "dlg_villefort_interrogation",
-   [{"choiceId": "dlg_villefort_interrogation_truth", "forced": "pass"}],
+   [{"choiceId": "dlg_villefort_interrogation_truth", "forced": "pass"},
+    {"advance": 1}],
    {"flags": {"letter_burned": True, "condemned": True}},
    "Passing changes the route through the scene but not its destination. Both "
    "branches must converge on the cell; Villefort burns the letter either way, "
@@ -1580,7 +1588,8 @@ RT("rt_interrogation_truth", "dlg_villefort_interrogation",
    start={"inventory": ["item_letter_elba"], "flags": {"took_letter": True}})
 
 RT("rt_faria_blind_deduction", "dlg_faria_deduce",
-   [{"choiceId": "dlg_faria_deduce_blind", "forced": "fail"}],
+   [{"choiceId": "dlg_faria_deduce_blind", "forced": "fail"},
+    {"advance": 1}],
    {"flags": {"knows_betrayers": True}},
    "Faria reaches the answer even when Dantès cannot. Failing the deduction "
    "routes through 'led' and still arrives at the three names — the education "
@@ -1596,6 +1605,7 @@ RT("rt_grotto_fumbled", "dlg_grotto",
 
 RT("rt_diamond_given", "dlg_caderousse_diamond",
    [{"choiceId": "dlg_caderousse_diamond_probe", "forced": "pass"},
+    {"advance": 2},
     {"choiceId": "dlg_caderousse_diamond_give"}],
    {"flags": {"heard_inn_tale": True, "gave_diamond": True}},
    "The inn scene must both inform and offer the choice: hearing the tale sets "
@@ -1605,6 +1615,7 @@ RT("rt_diamond_given", "dlg_caderousse_diamond",
 
 RT("rt_diamond_withheld", "dlg_caderousse_diamond",
    [{"choiceId": "dlg_caderousse_diamond_probe", "forced": "pass"},
+    {"advance": 2},
     {"choiceId": "dlg_caderousse_diamond_hold"}],
    {"flags": {"heard_inn_tale": True}, "forbiddenFlags": ["gave_diamond"]},
    "Withholding is a real option, not a dead end — the quest still completes "

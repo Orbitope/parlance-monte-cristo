@@ -11,6 +11,9 @@
     {
       "choiceId": "dlg_faria_deduce_blind",
       "forced": "fail"
+    },
+    {
+      "advance": 1
     }
   ]
 }

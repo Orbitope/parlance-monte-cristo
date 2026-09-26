@@ -20,6 +20,9 @@
     {
       "choiceId": "dlg_villefort_interrogation_truth",
       "forced": "pass"
+    },
+    {
+      "advance": 1
     }
   ]
 }
