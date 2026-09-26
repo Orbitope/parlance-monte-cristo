@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The Count of Monte Cristo as a Parlance scale fixture — hand-authored skeleton.
 
-Every quest, gate, ladder rung, and dialogue below is individually decided from
+Every quest, gate, dialogue offer, and dialogue below is individually decided from
 the novel; the script is a serialization vehicle, not a generator. Node text is
 drawn from the 1846 English translation (US public domain), scoped to the act
 the scene belongs to, so lines land near their own part of the story.
@@ -850,9 +850,9 @@ def G(did, title, speaker, act, rungs=2):
     ])
     return did
 
-# --- Reactive rungs for the major cast: the same person, changed by events.
-# Effect-free like all gossip, so rungs re-visit safely. Each gate READS a
-# flag the story already writes — this is the ladder mechanic doing its job.
+# --- Reactive offers for the major cast: the same person, changed by events.
+# Effect-free like all gossip, so they re-visit safely. Each offer gate READS
+# a flag the story already writes — this is the offer mechanic doing its job.
 
 G("dlg_mercedes_waiting", "Mercédès — the woman who waits", "npc_mercedes", "act3")
 G("dlg_mercedes_widow", "Mercédès — after the house of Morcerf", "npc_mercedes", "act4")
@@ -871,12 +871,22 @@ G("dlg_fernand_uneasy", "Morcerf — a count reading the papers twice", "npc_fer
 G("dlg_valentine_hidden", "Valentine — alive, and officially not", "npc_valentine", "act4")
 G("dlg_jacopo_captain", "Jacopo — a captain with his own deck", "npc_jacopo", "act3")
 
-# ===================== CHARACTERS — ladders, most specific rung first =======
-def CH(cid, name, desc, ladder):
-    for rung in ladder:
-        if "showIf" in rung: _scan_cond(rung["showIf"])
+# ===================== CHARACTERS — and the dialogues they offer ==========
+# Parlance 0.14 dropped the character ladder: each dialogue now carries its own
+# `offer` ({ character?, when?, priority? }) and the runtime picks the winner by
+# priority tier, then condition specificity, then lowest id. CH() still lists a
+# character's candidate dialogues together, because that is how they were
+# decided, but the list is only an authoring grouping — OFFERS collects it, the
+# routes below may amend a gate, and _emit_offers() writes the `offer` objects
+# onto the dialogues once every gate is final. List order carries no meaning.
+OFFERS = {}   # character id -> [{"dialogue", "showIf"?, "forced"?}]
+
+def CH(cid, name, desc, candidates):
+    for cand in candidates:
+        if "showIf" in cand: _scan_cond(cand["showIf"])
+    OFFERS[cid] = candidates
     FILES[f"data/characters/{cid}.json"] = {
-        "description": desc, "dialogues": ladder, "id": cid, "name": name, "role": desc}
+        "description": desc, "id": cid, "name": name, "role": desc}
 
 def R(did, show=None):
     return {"dialogue": did, "showIf": show} if show else {"dialogue": did}
@@ -1238,9 +1248,9 @@ FILES["data/progression.json"] = {
 
 # ===================== GOSSIP & WORLD TEXTURE ==============================
 # Effect-free by design: gossip observes the world, never advances it. That
-# keeps every rung re-visitable without retire-gates, and makes the ladders a
+# keeps every offer re-visitable without retire-gates, and makes the offers a
 # clean demonstration — the same person says different things as the story
-# moves, chosen by first-match-wins over world state.
+# moves, chosen by the runtime from whichever gates pass.
 
 
 # --- Marseilles: the quay talks, and later remembers --------------------
@@ -1391,14 +1401,14 @@ alternative is not knowing what happens at his table.
 
 
 # ===================== ROUTES: scene-to-scene jumps =========================
-# `set_active_dialogue` re-points a character's ladder at a specific next
-# conversation — "after this, they want to talk about that". It is also what
-# the editor's flow map draws its edges from, so a story whose connections
-# live only in ladder gates analyses as N disconnected scenes.
+# `set_active_dialogue` re-points a character at a specific next conversation
+# — "after this, they want to talk about that". It is also what the editor's
+# flow map draws its edges from, so a story whose connections live only in
+# offer gates analyses as N disconnected scenes.
 #
-# Each route: the SOURCE dialogue's terminal beats pin the character; the
-# TARGET's rung accepts the pin as an alternative to its story condition, and
-# clears it on the way out. One pin per character at a time — the flag is a
+# Each route: the SOURCE dialogue's terminal beats pin the character (the flag
+# active_dialogue__<character>); the TARGET becomes a FORCED offer — a top tier
+# gated on the pin — and clears it on the way out. One pin per character at a time — the flag is a
 # boolean, so these are single hops, never chains.
 
 ROUTE_LIST = [
@@ -1415,7 +1425,7 @@ ROUTE_LIST = [
     ("dlg_valentine_vigil",   "npc_maximilien",  "dlg_morrel_despair"),
         ("dlg_danglars_ruin",     "npc_mme_danglars","dlg_mme_danglars_ruin"),
 
-    # Faria's tutorials run end to end, so his five rungs read as one spine.
+    # Faria's tutorials run end to end, so his five offers read as one spine.
     ("dlg_faria_teach_2",     "npc_faria",       "dlg_faria_deduce"),
     ("dlg_faria_treasure",    "npc_faria",       "dlg_faria_death"),
 
@@ -1457,7 +1467,7 @@ for _src, _char, _tgt in ROUTE_LIST:
     # Clear the pin as the target ends — but NOT on a failure branch. A
     # fumbled attempt should leave the character still wanting to talk about
     # it, so you can come back; clearing there would also mean a failed roll
-    # silently reorders the ladder, which is the punishment spiral the
+    # silently changes which offer wins, which is the punishment spiral the
     # validator warns about.
     _fail_nodes = set()
     for _n in DIALOGUES[_tgt]["nodes"]:
@@ -1467,17 +1477,62 @@ for _src, _char, _tgt in ROUTE_LIST:
     for _n in DIALOGUES[_tgt]["nodes"]:
         if _n.get("isEnd") and _n["id"] not in _fail_nodes:
             _n.setdefault("onEnter", []).append({"flag": _pin, "type": "set_flag", "value": False})
-    # The target's rung accepts the pin OR its own story condition.
-    _cfile = FILES[f"data/characters/{_char}.json"]
-    for _rung in _cfile["dialogues"]:
-        if _rung["dialogue"] == _tgt:
-            if "showIf" in _rung:
-                _rung["showIf"] = {"of": [{"flag": _pin, "type": "flag", "value": True},
-                                          _rung["showIf"]], "type": "any"}
+    # The target's gate accepts the pin OR its own story condition, and it is
+    # marked forced so _emit_offers() lifts it to the top tier.
+    for _cand in OFFERS[_char]:
+        if _cand["dialogue"] == _tgt:
+            if "showIf" in _cand:
+                _cand["showIf"] = {"of": [{"flag": _pin, "type": "flag", "value": True},
+                                          _cand["showIf"]], "type": "any"}
             else:
-                _rung["showIf"] = {"flag": _pin, "type": "flag", "value": True}
+                _cand["showIf"] = {"flag": _pin, "type": "flag", "value": True}
+            _cand["forced"] = True
             FLAG_R.add(_pin)
             break
+    else:
+        raise SystemExit(f"route target {_tgt} is not offered by {_char}")
+
+
+def _emit_offers():
+    """Write each candidate's `offer` onto its dialogue.
+
+    The tiers are the mechanical placeholder scheme this project was migrated
+    with (Parlance 0.14), chosen so `validate --strict` has no OFFER warnings,
+    not to encode a narrative preference:
+      - the one ungated candidate is the fallback: `offer: {}` (tier 0);
+      - ordinary gated candidates take tiers 1..k, in id order, so no two
+        share a tier and the "id decides" tie can never arise;
+      - forced (route-target) candidates take the tiers above those, in id
+        order, gated on all([pin, gate]) so the pin is a top-level conjunct —
+        a forced offer that its own story condition could satisfy without the
+        pin would be out-rankable and would not be forced at all.
+    """
+    for cid, cands in OFFERS.items():
+        pin = {"flag": "active_dialogue__" + cid, "type": "flag", "value": True}
+        fallback = [c for c in cands if "showIf" not in c]
+        if len(fallback) != 1:
+            raise SystemExit(f"{cid}: needs exactly one ungated fallback offer, "
+                             f"has {len(fallback)}")
+        ordinary = sorted((c for c in cands if "showIf" in c and not c.get("forced")),
+                          key=lambda c: c["dialogue"])
+        forced = sorted((c for c in cands if c.get("forced")), key=lambda c: c["dialogue"])
+        offers = {fallback[0]["dialogue"]: {}}
+        for tier, c in enumerate(ordinary, 1):
+            offers[c["dialogue"]] = {"priority": tier, "when": c["showIf"]}
+        for tier, c in enumerate(forced, len(ordinary) + 1):
+            when = c["showIf"] if c["showIf"] == pin else {"of": [pin, c["showIf"]], "type": "all"}
+            offers[c["dialogue"]] = {"priority": tier, "when": when}
+        for did, offer in offers.items():
+            d = DIALOGUES.get(did)
+            if d is None:
+                continue  # reported by the self-lint below
+            if d.get("speakerId") != cid:
+                offer["character"] = cid
+            if "offer" in d:
+                raise SystemExit(f"{did}: offered twice (by {cid} too)")
+            d["offer"] = offer
+
+_emit_offers()
 
 
 # ===================== SAVED ROUTES (tests/routes) ==========================
@@ -1694,9 +1749,9 @@ for did, d in DIALOGUES.items():
     if d["entry"] not in ids: problems.append(f"{did}: entry missing")
 for rel_path, obj in list(FILES.items()):
     if rel_path.startswith("data/characters/"):
-        for rung in obj["dialogues"]:
-            if rung["dialogue"] not in DIALOGUES:
-                problems.append(f"{obj['id']}: ladder -> missing {rung['dialogue']}")
+        for cand in OFFERS.get(obj["id"], []):
+            if cand["dialogue"] not in DIALOGUES:
+                problems.append(f"{obj['id']}: offer -> missing {cand['dialogue']}")
     if rel_path.startswith("data/locations/"):
         for it in obj["interactables"]:
             if it["kind"] == "object" and it["dialogue"] not in DIALOGUES:
@@ -1714,7 +1769,7 @@ FILES["data/variables.json"] = {"variables": variables}
 
 FILES_LORE = """# A scale fixture shaped like The Count of Monte Cristo
 
-The QUEST STRUCTURE, gates, ladders and identities follow Dumas's novel; the
+The QUEST STRUCTURE, gates, dialogue offers and identities follow Dumas's novel; the
 node text is drawn from the 1846 English translation (US public domain, via
 Project Gutenberg), scoped to the act each scene belongs to, but recombined —
 it will not read as continuous prose. This is a demonstration project for
